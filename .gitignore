@@ -55,12 +55,6 @@ cm/hae-db-management/bin/HAE/service.properties
 
 cm/hae-db-management/bin/derby.log
 
-*.pbxproj
-
-source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.pbxproj
-
-source/ui/java/admintool/pom.xml
-
 source/ui/ios/.DS_Store
 
 source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.xcworkspace/xcuserdata/u1c227.xcuserdatad/WorkspaceSettings.xcsettings
@@ -68,12 +62,6 @@ source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.xcworkspace/
 source/ui/ios/ClientApplication/ClientApplication.xcodeproj/xcuserdata/u1c227.xcuserdatad/xcschemes/ClientApplication.xcscheme
 
 source/ui/ios/ClientApplication/ClientApplication.xcodeproj/xcuserdata/u1c227.xcuserdatad/xcschemes/xcschememanagement.plist
-
-source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.pbxproj
-
-source/backend/core/domain-factories/src/test/resources/com/hae/tests/jpaContext.xml
-
-cm/hae-db-management/core/derby/pom.xml
 
 source/backend/rest-webservices/src/.DS_Store
 
@@ -90,7 +78,5 @@ cm/hae-db-management/bin/hae/log/log.ctrl
 cm/hae-db-management/bin/hae/log/logmirror.ctrl
 
 .DS_Store
-
-source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.pbxproj
 
 cm/hae-db-management/bin/HAE/dbex.lck

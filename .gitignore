@@ -4,3 +4,11 @@ source/ui/ios/ClientApplication/ClientApplication/.DS_Store
 source/ui/ios/ClientApplication/ClientApplication/Classes/.DS_Store
 
 source/ui/ios/ClientApplication/.DS_Store
+
+*.xcuserstate
+
+*.xcuserstate
+
+source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.xcworkspace/xcuserdata/chrispurtell.xcuserdatad/UserInterfaceState.xcuserstate
+
+source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.xcworkspace/xcuserdata/chrispurtell.xcuserdatad/UserInterfaceState.xcuserstate

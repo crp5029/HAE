@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+         <groupId>com.hae.core.persistence</groupId>
+         <artifactId>hae-core-persistence</artifactId>
+         <version>MAIN-SNAPSHOT</version>
+    </parent>
+    <groupId>com.hae.core.persistence.repositores</groupId>
+    <artifactId>hae-core-persistence-repositories</artifactId>
+    <version>MAIN-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>HAE - Core - Persistence - Repositories Modules</name>
+    <organization>
+        <name>Fassserve Projectt</name>
+    </organization>
+    <developers>
+        <developer>
+            <id>crp5029</id>
+            <name>Chris Purtell</name>
+            <email>crp5029@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    <modules>
+        <module>jpa</module>
+    </modules>
+    
+</project>

@@ -9,6 +9,32 @@ source/ui/ios/ClientApplication/.DS_Store
 
 *.xcuserstate
 
+*.dat
+
+*.DS_STORE
+
+*.classpath
+
+*.project
+
+*.prefs
+
+source/backend/core/domain-factories/target/
+
+source/backend/core/persistence/repositories/jpa/target/
+
+source/backend/rest-webservices/target/
+
+source/ui/java/admintool/web/target/
+
+cm/hae-db-management/core/derby/target
+
+cm/hae-db-management/test-data/derby/target
+
+source/backend/core/domain-mapping/target/
+
+source/backend/core/services/target/
+
 source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.xcworkspace/xcuserdata/chrispurtell.xcuserdatad/UserInterfaceState.xcuserstate
 
 source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.xcworkspace/xcuserdata/chrispurtell.xcuserdatad/UserInterfaceState.xcuserstate

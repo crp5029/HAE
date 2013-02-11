@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Personal Account Signup</title>
+		<link rel="stylesheet" href="PrimaryStyleCSS.css"/>
+		<meta name="description" content="Personal Account Signup" />
+		<meta name="author" content="Chris Purtell" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>		
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body class="formPagesBody">
+		<legend class="headerInformation">Enter your information</legend>
+		<form class="standardInfoForm_form">
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li id="formHeaderText_li">Please fill in all Fields</li>
+				</ul>
+			</div>
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Email Address</li>
+					<li id="fieldInformation_li">You will use this to log into Fasserv</li>
+			 		<li class="formListElement_li"><input type="text" name="userEmailAddress" required="required" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Choose a Password</li>
+			 		<li class="formListElement_li"><input type="password" name="userPassword" required="required" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Re-Enter Password</li>
+			 		<li class="formListElement_li"><input type="password" name="userPasswordReEnter" required="required" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Enter Legal First Name</li>
+			 		<li class="formListElement_li"><input type="text" name="userFirstName" required="required" maxlength="25" size="*30"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Enter Legal Last Name</li>
+			 		<li class="formListElement_li"><input type="text" name="userLastName" required="required" maxlength="25" size="*30"/></li>
+		 		</ul>	
+		 	</div>		
+		 	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Address Line 1</li>
+			 		<li class="formListElement_li"><input type="text" name="userAddressLine1" required="required" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">
+						Address Line 2 <span class="smallFont_span">(optional)</span>
+					</li>
+			 		<li class="formListElement_li"><input type="text" name="userAddressLine2" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">City/State</li>
+			 		<li class="formListElement_li"><input type="text" name="userCity" maxlength="30" size="*30" required="required"/>
+			 			<select name="userState">
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="DC">DC</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</li>
+		 		</ul>	
+		 	</div>				 	 			 			 		 			 	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Zip Code</li>
+			 		<li class="formListElement_li"><input type="text" name="userZipCode" required="required" maxlength="6" size="*15"/></li>
+		 		</ul>	
+		 	</div>	
+		 	
+		 	<!-- TEST REQUIRED ATTRIBUTE; Make NUMBERS ONLY-->
+			<div class="textOverInputField_div" >
+				<ul class="listNoStyle_ul">
+					<li id="formAgreementText_li"><input type="checkbox" name="userAgreement" required="required">
+						Yes, I Have Read and Agreed to the Following:
+						<ul id="bulletedList_ul">
+							<li class="formListElement_li">Some Agreement</li>
+							<li class="formListElement_li">Additional Agreements</li>
+						</ul>
+					</li>
+				</ul>
+		 	</div>	
+	 		<div class="submitButton_div">
+	 			<input type="submit" name="loginButton" value="Agree and Create Account"/>
+	 		</div>		 			 			 			
+		</form>
+		
+		
+		
+		<script type="text/javascript">			
+			$(".standardInfoForm_form").submit(function() {
+				var newCustomerObj = {};
+				jQuery.each(($(this).serializeArray()), function(i, field) {
+				newCustomerObj[field.name] = field.value;
+			});
+			
+			/*alert(newCustomerObj.userEmailAddress);
+			alert(newCustomerObj.userPassword);
+			alert(newCustomerObj.userPasswordReEnter);
+			alert(newCustomerObj.userFirstName);
+			alert(newCustomerObj.userLastName);
+			alert(newCustomerObj.userAddressLine1);
+			alert(newCustomerObj.userAddressLine2);
+			alert(newCustomerObj.userCity);
+			alert(newCustomerObj.userState);
+			alert(newCustomerObj.userZipCode);
+			alert(newCustomerObj.userAgreement);
+			  */
+
+    	 	window.location.href='http://127.0.0.1:8020/Hae/HaeClient/SaveCCInfo.html';
+			 return false;
+			  
+			});
+		</script>	
+	</body>
+</html>

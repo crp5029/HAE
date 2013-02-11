@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Return Customer Login Page</title>
+		<link rel="stylesheet" href="PrimaryStyleCSS.css"/>
+		<meta name="description" content="Returning Customer Login Page" />
+		<meta name="author" content="Chris Purtell" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body class="loginPageBody">
+		<form class="standardInfoForm_form">
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Enter Your E-Mail Address to Sign In: </li>
+					<li class="formListElement_li"><input type="text" name="returnUserId" required="required" maxlength="30" autofocus="autofocus" size="*30"/></li>
+				</ul>
+			</div>							
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Password:</li>	
+			 		<li class="formListElement_li"><input type="password" name="returnUserPassword" required="required" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>
+	 		<div class="submitButton_div">
+	 			  <input type="submit" name="loginButton" value="Login"/>
+	 		</div>
+		</form>	
+		
+		<script type="text/javascript">
+			$(".standardInfoForm_form").submit(function() {
+			  var returnCustomerObj = {};
+			  jQuery.each(($(this).serializeArray()), function(i, field) {
+			  	//if(field.name == 'returnUserId'){
+			  		//alert('returnUserId');
+			  		//if(validateUserName(field.value)){
+			  		//	alert("BACK IN 2nd IF");
+			  			
+			  		//};
+			  //	}
+			  	/*if (field.value == '' || field.value.length < 5){
+			  		alert("NO GOOD!!!");
+			  	} else{
+			  		returnCustomerObj[field.name] = field.value;
+			  		alert(this.value);
+			  	};*/
+			  });
+			  
+			 // alert(returnCustomerObj.returnUserId);
+			  //alert(returnCustomerObj.returnUserPassword);
+			  window.location.href='http://127.0.0.1:8020/HaeClient/SaveCCInfo.html';
+			  return false;
+			});
+			
+			
+	/*		function validateUserName(aUserName){
+				if ((aUserName != '') && (aUserName.length > 5)){
+					alert(aUserName + "GOOD");
+					return true;
+				}
+				else{
+					alert("BAD");
+					return false;	
+				}
+			}
+			*/
+		</script>	
+			
+	</body>
+</html>
+
+<!--
+	
+	   //$("div.submitButton_div").click(function() {
+	    	//alert( $('[name=returnUserId]').val() );
+	    	//alert( $('[name=returnUserPassword]').val() );
+	    	//var obj = ($(this).serializeArray());
+	    	
+	    	
+	    	
+    //function showValues() {
+     // var str = $(".standardInfoForm_form").serialize();
+     // alert(str);
+     
+     //var obj = {returnUserId:$('[name=returnUserId]').val(),returnUserPassword:$('[name=returnUserPassword]').val()};
+     
+     
+      //   jQuery.each(obj, function(i, val) {
+   //   alert(i + " " + val);
+  //  });
+
+   // }
+    //$(":checkbox, :radio").click(showValues);
+   // $("select").change(showValues);
+   // showValues();
+
+	    	
+	 //  });
+	 
+	 
+	   	//alert(obj.returnUserPassword);
+  	
+  	 //var fields = $(":input").serializeArray();
+  	 
+  	 /*$(this.find(":input")).each(function() {
+    // The selector will match buttons; if you want to filter
+    // them out, check `this.tagName` and `this.type`; see
+    // below
+    fields[this.name] = $(this).val();
+    alert(this.name);
+	
+	*/
+	
+  	    // alert(i + " " + val);
+    //}); -->
+
+

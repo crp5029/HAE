@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Admin Tool Login</title>
+		<link rel="stylesheet" href="PrimaryStyleCSS.css"/>
+		<meta name="description" content="Admin Tool Login Page" />
+		<meta name="author" content="Chris Purtell" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body class="loginPageBody">		
+		<div id="mainHeader">
+			Admin Tool
+		</div>
+		<form class = "loginForm">
+				<!-- method="post" action"" -->
+			<div id="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">User Name</li>
+					<li class="formListElement_li"><input type="text" id="userid" name="userid" class="text" required="required" maxlength="30" autofocus="autofocus" size="*30"/></li>
+				</ul>
+			</div>							
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Password</li>	
+			 		<li class="formListElement_li"><input type="password" id="password" name="password" class="text" required="required" maxlength="30" size="*30"/></li>
+		 		</ul>	
+		 	</div>
+	 		<div class="submitButton_div">
+	 			  <input type="submit" name="loginButton" value="Login"/>
+	 		</div>
+		</form>	
+		
+		<script type="text/javascript">
+			$(".loginForm").submit(function() {
+				var loginObj = {};
+				jQuery.each(($(this).serializeArray()), function(i, field) {
+				loginObj[field.name] = field.value;
+			});
+			
+    	 	sendLoginData(loginObj);
+    	 	
+    	/* 	jQuery.ajax({
+            type: "Post",
+            url: "/Main/SearchForServers",
+            data: { criteria: $('#searchCriteria').val() }, <---  Send the data with the post...
+            success: function (data) {
+                jQuery("#searchList").page = 1;
+                jQuery("#searchList").trigger("reloadGrid");    <--- The callback what happens when the data comes back...
+            },
+            dataType: "json",
+            async: false
+            */
+			 return false;
+			  
+			});
+			
+			function sendLoginData(loginObj) {
+				//alert(loginObj.userid);
+    	 		//alert(loginObj.password);
+    	 		//url: "http://localhost:49197/hae-ui/admin/ajax/authenticateUser",
+    	 		
+    	 		alert("Alert32121");
+    	 		//jQuery.ajax({
+    	 			$.ajax({
+    	 			type: "POST",
+    	 			url: "http://localhost:8080/hae/admintool/authenticateUser",
+    	 			data: {
+ 						"userid":"fsadmin",
+ 						//"password":"test123"
+    	 				},
+    	 			success: function (data) {
+    	 				alert("Alert2");
+                		jQuery(".loginForm").page = 1;
+                		jQuery(".loginForm").trigger("reloadGrid");   // <--- The callback what happens when the data comes back...
+           			 },
+            		dataType: "json",
+            		async: false
+    	 		});
+			}
+		</script> 	
+	</body>
+</html>
+
+
+

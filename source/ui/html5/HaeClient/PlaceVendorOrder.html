@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Place Order</title>
+		<link rel="stylesheet" href="PrimaryStyleCSS.css"/>
+		<meta name="description" content="Place Order" />
+		<meta name="author" content="Chris Purtell" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>			
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
+	<body class="formPagesBody">
+		<form class="standardInfoForm_form">
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li id="formHeaderText_li">Save Credit Card Information for Future Use</li>
+				</ul>
+			</div>
+
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Enter First Name as it Appears on Your Card</li>
+			 		<li class="formListElement_li"><input type="text" name="userCCFirstName" maxlength="25" size="*30" required="required"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Enter Last Name as it Appears on Your Card</li>
+			 		<li class="formListElement_li"><input type="text" name="userCCLastName" maxlength="25" size="*30" required="required"/></li>
+		 		</ul>	
+		 	</div>		
+		 	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Billing Address Line 1</li>
+			 		<li class="formListElement_li"><input type="text" name="userCCAddressLine1" maxlength="30" size="*30" required="required"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">
+						Billing Address Line 2 <span class="smallFont_span">(optional)</span>
+					</li>
+			 		<li class="formListElement_li"><input type="text" name="userCCAddressLine2" maxlength="30" size="*30" required="required"/></li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Billing City/State</li>
+			 		<li class="formListElement_li"><input type="text" name="userCCCity" maxlength="30" size="*30" required="required"/>
+			 			<select name="userCCState">
+							<option value="AL">AL</option>
+							<option value="AK">AK</option>
+							<option value="AZ">AZ</option>
+							<option value="AR">AR</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DE">DE</option>
+							<option value="DC">DC</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="IA">IA</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="ME">ME</option>
+							<option value="MD">MD</option>
+							<option value="MA">MA</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MS">MS</option>
+							<option value="MO">MO</option>
+							<option value="MT">MT</option>
+							<option value="NE">NE</option>
+							<option value="NV">NV</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NY">NY</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VT">VT</option>
+							<option value="VA">VA</option>
+							<option value="WA">WA</option>
+							<option value="WV">WV</option>
+							<option value="WI">WI</option>
+							<option value="WY">WY</option>
+						</select>
+					</li>
+		 		</ul>	
+		 	</div>	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Billing Zip Code</li>
+			 		<li class="formListElement_li"><input type="text" name="userCCZipCode" maxlength="6" size="*15" required="required"/></li>
+		 		</ul>	
+		 	</div>			 	
+		 	
+		 	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Credit Card Type</li>
+						<li><select name="ccType">				
+			 				<option value="VISA">VISA</option>
+			 				<option value="Master Card">Master Card</option>
+			 				<option value="AMEX">AMEX</option>
+			 				<option value="Discover">Discover</option>		 	
+						</select>
+						</li>
+		 		</ul>	
+		 	</div>	
+		 	<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Credit Card Number</li>
+			 		<li class="formListElement_li"><input type="number" name="userCCNumber" maxlength="16" size="*20" required="required"/></li>
+		 		</ul>	
+		 	</div>	
+		 	
+			<div class="textOverInputField_div">
+				<ul class="listNoStyle_ul">
+					<li class="formListElement_li">Expiration Date</li>
+			 		<li class="formListElement_li"> <span class="smallFont_span">(MM/**YY)</span>
+			 			<select name="ccExpirationMonth">
+			 				<option value="01">01</option>
+			 				<option value="02">02</option>
+			 				<option value="03">03</option>
+			 				<option value="04">04</option>	
+			 				<option value="05">05</option>
+			 				<option value="06">06</option>
+			 				<option value="07">07</option>
+			 				<option value="08">08</option>	
+			 				<option value="09">09</option>
+			 				<option value="10">10</option>
+			 				<option value="11">11</option>
+			 				<option value="12">12</option>				 							 					 	
+						</select>	
+			 			<select name="ccExpirationYear">
+			 				<option value="11">11</option>
+			 				<option value="12">12</option>
+			 				<option value="13">13</option>
+			 				<option value="14">14</option>	
+			 				<option value="15">15</option>
+			 				<option value="16">16</option>
+			 				<option value="17">17</option>			 							 					 	
+						</select>									 			
+		 		</ul>	
+		 	</div>			 	
+		 	<!-- TEST REQUIRED ATTRIBUTE; Make NUMBERS ONLY-->
+			<div class="textOverInputField_div" >
+				<ul class="listNoStyle_ul">
+					<li id="formAgreementText_li"><input type="checkbox" name="userCCAgreement" required="required">
+						Yes, I Have Read and Agreed to the Following:
+						<ul id="bulletedList_ul">
+							<li class="formListElement_li">Some Agreement</li>
+							<li class="formListElement_li">Additional Agreements</li>
+						</ul>
+					</li>
+				</ul>
+		 	</div>	
+	 		<div class="submitButton_div">
+	 			<input type="submit" name="loginButton" value="Agree and Save Information"/>
+	 		</div>		 			 			 			
+		</form>
+		
+		
+		<script type="text/javascript">			
+			$(".standardInfoForm_form").submit(function() {
+				var newCustomerCCObj = {};
+				jQuery.each(($(this).serializeArray()), function(i, field) {
+				newCustomerCCObj[field.name] = field.value;
+			});
+			
+			//alert(newCustomerCCObj.userCCFirstName);
+			//alert(newCustomerCCObj.userCCLastName);
+			//alert(newCustomerCCObj.userCCAddressLine1);
+			//alert(newCustomerCCObj.userCCAddressLine2);
+			//alert(newCustomerCCObj.userCCCity);
+			//alert(newCustomerCCObj.userCCState);
+			//alert(newCustomerCCObj.userCCZipCode);
+			//alert(newCustomerCCObj.ccType);
+			//alert(newCustomerCCObj.userCCNumber);
+			//alert(newCustomerCCObj.ccExpirationMonth);
+			//alert(newCustomerCCObj.ccExpirationYear);
+			//alert(newCustomerCCObj.userCCAgreement);	
+			    	    	
+    	//window.location.href='http://127.0.0.1:8020/HaeClient/SaveCCInfo.html';
+    	return false;
+   });
+</script>			
+	</body>
+</html>

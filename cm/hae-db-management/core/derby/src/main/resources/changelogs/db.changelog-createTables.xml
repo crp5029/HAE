@@ -1,0 +1,128 @@
+
+<databaseChangeLog
+    xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.liquibase.org/xml/ns/dbchangelog/1.9
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+    <changeSet id = "1" author = "Chris Purtell">
+        <comment>Create FASSERVE/CM Tables</comment>
+
+
+        <createTable tableName = "FS_USER">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "USERID" type = "varchar(250)"/>
+            <column name = "PASSWORD" type = "varchar(25)"/>
+            <column name = "ISADMIN" type = "INT"/>  
+            <column name = "CUSTOMER_ID" type = "bigint" />
+            <column name = "VENDOR_ID" type = "bigint" />
+        </createTable>
+
+        <createTable tableName = "CUSTOMER">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(100)"/>
+        </createTable>
+        
+        <createTable tableName = "VENDOR">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(100)"/>
+            <column name = "CUSTOMER_ID" type = "bigint"/>
+        </createTable>
+
+        <createTable tableName = "CONCESSION">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(250)"/>
+            <column name = "FREESTANDING" type = "int"/>
+            <column name = "VENDOR_ID" type = "bigint"/>
+            <column name = "VENUESECTION_ID" type = "bigint"/>
+        </createTable>
+        
+        <createTable tableName = "CONCESSION_MENUITEMS">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "MENUITEM_ID" type = "bigint"/>
+            <column name = "CONCESSION_ID" type = "bigint"/>
+        </createTable>
+
+        <createTable tableName = "VENUE">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(100)"/>
+        </createTable>
+
+        <createTable tableName = "VENUESECTION">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "VENUEID" type = "int"/>
+            <column name = "SECTION_ID" type = "varchar(25)"/>
+        </createTable>
+
+
+        <createTable tableName = "MENU">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(100)"/>
+        </createTable>
+
+        <createTable tableName = "MENUITEM">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "DISPLAYNAME" type = "varchar(30)"/>
+            <column name = "DETAILEDTEXT" type = "varchar(200)"/>
+            <column name = "DISPLAYORDER" type = "int"/>
+            <column name = "IMAGEURL" type = "varchar(200)"/>
+            <column name = "MENUID" type = "int"/>
+        </createTable>
+
+        <createTable tableName = "MENUITEMPRICE">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "CURRENCYID" type = "int"/>
+            <column name = "PRICE" type = "CURRENCY"/>
+            <column name = "MENUITEMID" type = "int"/>
+        </createTable>
+
+        <createTable tableName = "MENUSECTION">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "ACTIVE" type = "boolean"/>
+            <column name = "DISPLAYNAME" type = "varchar(100)"/>
+            <column name = "DISPLAYORDER" type = "varchar(20)"/>
+            <column name = "IMAGEURL" type = "varchar(200)"/>
+            <column name = "MENUID" type = "int"/>
+        </createTable>
+
+	<!-- ORDER needs information about the items in the order -->
+        <createTable tableName = "ORDERS">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "ORDERDATETIME" type = "varchar(150)"/>
+            <column name = "SALESTAXID" type = "int"/>
+        </createTable>
+
+        <createTable tableName = "SALESTAX">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(100)"/>
+            <column name = "RATE" type = "float"/>
+            <column name = "STATE" type = "varchar(2)"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

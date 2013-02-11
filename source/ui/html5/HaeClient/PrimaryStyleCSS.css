@@ -1,0 +1,210 @@
+/*ReturnCustomerLogin.html Specific*/
+	body.loginPageBody{
+	  padding-left: 1em;
+	  font-family: Georgia, "Times New Roman",
+	        Times, serif;
+	  color: black;
+	  text-align: center;
+	}
+
+
+/*EnterCustomerPersonalInfo.html Specific*/
+	body.formPagesBody{
+	  padding-left: 1em;
+	  font-family: Georgia, "Times New Roman",
+	        Times, serif;
+	  color: black;
+	  text-align: left;
+	}
+	
+/*Entrance Page Specific*/
+	body.entrancePageBody{
+	  padding-left: 1em;
+	  font-family: Georgia, "Times New Roman",
+	        Times, serif;
+	  color: black;
+	  text-align: center;
+	}	
+	
+
+/*Shared Specifications*/
+	div.textOverInputField_div {
+	    width:600px;
+	    margin-right:auto;
+	    margin-bottom:auto;
+	    margin-left:auto;
+	    padding-bottom:10px;
+	
+	 }
+	 
+	 div.submitButton_div {
+	    width:600px;	
+	    margin-right:auto;
+	    margin-bottom:auto;
+	    margin-left:auto;
+	    padding-top:15px;
+	 }
+	
+	 
+	 ul.listNoStyle_ul{
+	 	list-style: none;
+	 	padding: 0;
+	 	margin: 0;
+	 }
+	 
+	 li.formListElement_li{
+	 	padding-bottom: 5px;
+	 	font-weight: 500;
+	 }
+	 
+	 li.entranceLogo_li{
+	 	padding-bottom: 10px;
+	 	font-weight: 600;
+	 	color: red;
+	 }
+	 	 
+	 
+	form.standardInfoForm_form{
+		display: block;
+		border-spacing: 10px;
+		border-style: inset;
+		border-width: thin;
+		border-color: black;
+		width: 600px;
+		padding-left: 10px;
+		background-color: #FFEEEE;
+		padding-bottom: 10px;
+	}	 
+	
+	span.smallFont_span{
+		font-size: 10px;
+		color: gray;
+		visibility: inherit;
+	}
+	
+	legend.headerInformation{
+		font-size: 16px;
+		color: blue;
+		padding-bottom: 5px;
+		font-weight: bold;
+	}
+	
+
+	 #formHeaderText_li{
+	 	padding-bottom: 10px;
+	 	font-weight: bold;
+	 	font-size: 12px;
+	 }	
+	 
+	 #formAgreementText_li{
+	 	padding-bottom: 5px;
+	 	font-weight: bold;
+	 	font-size: 12px;
+	 }		 
+
+	 #fieldInformation_li{
+	 	font-size: x-small;
+	 	color: gray;
+	 	padding-bottom: 5px;
+	 }	 
+	 
+	 #bulletedList_ul{
+	 	list-style: disc;
+	 	text-indent: 10px;
+	 	padding-top: 5px;
+	 }	
+	 
+	 
+	 div.entranceButtons_div {
+	    width:600px;
+	    margin-right:auto;
+	    margin-bottom:auto;
+	    margin-left:auto;
+	    padding-top:15px;
+	    padding-bottom: 5px; 
+	 }	
+	 
+
+	table.standardSpacing_table{
+
+	  border-spacing: 30pt 20pt;
+	  margin-left: auto;
+	  margin-right: auto;
+	  
+	  }
+	  
+	td.cellSpacing {
+	  }	 
+		 
+	a.customButton{
+	    color:white;
+	    padding:5px 20px;
+	    text-shadow:1px 1px 0 #145982;
+	    font-family:Arial,Helvetica,sans-serif;
+	    font-size:12px;
+	    font-weight:bold;
+	    text-align:center;
+	    border:1px solid #60b4e5;
+	    /*
+	        CSS3 gradients for webkit and mozilla browsers fallback color for the rest:
+	    */
+	 
+	    background-color: #59aada;
+	    background-image: -moz-linear-gradient(#F902B6, #FFA4E6);
+	    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F902B6), to(#FFA4E6));
+	    box-shadow:3px 3px 3px #000000;
+	    -moz-box-shadow:3px 3px 3px #000000;
+	    -webkit-box-shadow:3px 3px 3px #000000;
+	    border:1px solid #F902B6;
+	    border-radius:6px;
+	    -moz-border-radius:6px;
+	    -webkit-border-radius:6px;
+	}
+	
+	#customButtonOrder{
+	    color:white;
+	    padding:5px 60px;
+	    text-shadow:1px 1px 0 #145982;
+	    font-family:Arial,Helvetica,sans-serif;
+	    font-size:15px;
+	    font-weight:bold;
+	    text-align:center;
+	    border:1px solid #60b4e5;
+	    /*
+	        CSS3 gradients for webkit and mozilla browsers fallback color for the rest:
+	    */
+	 
+	    background-color: green;
+	    background-image: -moz-linear-gradient(green);
+	    box-shadow:3px 3px 3px #000000;
+	    -moz-box-shadow:3px 3px 3px #000000;
+	    -webkit-box-shadow:3px 3px 3px #000000;
+	    border:1px solid red;
+	    border-radius:6px;
+	    -moz-border-radius:6px;
+	    -webkit-border-radius:6px;		
+	}
+	
+	#customRegisterButton{
+	    padding:5px 33px;	
+	}
+	
+	#customContactUs{
+	    padding:5px 51px;	
+	}		
+  
+  
+	#customReturnCustomerButton{
+	    padding:5px 61px;	
+	}	  
+	
+	#customEditSettingsButton{
+	    padding:5px 20px;	
+	}	 	
+
+
+ 	 
+	
+	 
+ 
+

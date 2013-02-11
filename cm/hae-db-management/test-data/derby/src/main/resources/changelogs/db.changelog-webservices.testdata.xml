@@ -1,0 +1,50 @@
+<databaseChangeLog
+    xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.liquibase.org/xml/ns/dbchangelog/1.9
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+   
+    
+    <changeSet id = "1" author = "Brad Messerle">
+        <comment>Test Data</comment>
+        
+
+        <!-- Add Test Customer -->
+        
+        <insert tableName = "CUSTOMER">
+            <column name = "NAME" value = "Aramark Sports Entertainment"/>
+        </insert>
+        
+        
+        <!-- Users -->
+        
+        <insert tableName = "FS_USER">
+            <column name = "USERID" value = "bradmesserle@gmail.com"/>
+            <column name = "PASSWORD" value = "test123"/>
+            <column name = "ISADMIN" valueNumeric = "1"/>
+            <column name = "CUSTOMER_ID" valueNumeric = "((select id from CUSTOMER where name='Aramark Sports Entertainment'))"/>
+        </insert>
+        
+
+        <!-- Adding Vendors -->
+        
+        <insert tableName = "VENDOR">
+            <column name = "NAME" value = "NY Style Pizza"/>
+            <column name = "CUSTOMER_ID" valueNumeric = "((select id from CUSTOMER where name='Aramark Sports Entertainment'))"/>
+        </insert>
+        
+        <insert tableName = "VENDOR">
+            <column name = "NAME" value = "Hot Dogs and Hamburgers"/>
+            <column name = "CUSTOMER_ID" valueNumeric = "((select id from CUSTOMER where name='Aramark Sports Entertainment'))"/>
+        </insert>
+        
+        <insert tableName = "VENDOR">
+            <column name = "NAME" value = "Cotten Candy Central"/>
+            <column name = "CUSTOMER_ID" valueNumeric = "((select id from CUSTOMER where name='Aramark Sports Entertainment'))"/>
+        </insert>
+        
+    
+ 
+            
+    </changeSet>
+</databaseChangeLog>

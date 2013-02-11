@@ -1,0 +1,460 @@
+<databaseChangeLog
+    xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.liquibase.org/xml/ns/dbchangelog/1.9
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+   
+    
+    <changeSet id = "1" author = "Brad Messerle">
+        <comment>Verizon Center Venue Data</comment>
+        
+
+        <insert tableName = "VENUE">
+            <column name = "NAME" value = "Verizon Center"/>
+        </insert>
+
+        
+        <!--- Level 1 -->
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "100"/>
+        </insert>
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "101"/>
+        </insert>
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "102"/>
+        </insert>     
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "103"/>
+        </insert> 
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "104"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "105"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "106"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "107"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "108"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "109"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "110"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "111"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "112"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "113"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "114"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "115"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "116"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "117"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "118"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "119"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "120"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "121"/>
+        </insert> 
+
+
+        <!-- Level 2 -->
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "200"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "201"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "202"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "203"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "204"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "205"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "206"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "207"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "208"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "209"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "210"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "211"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "212"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "213"/>
+        </insert> 
+            
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "214"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "215"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "216"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "217"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "218"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "219"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "220"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "221"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "222"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "223"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "224"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "225"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "226"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "227"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "228"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "229"/>
+        </insert> 
+            
+        <!-- Level 3 -->
+        
+        
+        
+        <!-- Level 4 -->
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "400"/>
+        </insert> 
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "401"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "402"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "403"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "404"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "405"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "406"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "407"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "408"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "409"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "410"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "411"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "412"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "413"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "414"/>
+        </insert> 
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "415"/>
+        </insert> 
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "416"/>
+        </insert>
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "417"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "418"/>
+        </insert>
+
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "419"/>
+        </insert>
+            
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "420"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "421"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "422"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "423"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "424"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "425"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "426"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "427"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "428"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "429"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "430"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "431"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "432"/>
+        </insert>
+        
+        <insert tableName = "VENUESECTION">
+            <column name = "VENUEID" valueNumeric = "((select id from venue where name='Verizon Center'))"/>
+            <column name = "SECTION_ID" value = "433"/>
+        </insert>
+            
+            
+    </changeSet>
+</databaseChangeLog>

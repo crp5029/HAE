@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.hae</groupId>
+        <artifactId>hae-core</artifactId>
+        <version>MAIN-SNAPSHOT</version>
+    </parent>
+    <groupId>com.hae.domain.mapping</groupId>
+    <artifactId>hae-core-domain-mapping</artifactId>
+    <version>MAIN-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>HAE - Core - Domain Mapping</name>
+    <organization>
+        <name>HAE Project</name>
+    </organization>
+    <developers>
+        <developer>
+            <id>crp5029</id>
+            <name>Chris Purtell</name>
+            <email>crp5029@gmail.com</email>
+            <organization></organization>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    
+   <dependencies>
+   
+       <!--  hae Dependencies -->
+       
+       <dependency>
+          <groupId>com.hae.core.model</groupId>
+          <artifactId>hae-core-model</artifactId>
+          <version>MAIN-SNAPSHOT</version>
+       </dependency>
+       
+       <dependency>
+           <groupId>com.hae.core.persistence.repositores.jpa</groupId>
+           <artifactId>hae-core-persistence-repositories-jpa</artifactId>
+           <version>MAIN-SNAPSHOT</version>
+       </dependency>
+       
+       
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.7.1</version>
+        </dependency>   
+
+       <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.7.1</version>
+       </dependency>
+       
+       <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+           <artifactId>jackson-xc</artifactId>
+           <version>1.7.1</version>
+       </dependency>
+
+     </dependencies>
+
+</project>

@@ -1,0 +1,151 @@
+<databaseChangeLog
+    xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.liquibase.org/xml/ns/dbchangelog/1.9
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+    <changeSet id = "1" author = "Chris Purtell">
+        <comment>Adding Dummy Data</comment>
+        
+
+	<insert tableName = "CUSTOMER">
+            	<column name = "NAME" value = "Customer1"/>
+	</insert>
+
+	<insert tableName = "CUSTOMER">
+            	<column name = "NAME" value = "Customer2"/>
+	</insert>
+
+
+
+	<insert tableName = "VENDOR">
+            	<column name = "NAME" value = "Vendor1Customer1"/>
+		<column name = "CUSTOMERID" valueNumeric = "1"/>
+	</insert>
+
+	<insert tableName = "VENDOR">
+            	<column name = "NAME" value = "Vendor2Customer1"/>
+		<column name = "CUSTOMERID" valueNumeric = "1"/>
+	</insert>
+
+	<insert tableName = "VENDOR">
+            	<column name = "NAME" value = "Vendor1Customer2"/>
+		<column name = "CUSTOMERID" valueNumeric = "2"/>
+	</insert>
+
+	<insert tableName = "VENDOR">
+            	<column name = "NAME" value = "Vendor2Customer2"/>
+		<column name = "CUSTOMERID" valueNumeric = "2"/>
+	</insert>
+
+
+	<insert tableName = "CONCESSION">
+            	<column name = "NAME" value = "Concession1Vendor1Customer1"/>
+		<column name = "VENDORID" valueNumeric = "1"/>
+	</insert>
+
+	<insert tableName = "CONCESSION">
+            	<column name = "NAME" value = "Concession1Vendor2Customer1"/>
+		<column name = "VENDORID" valueNumeric = "2"/>
+	</insert>
+
+	<insert tableName = "CONCESSION">
+            	<column name = "NAME" value = "Concession3Vendor3Customer2"/>
+		<column name = "VENDORID" valueNumeric = "3"/>
+	</insert>
+
+	<insert tableName = "CONCESSION">
+            	<column name = "NAME" value = "Concession4Vendor4Customer2"/>
+		<column name = "VENDORID" valueNumeric = "4"/>
+	</insert>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+   	
+
+	<insert tableName = "VENUE">
+           	<column name = "ACTIVE" valueBoolean = "1"/>
+           	<column name = "DISPLAYNAME" value = "Venue1"/>
+		<column name = "RESTAURANTSSERVINGALLSECTIONS" valueBoolean = "1"/>
+
+
+	Value of double????
+		<column name = "LATITUDE" valueDoublePrecision = "16.3"/>
+		<column name = "LONGITUDE" valueDoublePrecision = "46.2"/>
+		<column name = "VERSION" value ="1.0"/>
+
+       </insert>  
+
+
+
+
+	<insert tableName = "RESTAURANT">
+            	<column name = "ACTIVE" valueBoolean = "1"/>
+		<column name = "DISPLAYNAME" value = "Restaurant1"/>
+		<column name = "DETAILEDTEXT" value = "This is Rest. 1"/>
+		<column name = "DISPLAYORDER" valueNumeric = "30"/>
+		<column name = "IMAGEURL" value = "www.test1.com"/>
+           	<column name = "VENUEID" valueNumeric = "1" />
+       </insert>  
+
+
+
+
+       
+	<insert tableName = "RESTAURANTLOCATION">
+            	<column name = "SECTIONNUMBER" value = "1A"/>
+		<column name = "SERVINGSECTION" value = "1B"/>
+	</insert>
+
+
+
+
+	<insert tableName = "MENU">
+            	<column name = "RESTAURANTID" valueNumeric = "1"/>
+		<column name = "CURRENCY" value = "USD"/>
+	</insert>
+
+
+
+
+	
+	<insert tableName = "MENUITEM">
+            	<column name = "ACTIVE" valueBoolean = "1"/>
+		<column name = "DISPLAYNAME" value = "Restaurant1"/>
+		<column name = "DETAILEDTEXT" value = "item1"/>
+		<column name = "DISPLAYORDER" valueNumeric ="1"/>
+		<column name = "IMAGEURL" value = "www.item1.com"/>
+
+ 			double
+		<column name = "PRICE" value = "1.25"/>
+
+		<column name = "MENUSECTIONID" value = "1"/>
+	</insert>
+
+
+
+
+
+	<insert tableName = "MENUSECTION">
+            	<column name = "ACTIVE" valueBoolean = "1"/>
+		<column name = "DISPLAYNAME" value = "Menu1"/>
+		<column name = "DISPLAYORDER" value ="1"/>
+		<column name = "IMAGEURL" value = "www.menusection1.com"/>
+		<column name = "MENUID" valueNumeric = "1"/>
+	</insert>
+
+       
+-->
+
+
+
+    </changeSet>
+</databaseChangeLog>

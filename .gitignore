@@ -92,3 +92,5 @@ cm/hae-db-management/bin/hae/log/logmirror.ctrl
 .DS_Store
 
 source/ui/ios/ClientApplication/ClientApplication.xcodeproj/project.pbxproj
+
+cm/hae-db-management/bin/HAE/dbex.lck

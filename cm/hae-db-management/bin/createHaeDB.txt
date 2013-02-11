@@ -1,1 +1,1 @@
-CONNECT 'jdbc:derby://localhost:1527/HAE;create=true;user=hae;password=hae123';
+CONNECT 'jdbc:derby://localhost:1527/hae;create=true;user=hae;password=hae123';

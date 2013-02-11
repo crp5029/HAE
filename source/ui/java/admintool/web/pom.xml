@@ -52,7 +52,7 @@
     		      <webResources>
       			 <resource>
        			     <filtering>true</filtering>
-        		     <directory>../../html5/HAEAdminTool/AdminToolGUI/</directory>
+        		     <directory>../../html5/HaeAdminTool/AdminToolGUI/</directory>
        			     <includes>
 				<include>*.html</include>
                    		<include>**/*.js</include>

@@ -19,11 +19,13 @@
 
 @synthesize window;
 @synthesize uiTabBarController;
+@synthesize userid;
+@synthesize password;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Initialize RestKit
-    RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
+   /* RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
     [userMapping addAttributeMappingsFromDictionary:@{
      @"userid": @"userid",
      @"password": @"password",
@@ -35,10 +37,116 @@
                                                                                         statusCodes:
                                                                                         RKStatusCodeIndexSetForClass
                                                                                         (RKStatusCodeClassSuccessful)];
-    NSURL *URL = [NSURL URLWithString:@"http://localhost:8080/"];
+    NSURL *URL = [NSURL URLWithString:@"http://localhost:8080/hae/admintool/authenticateUser"];
    // RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    */
     
     
+    
+    
+  
+    //NEWWWWWWWWW
+    
+    User *aUser = [User new];
+    aUser.userid = @"fsadmin";
+    aUser.password = @"test123";
+  /*
+    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:[aUser userid], @"userid", [aUser password], @"password",nil]
+    ;
+    NSError *err = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:NSJSONWritingPrettyPrinted error:&err];
+    NSString *jsonStr = nil;
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", err);
+    } else {
+        jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+
+  */  
+    
+    //let AFNetworking manage the activity indicator
+    //[AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    // Initialize HTTPClient
+   // NSURL *baseURL = [NSURL URLWithString:@"http://localhost:8080"];
+   // AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    //we want to work with JSON-Data
+   // [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
+    
+    
+    // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
+    RKObjectMapping *postUserMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
+    //[userMapping addAttributeMappingsFromArray:@[ @"userid", @"password"]];
+    [postUserMapping addAttributeMappingsFromDictionary:@{
+     @"userid" : @"userid",
+     @"password" : @"password",
+     }];
+
+    // Now configure the request descriptor
+    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postUserMapping objectClass:[User class] rootKeyPath:nil];
+    
+    
+    //Configure Response mapping
+    RKObjectMapping *responseUserMapping = [RKObjectMapping mappingForClass:[User class]];
+    [responseUserMapping addAttributeMappingsFromDictionary:@{
+     @"userid" : @"userid",
+     @"password": @"password",
+     @"isAdmin": @"isAdmin"}];
+    
+    //Configure Response descriptor
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:nil keyPath:@"Response" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    
+    
+    RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
+    [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"error" toKeyPath:@"errorMessage"]];
+    
+    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError);
+    RKResponseDescriptor *errorDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:errorMapping pathPattern:nil keyPath:@"errors" statusCodes:statusCodes];
+
+    
+    
+
+    
+
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:8080"]];
+    [objectManager addRequestDescriptor:requestDescriptor];
+    [objectManager addResponseDescriptor:responseDescriptor];
+    [objectManager addResponseDescriptor:errorDescriptor];
+    NSMutableURLRequest *request = [objectManager requestWithObject:aUser method:RKRequestMethodPOST path:@"/hae/admintool/authenticateUser" parameters:nil];
+    
+    
+    
+ /*   AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost:8080"]];
+    [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
+    [client setParameterEncoding:AFJSONParameterEncoding];
+   */ 
+    
+    RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
+                                                                                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                                                       NSLog(@"Success block: %@", mappingResult);
+                                                                                   } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
+                                                                                       NSLog(@"Failed with error: %@", [error localizedDescription]);
+                                                                                   }];
+    
+    //[RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/plain"];
+    
+    [objectManager enqueueObjectRequestOperation:operation];
+    
+    
+    //[[RKObjectManager sharedManager] postObject:aUser path:@"http://localhost:8080/hae/admintool/authenticateUser" parameters:nil success:nil failure:nil];
+    //This method takes care of both the serialization and object mapping
+   // [[RKObjectManager sharedManager].mappingProvider registerMapping:objectMapping withRootKeyPath:@"user"];
+
+    
+   //NEWWWWWW
+    
+    
+    
+    
+    
+    
+    
+ /*
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
     [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
@@ -48,12 +156,12 @@
     }];
     
     [objectRequestOperation start];
-    
+ */   
     
     
     
     // Enable Activity Indicator Spinner
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+   // [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
     // Initialize managed object store
    /* NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];

@@ -12,5 +12,6 @@
 
 @synthesize userid;
 @synthesize password;
+@synthesize isAdmin;
 
 @end

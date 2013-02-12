@@ -17,4 +17,6 @@
 /*@property (nonatomic, strong) NSMutableArray *guestServices;
 @property (nonatomic, strong) GuestService *guestService;
 */
+@property (nonatomic, copy) NSString* userid;
+@property (nonatomic, copy) NSString* password;
 @end

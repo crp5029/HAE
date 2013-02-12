@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSString *userid;
 @property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) NSString *isAdmin;
 
 @end

@@ -82,7 +82,7 @@
         jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
     
-    NSURL *aURL = [NSURL URLWithString: @"http://localhost:8080/fasserve/admintool/authenticateUser"];
+    NSURL *aURL = [NSURL URLWithString: @"http://localhost:8080/hae/admintool/authenticateUser"];
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:aURL];

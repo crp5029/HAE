@@ -24,26 +24,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Initialize RestKit
-   /* RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[User class]];
-    [userMapping addAttributeMappingsFromDictionary:@{
-     @"userid": @"userid",
-     @"password": @"password",
-     }];
-    
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping
-                                                                                        pathPattern:nil
-                                                                                        keyPath:@"user"
-                                                                                        statusCodes:
-                                                                                        RKStatusCodeIndexSetForClass
-                                                                                        (RKStatusCodeClassSuccessful)];
-    NSURL *URL = [NSURL URLWithString:@"http://localhost:8080/hae/admintool/authenticateUser"];
-   // RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
-    */
-    
-    
-    
-    
   
     //NEWWWWWWWWW
     
@@ -64,15 +44,6 @@
 
   */  
     
-    //let AFNetworking manage the activity indicator
-    //[AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    // Initialize HTTPClient
-   // NSURL *baseURL = [NSURL URLWithString:@"http://localhost:8080"];
-   // AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
-    //we want to work with JSON-Data
-   // [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
-    
     
     // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
     RKObjectMapping *postUserMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
@@ -91,10 +62,12 @@
     [responseUserMapping addAttributeMappingsFromDictionary:@{
      @"userid" : @"userid",
      @"password": @"password",
-     @"isAdmin": @"isAdmin"}];
+     @"isAdmin": @"isAdmin",
+     @"vendor": @"vendor",
+     @"customer":@"customer"}];
     
     //Configure Response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:nil keyPath:@"Response" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:nil keyPath:@"users" statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     
     RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
@@ -103,23 +76,15 @@
     NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError);
     RKResponseDescriptor *errorDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:errorMapping pathPattern:nil keyPath:@"errors" statusCodes:statusCodes];
 
-    
-    
-
-    
 
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:8080"]];
     [objectManager addRequestDescriptor:requestDescriptor];
     [objectManager addResponseDescriptor:responseDescriptor];
     [objectManager addResponseDescriptor:errorDescriptor];
+    objectManager.requestSerializationMIMEType=RKMIMETypeJSON;
+    
     NSMutableURLRequest *request = [objectManager requestWithObject:aUser method:RKRequestMethodPOST path:@"/hae/admintool/authenticateUser" parameters:nil];
     
-    
-    
- /*   AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost:8080"]];
-    [client setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
-    [client setParameterEncoding:AFJSONParameterEncoding];
-   */ 
     
     RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
                                                                                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
@@ -128,83 +93,37 @@
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                    }];
     
-    //[RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/plain"];
-    
     [objectManager enqueueObjectRequestOperation:operation];
-    
-    
-    //[[RKObjectManager sharedManager] postObject:aUser path:@"http://localhost:8080/hae/admintool/authenticateUser" parameters:nil success:nil failure:nil];
-    //This method takes care of both the serialization and object mapping
-   // [[RKObjectManager sharedManager].mappingProvider registerMapping:objectMapping withRootKeyPath:@"user"];
 
     
-   //NEWWWWWW
     
+  /*  WORKING REST CALL
+   NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:[aUser userid], @"userid", [aUser password], @"password",nil];
+    NSError *err = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:NSJSONWritingPrettyPrinted error:&err];
+    NSString *jsonStr = nil;
+    if (! jsonData) {
+        NSLog(@"Got an error: %@", err);
+    } else {
+        jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
     
+    NSURL *aURL = [NSURL URLWithString: @"http://localhost:8080/hae/admintool/authenticateUser"];
     
+    NSMutableURLRequest *requestTmp = [[NSMutableURLRequest alloc] init];
+    [request setURL:aURL];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:jsonData];
     
+    // print json:
+    NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:requestTmp delegate:self];
+    [connection start];
     
-    
- /*
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    RKObjectRequestOperation *objectRequestOperation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
-    [objectRequestOperation setCompletionBlockWithSuccess:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        RKLogInfo(@"Load collection of Users: %@", mappingResult.array);
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        RKLogError(@"Operation failed with error: %@", error);
-    }];
-    
-    [objectRequestOperation start];
- */   
-    
-    
-    
-    // Enable Activity Indicator Spinner
-   // [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    // Initialize managed object store
-   /* NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    objectManager.managedObjectStore = managedObjectStore;
-    */
-    // Setup our object mappings
-    /**
-     Mapping by entity. Here we are configuring a mapping by targetting a Core Data entity with a specific
-     name. This allows us to map back Twitter user objects directly onto NSManagedObject instances --
-     there is no backing model class!
-     */
-    
-    
-    
-    /*   GOOD CODE
-    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"User" inManagedObjectStore:managedObjectStore];
-    userMapping.identificationAttributes = @[ @"userid" ];
-    [userMapping addAttributeMappingsFromDictionary:@{
-     @"id": @"userid",
-     @"pwd": @"password",
-     }];
-     
-     
-     
-     
-     */
-    
-    // If source and destination key path are the same, we can simply add a string to the array
-   //******* [userMapping addAttributeMappingsFromArray:@[ @"name" ]];
-    
-    
-    // Register our mappings with the provider
-    
-  /*  RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping
-                                                                                    pathPattern:nil
-                                                                                    keyPath:@"user"
-                                                                                    statusCodes:
-                                                                                    RKStatusCodeIndexSetForClass
-                                                                                    (RKStatusCodeClassSuccessful)];
-   */
-    //[objectManager addResponseDescriptor:responseDescriptor];
-    //self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreenI boundsSc autorelease]; ]]]
+  */
     
     
     

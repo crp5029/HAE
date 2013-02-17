@@ -49,7 +49,7 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
         
         if (entity != null)
         {
-           user = userFactory.createUser(entity);
+           user = userFactory.createUser(entity, user);
         }
         
         return user;

@@ -29,25 +29,11 @@
     
     User *aUser = [User new];
     aUser.userid = @"fsadmin";
-    aUser.password = @"test123";
-  /*
-    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:[aUser userid], @"userid", [aUser password], @"password",nil]
-    ;
-    NSError *err = nil;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:NSJSONWritingPrettyPrinted error:&err];
-    NSString *jsonStr = nil;
-    if (! jsonData) {
-        NSLog(@"Got an error: %@", err);
-    } else {
-        jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-
-  */  
+    aUser.password = @"test123"; 
     
     
     // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
     RKObjectMapping *postUserMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
-    //[userMapping addAttributeMappingsFromArray:@[ @"userid", @"password"]];
     [postUserMapping addAttributeMappingsFromDictionary:@{
      @"userid" : @"userid",
      @"password" : @"password",
@@ -67,7 +53,7 @@
      @"customer":@"customer"}];
     
     //Configure Response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:nil keyPath:@"users" statusCodes:[NSIndexSet indexSetWithIndex:200]];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:@"/hae/admintool/authenticateUser" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     
     RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
@@ -88,14 +74,16 @@
     
     RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
                                                                                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                                                       User *aAUser = [User new];
+                                                                                       NSArray* statuses = [mappingResult array];
+                                                                                       aAUser = statuses.lastObject;
+                                                                                       NSLog(@"Loaded statuses: %@", aAUser.isAdmin);
                                                                                        NSLog(@"Success block: %@", mappingResult);
                                                                                    } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                    }];
     
     [objectManager enqueueObjectRequestOperation:operation];
-
-    
     
   /*  WORKING REST CALL
    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:[aUser userid], @"userid", [aUser password], @"password",nil];
@@ -122,10 +110,7 @@
     
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:requestTmp delegate:self];
     [connection start];
-    
-  */
-    
-    
+    */
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
 	UINavigationController *navigationController = [[tabBarController viewControllers]objectAtIndex:2];

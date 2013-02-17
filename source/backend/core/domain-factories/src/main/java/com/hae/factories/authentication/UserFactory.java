@@ -32,9 +32,8 @@ public class UserFactory {
      * @param entity
      * @return 
      */
-    public User createUser(UserEntity entity)
+    public User createUser(UserEntity entity, User user)
     {
-        User user = new UserImpl();
         UserMapper mapper = new UserMapper();
         mapper.mapToDomain(entity, user);
         return user;

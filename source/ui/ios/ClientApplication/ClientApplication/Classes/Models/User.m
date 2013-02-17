@@ -13,5 +13,7 @@
 @synthesize userid;
 @synthesize password;
 @synthesize isAdmin;
+@synthesize vendor;
+@synthesize customer;
 
 @end

@@ -13,5 +13,7 @@
 @property (nonatomic, strong) NSString *userid;
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *isAdmin;
+@property (nonatomic, strong) NSString *vendor;
+@property (nonatomic, strong) NSString *customer;
 
 @end

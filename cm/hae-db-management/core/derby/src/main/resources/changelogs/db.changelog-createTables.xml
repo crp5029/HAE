@@ -26,6 +26,13 @@
             <column name = "NAME" type = "varchar(100)"/>
         </createTable>
         
+        <createTable tableName = "MAINTENANCE">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "DESCRIPTION" type = "varchar(300)"/>
+        </createTable> 
+
         <createTable tableName = "VENDOR">
             <column name = "id" type = "bigint" autoIncrement="true">
                 <constraints primaryKey = "true" nullable = "false"/>

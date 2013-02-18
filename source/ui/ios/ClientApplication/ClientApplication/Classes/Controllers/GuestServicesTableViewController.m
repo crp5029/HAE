@@ -171,12 +171,12 @@ testLabel.text = aService.name;
         maintenanceServices = [[NSMutableArray alloc] init];
         
         maintenanceService = [[MaintenanceService alloc] init];
-        maintenanceService.name = @"Turn Down Service";
+        maintenanceService.name = @"New Request";
         maintenanceService.enabled = YES;
         [maintenanceServices addObject:maintenanceService];
         
         maintenanceService = [[MaintenanceService alloc] init];
-        maintenanceService.name = @"Linen Replacement";
+        maintenanceService.name = @"Maintenance History";
         maintenanceService.enabled = YES;
         [maintenanceServices addObject:maintenanceService];
         

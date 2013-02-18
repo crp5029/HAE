@@ -8,19 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "RoomMaintenanceTableViewController.h"
-#import "User.h"
+#import "MaintenanceRequest.h"
 #import <RestKit/RestKit.h>
 
-@interface GuestServiceConfirmationVC : UIViewController
+@interface GuestServiceConfirmationVC : UIViewController <UITextViewDelegate> {
+    UITextView *txtViewData;
+    
+}
 
 @property (strong, nonatomic) IBOutlet UIButton *testButton;
 
 @property (strong, nonatomic) IBOutlet UILabel *testLabel;
 
 @property (nonatomic, strong) MaintenanceService *maintenanceService;
-@property (nonatomic, strong) User *aUser;
+@property (nonatomic, strong) MaintenanceRequest *aRequest;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 - (IBAction)testAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextView *txtViewData;
 
 @end

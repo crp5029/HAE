@@ -20,15 +20,20 @@ import com.hae.data.repositories.MaintenanceRepository;
 import com.hae.domain.maintenance.MaintenanceRequest;
 import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
 import com.hae.entities.maintenance.MaintenanceEntity;
+import com.hae.factories.maintenanceRequest.MaintenanceRequestFactory;
 //import com.hae.factories.authentication.UserFactory;
 import com.hae.maintenance.service.api.NewTicketService;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.hae.daos.api.MaintenanceRequestDao;
+import com.hae.daos.impl.MaintenanceRequestDaoImpl;
 
 /**
  *
@@ -37,77 +42,24 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("newMaintenanceRequest")
 public class NewTicketServiceImpl implements NewTicketService {
 
-    protected EntityManager em;
-    private MaintenanceRequest request;
+    private static final Logger LOGGER = LoggerFactory.getLogger(NewTicketServiceImpl.class);
     
- /*   @Autowired
-    UserFactory userFactory; 
- */   
+    @Autowired
+    private MaintenanceRequestFactory maintenanceRequestFactory;
     
     @Autowired
     private MaintenanceRepository maintenanceRepository;
     
     @Override
-    public void addNewMaintenanceRequest(MaintenanceRequest request)
+    public void addNewMaintenanceRequest(MaintenanceRequest description)
     {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("NewTicketServiceImpl");
-        em = entityManagerFactory.createEntityManager();
-        em.getTransaction().begin();
-        this.request = request;
-        em.persist(this.request);
-        em.getTransaction().commit();
+        MaintenanceRequestDao requestDao = new MaintenanceRequestDaoImpl();
+        MaintenanceRequestFactory aFactory = new MaintenanceRequestFactory();
+        MaintenanceRequest request = new MaintenanceRequestImpl();
+        request = description;
+        requestDao.save(aFactory.createRequest(description));
         
-        em.close();
-        entityManagerFactory.close();
-    }
-
-    public EntityManager getEntityManager() 
-    {
-        return em;
+        
     }
     
-    @PersistenceContext
-    public void setEntityManager(EntityManager entityManager) 
-    {
-        this.em = entityManager;
-    }
-
-  /*  @Transactional
-    public List<Car> getCars() throws DataAccessException 
-    {
-        Query query = getEntityManager().createQuery("select c from Car c");
-        List<Car> resultList = query.getResultList();
-        return resultList;
-    }
-
-    @Transactional
-    public Car getCar(Long carId) throws DataAccessException 
-    {
-        return getEntityManager().find(Car.class, carId);
-    }
-*/
-
-        
-  /*      
-        if (entity != null)
-        {
-           user = userFactory.createUser(entity, user);
-        }
-        
-        return user;
-    }
-      
-    */
-        //return null;
-    }
-    
-    /**
-     * Retrieve User from the DB
-     * @param userid
-     * @param password
-     * @return 
-     */
- /*   private MaintenanceEntity getMaintenance(MaintenanceRequest description) {
-       return maintenanceRepository.addNewRequest(description);
-    }*/
-
+}

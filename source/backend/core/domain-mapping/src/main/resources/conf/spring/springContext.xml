@@ -26,6 +26,9 @@
     
     <bean id="CustomerMapper" class="com.hae.domain.mapping.customer.CustomerMapper">
     </bean>
+    
+    <bean id="MaintenanceRequestMapper" class="com.hae.domain.mapping.maintenanceRequest.MaintenanceRequestMapper">
+    </bean>
    
    
 </beans>

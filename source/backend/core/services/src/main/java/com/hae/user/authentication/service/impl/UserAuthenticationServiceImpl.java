@@ -56,9 +56,6 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
         
     }
     
-   
-    
-    
     /**
      * Retrieve User from the DB
      * @param userid

@@ -32,6 +32,9 @@
     
     <bean id="VendorFactory" class="com.hae.factories.vendor.VendorFactory">
     </bean>
+    
+    <bean id="MaintenanceRequestFactory" class="com.hae.factories.maintenanceRequest.MaintenanceRequestFactory">
+    </bean>
    
    
 </beans>

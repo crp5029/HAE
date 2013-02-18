@@ -12,6 +12,6 @@ import com.hae.domain.maintenance.MaintenanceRequest;
  */
 public interface NewTicketService {
     
-     public void addNewMaintenanceRequest(MaintenanceRequest request);
+     public void addNewMaintenanceRequest(MaintenanceRequest description);
     
 }

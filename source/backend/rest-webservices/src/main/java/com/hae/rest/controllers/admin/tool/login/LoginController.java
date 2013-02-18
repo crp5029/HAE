@@ -47,10 +47,7 @@ public class LoginController {
     @ResponseBody
     User authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) 
     {
-        System.out.println("TESTTTTTTTTT!");
         response.setStatus(HttpServletResponse.SC_OK);
-        System.out.println(context.getUserid());
-        System.out.println(context.getPassword());
         return userAuthService.authenticateUser(context.getUserid(), context.getPassword());
     }
     

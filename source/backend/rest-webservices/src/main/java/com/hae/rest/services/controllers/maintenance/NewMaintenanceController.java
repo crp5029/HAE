@@ -45,9 +45,7 @@ public class NewMaintenanceController {
     @ResponseBody
     MaintenanceRequest processNewMaintenanceTicket(@RequestBody MaintenanceRequestImpl context, HttpServletResponse response) 
     {
-        System.out.println("TESTTTTTTTTT!");
         response.setStatus(HttpServletResponse.SC_OK);
-        System.out.println(context.getDescription());
         newTicketService.addNewMaintenanceRequest(context);
         return null;
     }

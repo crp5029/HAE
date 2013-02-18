@@ -68,20 +68,6 @@
         RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postRequestMapping objectClass:[MaintenanceRequest class] rootKeyPath:nil];
         
         
-        //Configure Response mapping
-        /*RKObjectMapping *responseUserMapping = [RKObjectMapping mappingForClass:[MaintenanceRequest class]];
-         [responseUserMapping addAttributeMappingsFromDictionary:@{
-         @"userid" : @"userid",
-         @"password": @"password",
-         @"isAdmin": @"isAdmin",
-         @"vendor": @"vendor",
-         @"customer":@"customer"}];
-         */
-        
-        //Configure Response descriptor
-        //RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:@"/hae/admintool/authenticateUser" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
-        
-        
         RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
         [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"error" toKeyPath:@"errorMessage"]];
         
@@ -100,66 +86,11 @@
         
         RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
                                                                                        success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                                                           //User *aAUser = [User new];
-                                                                                           //NSArray* statuses = [mappingResult array];
-                                                                                           //aAUser = statuses.lastObject;
-                                                                                           //NSLog(@"Loaded statuses: %@", aAUser.isAdmin);
                                                                                            NSLog(@"Success block: %@", mappingResult);
                                                                                        } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                                                                                            NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                        }];
         
         [objectManager enqueueObjectRequestOperation:operation];
-    //[testLabel setText:[self.maintenanceService name]];
-  /*  aUser = [[User alloc] init];;
-    aUser.userid = @"fsadmin";
-    aUser.password = @"test123";
-    
-    NSDictionary *newDatasetInfo = [NSDictionary dictionaryWithObjectsAndKeys:[aUser userid], @"userid", [aUser password], @"password",nil]
-    ;
-    NSError *err = nil;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:newDatasetInfo options:NSJSONWritingPrettyPrinted error:&err];
-    NSString *jsonStr = nil;
-    if (! jsonData) {
-        NSLog(@"Got an error: %@", err);
-    } else {
-        jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }
-    
-    NSURL *aURL = [NSURL URLWithString: @"http://localhost:8080/hae/admintool/authenticateUser"];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:aURL];
-    [request setHTTPMethod:@"POST"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setHTTPBody:jsonData];
-    
-    // print json:
-    NSLog(@"JSON summary: %@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-    
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
-  */
-    
-}
-
-//Note: you cannot change the delegate method signatures, as you did (your's returns an NSData object)
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
-   // [self.responseData appendData:data]
-   // [self.responseData appendData:data]
-    //[testLabel setText:@"WORKED"];
-    
-    NSMutableData *responseData = [[NSMutableData alloc] init];
-    
-    
-   // [testLabel setText:@"WORKED"];
-    //data
-    
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    //Now that the connection was successfully terminated, do the real work.
 }
 @end

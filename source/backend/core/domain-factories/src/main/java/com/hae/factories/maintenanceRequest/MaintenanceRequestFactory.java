@@ -5,7 +5,6 @@
 package com.hae.factories.maintenanceRequest;
 
 import com.hae.domain.maintenance.MaintenanceRequest;
-import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
 import com.hae.domain.mapping.maintenanceRequest.MaintenanceRequestMapper;
 import com.hae.entities.maintenance.MaintenanceEntity;
 

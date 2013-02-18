@@ -18,22 +18,12 @@ package com.hae.maintenance.service.impl;
 
 import com.hae.data.repositories.MaintenanceRepository;
 import com.hae.domain.maintenance.MaintenanceRequest;
-import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
-import com.hae.entities.maintenance.MaintenanceEntity;
 import com.hae.factories.maintenanceRequest.MaintenanceRequestFactory;
-//import com.hae.factories.authentication.UserFactory;
 import com.hae.maintenance.service.api.NewTicketService;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import com.hae.daos.api.MaintenanceRequestDao;
-import com.hae.daos.impl.MaintenanceRequestDaoImpl;
 
 /**
  *
@@ -53,13 +43,7 @@ public class NewTicketServiceImpl implements NewTicketService {
     @Override
     public void addNewMaintenanceRequest(MaintenanceRequest description)
     {
-        MaintenanceRequestDao requestDao = new MaintenanceRequestDaoImpl();
-        MaintenanceRequestFactory aFactory = new MaintenanceRequestFactory();
-        MaintenanceRequest request = new MaintenanceRequestImpl();
-        request = description;
-        requestDao.save(aFactory.createRequest(description));
-        
-        
+        maintenanceRepository.save(maintenanceRequestFactory.createRequest(description));   
     }
     
 }

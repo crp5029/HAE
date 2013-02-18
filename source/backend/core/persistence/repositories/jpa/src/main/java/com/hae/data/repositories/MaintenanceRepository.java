@@ -17,17 +17,14 @@
 package com.hae.data.repositories;
 
 import com.hae.entities.maintenance.MaintenanceEntity;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author Chris Purtell
  */
 public interface MaintenanceRepository extends CrudRepository<MaintenanceEntity, Long>{
-    
-    @Query("select u from MaintenanceEntity u where u.description = ?1")
-    MaintenanceEntity addNewRequest(String description);
     
 
 }

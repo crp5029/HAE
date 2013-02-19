@@ -5,6 +5,7 @@
 package com.hae.maintenance.service.api;
 
 import com.hae.domain.maintenance.MaintenanceRequest;
+import java.util.List;
 
 /**
  *
@@ -13,5 +14,6 @@ import com.hae.domain.maintenance.MaintenanceRequest;
 public interface NewTicketService {
     
      public void addNewMaintenanceRequest(MaintenanceRequest description);
+     public List<MaintenanceRequest> getMaintenanceRequests();
     
 }

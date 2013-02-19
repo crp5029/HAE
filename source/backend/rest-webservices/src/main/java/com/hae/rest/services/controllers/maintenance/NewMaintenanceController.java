@@ -19,6 +19,7 @@ package com.hae.rest.services.controllers.maintenance;
 import com.hae.domain.maintenance.MaintenanceRequest;
 import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
 import com.hae.maintenance.service.api.NewTicketService;
+import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -48,6 +49,17 @@ public class NewMaintenanceController {
         response.setStatus(HttpServletResponse.SC_OK);
         newTicketService.addNewMaintenanceRequest(context);
         return null;
+    }
+    
+    @RequestMapping(value = "/admintool/getMaintenanceRequests", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    List<MaintenanceRequest> getMaintenanceRequests(@RequestBody MaintenanceRequestImpl context, HttpServletResponse response) 
+    {
+        response.setStatus(HttpServletResponse.SC_OK);
+        List<MaintenanceRequest> aList = newTicketService.getMaintenanceRequests();
+     
+        return aList;
     }
             
 }

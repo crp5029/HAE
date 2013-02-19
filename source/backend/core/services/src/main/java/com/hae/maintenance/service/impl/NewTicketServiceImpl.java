@@ -18,8 +18,12 @@ package com.hae.maintenance.service.impl;
 
 import com.hae.data.repositories.MaintenanceRepository;
 import com.hae.domain.maintenance.MaintenanceRequest;
+import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
+import com.hae.entities.maintenance.MaintenanceEntity;
 import com.hae.factories.maintenanceRequest.MaintenanceRequestFactory;
 import com.hae.maintenance.service.api.NewTicketService;
+import java.util.ArrayList;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +48,22 @@ public class NewTicketServiceImpl implements NewTicketService {
     public void addNewMaintenanceRequest(MaintenanceRequest description)
     {
         maintenanceRepository.save(maintenanceRequestFactory.createRequest(description));   
+    }
+    
+    @Override
+    public List<MaintenanceRequest> getMaintenanceRequests()
+    {
+        ArrayList<MaintenanceRequest> maintenanceRequests = new ArrayList<MaintenanceRequest>();
+        List<MaintenanceEntity> maintenanceRequestList = (List<MaintenanceEntity>) maintenanceRepository.findAll();
+        
+        for (MaintenanceEntity aEntity : maintenanceRequestList)
+        {
+            MaintenanceRequest request = new MaintenanceRequestImpl();
+            request = maintenanceRequestFactory.getRequest(aEntity, request);
+            maintenanceRequests.add(request);
+        }
+        
+        return maintenanceRequests;
     }
     
 }

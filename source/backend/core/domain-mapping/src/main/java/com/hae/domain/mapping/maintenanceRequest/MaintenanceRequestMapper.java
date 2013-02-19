@@ -31,7 +31,12 @@ public class MaintenanceRequestMapper implements Mapper {
     
     
     @Override
-    public <E, D extends FSDomain> void mapToDomain(E entity, D domain) {
+    public <E, D extends FSDomain> void mapToDomain(E entity, D domain) 
+    {
+        MaintenanceEntity maintenanceEntity = (MaintenanceEntity) entity;
+        MaintenanceRequest maintenanceDomain = (MaintenanceRequest) domain;
+        maintenanceDomain.setId(maintenanceEntity.getId());
+        maintenanceDomain.setDescription(maintenanceEntity.getDescription());
     }
 
      

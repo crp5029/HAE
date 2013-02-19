@@ -25,6 +25,9 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 - (IBAction)testAction:(id)sender;
+
 @property (strong, nonatomic) IBOutlet UITextView *txtViewData;
+//@property (weak, nonatomic) IBOutlet UIButton *testGet;
+- (IBAction)testGet:(UIButton *)sender;
 
 @end

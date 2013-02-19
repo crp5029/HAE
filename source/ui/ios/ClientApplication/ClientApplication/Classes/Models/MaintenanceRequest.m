@@ -10,6 +10,7 @@
 
 @implementation MaintenanceRequest
 
+@synthesize tableId;
 @synthesize description;
 
 @end

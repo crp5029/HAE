@@ -27,4 +27,11 @@ public class MaintenanceRequestFactory {
         return entity;
     }
     
+    public MaintenanceRequest getRequest(MaintenanceEntity entity, MaintenanceRequest maintenanceRequest)
+    {
+        MaintenanceRequestMapper mapper = new MaintenanceRequestMapper();
+        mapper.mapToDomain(entity, maintenanceRequest);
+        return maintenanceRequest;
+    }
+    
 }

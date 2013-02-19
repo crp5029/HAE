@@ -10,6 +10,7 @@
 
 @interface MaintenanceRequest : NSObject
 
+@property (nonatomic, strong) NSString *tableId;
 @property (nonatomic, strong) NSString *description;
 
 @end

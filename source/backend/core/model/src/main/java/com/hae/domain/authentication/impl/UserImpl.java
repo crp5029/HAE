@@ -24,25 +24,20 @@ import com.hae.domain.authentication.User;
  */
 public class UserImpl implements User {
     
-    
+    private long id;
     private String userid;
     private String password;
-    private boolean isAdmin;
-    
-    //Releationships
-    
-    
 
     @Override
-    public boolean isIsAdmin() {
-        return isAdmin;
+    public long getId() {
+        return id;
     }
 
     @Override
-    public void setIsAdmin(boolean isAdmin) {
-        this.isAdmin = isAdmin;
+    public void setId(long id) {
+        this.id = id;
     }
-
+    
     @Override
     public String getPassword() {
         return password;

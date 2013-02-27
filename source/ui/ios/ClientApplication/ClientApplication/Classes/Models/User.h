@@ -10,8 +10,8 @@
 
 @interface User : NSObject
 
+@property (nonatomic, strong) NSString *tableId;
 @property (nonatomic, strong) NSString *userid;
 @property (nonatomic, strong) NSString *password;
-@property (nonatomic, strong) NSNumber *isAdmin;
 
 @end

@@ -14,7 +14,6 @@
             </column>
             <column name = "USERID" type = "varchar(250)"/>
             <column name = "PASSWORD" type = "varchar(25)"/>
-            <column name = "ISADMIN" type = "INT"/>  
         </createTable>
 
         <createTable tableName = "CUSTOMER">

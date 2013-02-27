@@ -17,6 +17,8 @@
 @synthesize userIdText;
 @synthesize sessionKeyText;
 @synthesize passwordText;
+@synthesize aUser;
+@synthesize aRequest;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,6 +34,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    RKLogConfigureByName("RestKit", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,26 +50,25 @@
 }
 
 - (IBAction)loginButton:(id)sender {
-    User *aUser = [User new];
+    aUser = [User new];
     [aUser setUserid:[userIdText text]];
     [aUser setPassword:[passwordText text]];
-    
-    // Configure a request mapping for our class.
+    // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
     RKObjectMapping *postRequestMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
     [postRequestMapping addAttributeMappingsFromDictionary:@{
      @"userid" : @"userid",
      @"password" : @"password",
      }];
     
-    // Configure the request descriptor
+    // Now configure the request descriptor
     RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postRequestMapping objectClass:[User class] rootKeyPath:nil];
     
-    //Configure Response mapping
     RKObjectMapping *responseUserMapping = [RKObjectMapping mappingForClass:[User class]];
     [responseUserMapping addAttributeMappingsFromDictionary:@{
+     @"id" : @"tableId",
      @"userid" : @"userid",
-     @"password": @"password",
-     @"isAdmin": @"isAdmin"}];
+     @"password" : @"password"
+     }];
     
     //Configure Response descriptor
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:@"/hae/admintool/authenticateUser" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
@@ -85,29 +89,27 @@
     
     NSMutableURLRequest *request = [objectManager requestWithObject:aUser method:RKRequestMethodPOST path:@"/hae/admintool/authenticateUser" parameters:nil];
     
-    
     RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
                                                                                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                                                        User *aAUser = [User new];
                                                                                        NSArray* statuses = [mappingResult array];
+                                                                                       NSLog(@"Statuses: %@", statuses);
                                                                                        aAUser = statuses.lastObject;
-                                                                                       NSLog(@"User Name: %@", statuses);
-                                                                                       NSLog(@"Success block: %@", mappingResult);
+                                                                                       NSLog(@"ID: %@", [aAUser tableId]);
+                                                                                       NSLog(@"UserName: %@", [aAUser userid]);
+                                                                                       NSLog(@"Password: %@", [aAUser password]);
+                                                                                       
+                                                                                       /* NSLog(@"ARRAY SIZE %u", statuses.count);
+                                                                                        NSLog(@"ID: %@", aARequest.tableId);
+                                                                                        NSLog(@"DESCRIPTION: %@", aARequest.description);*/
+                                                                                        NSLog(@"Mapping Result: %@", mappingResult);
+                                                                                       
                                                                                    } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                    }];
     
+    operation.targetObject = nil;
     [objectManager enqueueObjectRequestOperation:operation];
-    
-  /*
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-	UINavigationController *navigationController = [[tabBarController viewControllers]objectAtIndex:2];
-	//GuestServicesTableViewController *guestServicesTableViewController = [[navigationController viewControllers]objectAtIndex:0];
-   */ 
-    // Override point for customization after application launch.
-    //return YES;
-
-    
     
 }
 @end

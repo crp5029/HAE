@@ -26,10 +26,14 @@ import com.hae.domain.vendor.Vendor;
  */
 public interface User extends FSDomain {
 
+    public long getId();
+    public void setId(long id);
     public String getPassword();
     public void setPassword(String password);
     public String getUserid();
     public void setUserid(String userid);
-    public boolean isIsAdmin();
-    public void setIsAdmin(boolean isAdmin);   
+ /*   public boolean isIsAdmin();
+    public void setIsAdmin(boolean isAdmin); 
+    * 
+    */
 }

@@ -35,9 +35,9 @@ public class UserMapper implements Mapper {
         
         UserEntity user = (UserEntity) entity;
         User userDomain = (User) domain;
+        userDomain.setId(user.getId());
         userDomain.setPassword(user.getPassword());
         userDomain.setUserid(user.getUserid());
-        userDomain.setIsAdmin(user.isIsAdmin());
         
        /* if (user.getCustomer() != null)
         {

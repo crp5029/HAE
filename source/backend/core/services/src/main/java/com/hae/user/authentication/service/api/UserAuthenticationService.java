@@ -17,6 +17,7 @@
 package com.hae.user.authentication.service.api;
 
 import com.hae.domain.authentication.User;
+import java.util.List;
 
 /**
  *
@@ -25,7 +26,7 @@ import com.hae.domain.authentication.User;
 public interface UserAuthenticationService {
 
     
-    public User authenticateUser(String userid, String Password);
+    public List<User> authenticateUser(String userid, String Password);
     
     
 }

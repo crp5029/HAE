@@ -34,7 +34,6 @@ public class UserEntity implements Serializable {
     private Long id;
     private String userid;
     private String password;
-    private boolean isAdmin;
     
   /*  
     @ManyToOne
@@ -54,13 +53,6 @@ public class UserEntity implements Serializable {
         this.id = id;
     }
 
-    public boolean isIsAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(boolean isAdmin) {
-        this.isAdmin = isAdmin;
-    }
 
     public String getPassword() {
         return password;

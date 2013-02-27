@@ -19,6 +19,7 @@ package com.hae.rest.controllers.admin.tool.login;
 import com.hae.domain.authentication.User;
 import com.hae.domain.authentication.impl.UserImpl;
 import com.hae.user.authentication.service.api.UserAuthenticationService;
+import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -45,7 +46,7 @@ public class LoginController {
     @RequestMapping(value = "/admintool/authenticateUser", method = RequestMethod.POST)
     public
     @ResponseBody
-    User authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) 
+    List<User> authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) 
     {
         response.setStatus(HttpServletResponse.SC_OK);
         return userAuthService.authenticateUser(context.getUserid(), context.getPassword());

@@ -10,8 +10,8 @@
 
 @implementation User
 
+@synthesize tableId;
 @synthesize userid;
 @synthesize password;
-@synthesize isAdmin;
 
 @end

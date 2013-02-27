@@ -57,9 +57,9 @@ public class NewMaintenanceController {
     List<MaintenanceRequest> getMaintenanceRequests(@RequestBody MaintenanceRequestImpl context, HttpServletResponse response) 
     {
         response.setStatus(HttpServletResponse.SC_OK);
-        List<MaintenanceRequest> aList = newTicketService.getMaintenanceRequests();
+        return newTicketService.getMaintenanceRequests();
      
-        return aList;
+        //return aList;
     }
             
 }

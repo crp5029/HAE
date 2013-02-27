@@ -22,6 +22,8 @@ import com.hae.domain.authentication.impl.UserImpl;
 import com.hae.entities.authentication.UserEntity;
 import com.hae.factories.authentication.UserFactory;
 import com.hae.user.authentication.service.api.UserAuthenticationService;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,18 +43,20 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
     private UserRepository userRepository;
     
     @Override
-    public User authenticateUser(String userid, String password)
+    public List<User> authenticateUser(String userid, String password)
     {
      
         User user = new UserImpl();
         UserEntity entity = getUser(userid,password);
+        ArrayList<User> users = new ArrayList<User>();
         
         if (entity != null)
         {
-           user = userFactory.createUser(entity, user);
+           //user = userFactory.createUser(entity, user);
+            users.add(userFactory.createUser(entity, user));
         }
         
-        return user;
+        return users;
         
     }
     

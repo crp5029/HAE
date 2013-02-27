@@ -9,7 +9,6 @@
 	<insert tableName = "FS_USER">
             	<column name = "USERID" value = "fsadmin"/>
 		<column name = "PASSWORD" value = "test123"/>
-		<column name = "ISADMIN" valueNumeric = "1"/>
 	</insert>
 
     </changeSet>

@@ -34,29 +34,27 @@ import org.springframework.stereotype.Service;
 @Service("userAuthenticationService")
 public class UserAuthenticationServiceImpl implements UserAuthenticationService {
 
-    
     @Autowired
-    UserFactory userFactory; 
-    
+    private UserFactory userFactory; 
     
     @Autowired
     private UserRepository userRepository;
+ 
     
     @Override
     public List<User> authenticateUser(String userid, String password)
     {
-     
-        User user = new UserImpl();
-        UserEntity entity = getUser(userid,password);
-        ArrayList<User> users = new ArrayList<User>();
+        UserEntity entity = getUser(userid, password);
+        ArrayList<User> usersList = new ArrayList<User>();
         
         if (entity != null)
         {
-           //user = userFactory.createUser(entity, user);
-            users.add(userFactory.createUser(entity, user));
+            User user = new UserImpl();
+            user = userFactory.createUser(entity, user);
+            usersList.add(user);
         }
         
-        return users;
+        return usersList;
         
     }
     
@@ -66,7 +64,8 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
      * @param password
      * @return 
      */
-    private UserEntity getUser(String userid, String password) {
+    @Override
+    public UserEntity getUser(String userid, String password) {
        return userRepository.findByUseridPassword(userid, password);
     }
 }

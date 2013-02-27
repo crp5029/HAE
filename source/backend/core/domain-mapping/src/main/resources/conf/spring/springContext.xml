@@ -29,6 +29,9 @@
     
     <bean id="MaintenanceRequestMapper" class="com.hae.domain.mapping.maintenanceRequest.MaintenanceRequestMapper">
     </bean>
+    
+    <bean id="UserMapper" class="com.hae.domain.mapping.authentication.UserMapper">
+    </bean>
    
    
 </beans>

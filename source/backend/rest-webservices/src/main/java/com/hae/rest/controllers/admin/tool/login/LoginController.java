@@ -41,8 +41,6 @@ public class LoginController {
     UserAuthenticationService userAuthService;
     
     
-    
-    
     @RequestMapping(value = "/admintool/authenticateUser", method = RequestMethod.POST)
     public
     @ResponseBody

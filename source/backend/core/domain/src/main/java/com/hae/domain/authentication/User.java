@@ -17,8 +17,6 @@
 package com.hae.domain.authentication;
 
 import com.hae.domain.FSDomain;
-import com.hae.domain.customer.Customer;
-import com.hae.domain.vendor.Vendor;
 
 /**
  *

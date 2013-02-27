@@ -16,7 +16,6 @@
 package com.hae.factories.authentication;
 
 import com.hae.domain.authentication.User;
-import com.hae.domain.authentication.impl.UserImpl;
 import com.hae.domain.mapping.authentication.UserMapper;
 import com.hae.entities.authentication.UserEntity;
 

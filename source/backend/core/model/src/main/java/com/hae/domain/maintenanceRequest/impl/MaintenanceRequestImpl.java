@@ -12,18 +12,7 @@ import com.hae.domain.maintenance.MaintenanceRequest;
  */
 public class MaintenanceRequestImpl implements MaintenanceRequest {
     
-        //Attributes
-    
-    /**
-     * object id
-     */
     private long id;
-    
-   
-    /**
-     * Maintenance Description
-     * 
-     */
     private String description;
 
     @Override

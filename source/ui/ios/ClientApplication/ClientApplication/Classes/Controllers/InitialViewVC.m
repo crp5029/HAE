@@ -18,7 +18,6 @@
 @synthesize sessionKeyText;
 @synthesize passwordText;
 @synthesize aUser;
-@synthesize aRequest;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,10 +48,11 @@
     
 }
 
-- (IBAction)loginButton:(id)sender {
+- (IBAction)loginButton:(UIButton *)sender {
     aUser = [User new];
     [aUser setUserid:[userIdText text]];
     [aUser setPassword:[passwordText text]];
+    
     // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
     RKObjectMapping *postRequestMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
     [postRequestMapping addAttributeMappingsFromDictionary:@{
@@ -108,7 +108,7 @@
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                    }];
     
-    operation.targetObject = nil;
+    //operation.targetObject = nil;
     [objectManager enqueueObjectRequestOperation:operation];
     
 }

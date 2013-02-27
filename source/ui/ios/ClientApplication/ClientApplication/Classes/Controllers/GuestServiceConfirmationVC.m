@@ -98,6 +98,7 @@
 {
     aRequest = [MaintenanceRequest new];
     [aRequest setDescription:[txtViewData text]];
+    
     // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
     RKObjectMapping *postRequestMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
     [postRequestMapping addAttributeMappingsFromDictionary:@{
@@ -135,19 +136,23 @@
     RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
                                                                                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
                                                                                        MaintenanceRequest *aARequest = [MaintenanceRequest new];
+                                                                                       
+                                                                                       
+                                                                                       
                                                                                        NSArray* statuses = [mappingResult array];
+                                                                                       NSLog(@"DESCRIPTION: %@", statuses);
                                                                                        aARequest = statuses.lastObject;
-                                                                                      /* NSLog(@"ARRAY SIZE %u", statuses.count);
+                                                                                      // NSLog(@"ARRAY SIZE %u", statuses.count);
                                                                                        NSLog(@"ID: %@", aARequest.tableId);
                                                                                        NSLog(@"DESCRIPTION: %@", aARequest.description);
-                                                                                       NSLog(@"Success block: %@", mappingResult);*/
-                                                                                       NSEnumerator *enumerator = [statuses objectEnumerator];
+                                                                                       NSLog(@"Success block: %@", mappingResult);
+                                                                                      /* NSEnumerator *enumerator = [statuses objectEnumerator];
                                                                                        MaintenanceRequest *aTest = [MaintenanceRequest new];
                                                                                        
                                                                                        while (aTest = [enumerator nextObject]) {
                                                                                            NSLog(@"aTest:  %@", aTest.tableId);
                                                                                            NSLog(@"aTest:  %@", aTest.description);
-                                                                                       }
+                                                                                       }*/
                                                                                    } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                    }];

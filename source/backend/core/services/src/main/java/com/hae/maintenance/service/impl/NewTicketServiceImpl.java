@@ -59,8 +59,7 @@ public class NewTicketServiceImpl implements NewTicketService {
         for (MaintenanceEntity aEntity : maintenanceRequestList)
         {
             MaintenanceRequest request = new MaintenanceRequestImpl();
-            request = maintenanceRequestFactory.getRequest(aEntity, request);
-            maintenanceRequests.add(request);
+            maintenanceRequests.add(maintenanceRequestFactory.getRequest(aEntity, request));
         }
         
         return maintenanceRequests;

@@ -33,11 +33,11 @@ public class UserMapper implements Mapper {
     public <E, D extends FSDomain> void mapToDomain(E entity, D domain) {
         
         
-        UserEntity user = (UserEntity) entity;
+        UserEntity userEntity = (UserEntity) entity;
         User userDomain = (User) domain;
-        userDomain.setId(user.getId());
-        userDomain.setPassword(user.getPassword());
-        userDomain.setUserid(user.getUserid());
+        userDomain.setId(userEntity.getId());
+        userDomain.setPassword(userEntity.getPassword());
+        userDomain.setUserid(userEntity.getUserid());
         
        /* if (user.getCustomer() != null)
         {

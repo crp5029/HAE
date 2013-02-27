@@ -17,8 +17,6 @@
 package com.hae.domain.authentication.impl;
 
 import com.hae.domain.authentication.User;
-import com.hae.domain.customer.Customer;
-import com.hae.domain.vendor.Vendor;
 
 /**
  *
@@ -32,8 +30,6 @@ public class UserImpl implements User {
     private boolean isAdmin;
     
     //Releationships
-    private Vendor vendor;
-    private Customer customer;
     
     
 
@@ -65,31 +61,6 @@ public class UserImpl implements User {
     @Override
     public void setUserid(String userid) {
         this.userid = userid;
-    }
-
-    @Override
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    @Override
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    @Override
-    public Vendor getVendor() {
-        return vendor;
-    }
-
-    @Override
-    public void setVendor(Vendor vendor) {
-        this.vendor = vendor;
-    }
-    
-    
-    
-    
-    
+    } 
 
 }

@@ -36,7 +36,7 @@ public class UserEntity implements Serializable {
     private String password;
     private boolean isAdmin;
     
-    
+  /*  
     @ManyToOne
     @JoinColumn(name="VENDOR_ID")
     private VendorEntity vendor;
@@ -44,7 +44,7 @@ public class UserEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name="CUSTOMER_ID")
     private CustomerEntity customer;
-    
+  */  
 
     public long getId() {
         return id;
@@ -77,7 +77,7 @@ public class UserEntity implements Serializable {
     public void setUserid(String userid) {
         this.userid = userid;
     }
-
+/*
     public CustomerEntity getCustomer() {
         return customer;
     }
@@ -94,7 +94,7 @@ public class UserEntity implements Serializable {
         this.vendor = vendor;
     }
 
-   
+   */
     
     
 }

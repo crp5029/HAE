@@ -15,8 +15,6 @@
             <column name = "USERID" type = "varchar(250)"/>
             <column name = "PASSWORD" type = "varchar(25)"/>
             <column name = "ISADMIN" type = "INT"/>  
-            <column name = "CUSTOMER_ID" type = "bigint" />
-            <column name = "VENDOR_ID" type = "bigint" />
         </createTable>
 
         <createTable tableName = "CUSTOMER">

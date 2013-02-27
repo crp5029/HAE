@@ -29,6 +29,7 @@
 		2A22BDBA16AC01FD00EC87BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A22BD9216AC01FC00EC87BC /* Foundation.framework */; };
 		2A22BDC216AC01FD00EC87BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A22BDC016AC01FD00EC87BC /* InfoPlist.strings */; };
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
+		2AF4F20116DDFB15003733B5 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF4F20016DDFB15003733B5 /* InitialViewVC.m */; };
 		88698DE916D2811300D5606E /* MaintenanceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 88698DE816D2811300D5606E /* MaintenanceRequest.m */; };
 		88FE814B16C990CB00B59C22 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE814916C990CB00B59C22 /* MainStoryboard_iPad.storyboard */; };
 		88FE814C16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE814A16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard */; };
@@ -115,6 +116,8 @@
 		2A22BDC116AC01FD00EC87BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A22BDC316AC01FD00EC87BC /* ClientApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientApplicationTests.h; sourceTree = "<group>"; };
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
+		2AF4F1FF16DDFB15003733B5 /* InitialViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewVC.h; sourceTree = "<group>"; };
+		2AF4F20016DDFB15003733B5 /* InitialViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewVC.m; sourceTree = "<group>"; };
 		88698DE716D2811300D5606E /* MaintenanceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaintenanceRequest.h; path = ClientApplication/Classes/Models/MaintenanceRequest.h; sourceTree = SOURCE_ROOT; };
 		88698DE816D2811300D5606E /* MaintenanceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaintenanceRequest.m; path = ClientApplication/Classes/Models/MaintenanceRequest.m; sourceTree = SOURCE_ROOT; };
 		88FE814916C990CB00B59C22 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPad.storyboard; path = ClientApplication/Classes/Storyboards/MainStoryboard_iPad.storyboard; sourceTree = SOURCE_ROOT; };
@@ -293,6 +296,8 @@
 				88FE815B16C990FB00B59C22 /* RoomMaintenanceTableViewController.m */,
 				88FE816016C990FB00B59C22 /* WakeupCallViewController.h */,
 				88FE816116C990FB00B59C22 /* WakeupCallViewController.m */,
+				2AF4F1FF16DDFB15003733B5 /* InitialViewVC.h */,
+				2AF4F20016DDFB15003733B5 /* InitialViewVC.m */,
 			);
 			name = Controllers;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Controllers;
@@ -492,6 +497,7 @@
 				88FE816716C990FB00B59C22 /* WakeupCallViewController.m in Sources */,
 				88FE816A16C9911000B59C22 /* AppDelegate.m in Sources */,
 				88698DE916D2811300D5606E /* MaintenanceRequest.m in Sources */,
+				2AF4F20116DDFB15003733B5 /* InitialViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

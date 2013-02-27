@@ -16,8 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class CustomerFactoryTest extends BaseTest {
     
-    @Autowired
-    CustomerFactory factory;
+  //  @Autowired
+  //  CustomerFactory factory;
 
     @BeforeClass
     public static void setUpClass() throws Exception {

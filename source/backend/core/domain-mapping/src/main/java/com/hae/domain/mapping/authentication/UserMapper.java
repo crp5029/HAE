@@ -18,13 +18,7 @@ package com.hae.domain.mapping.authentication;
 
 import com.hae.domain.FSDomain;
 import com.hae.domain.authentication.User;
-import com.hae.domain.customer.Customer;
-import com.hae.domain.customer.impl.CustomerImpl;
-import com.hae.domain.mapping.customer.CustomerMapper;
 import com.hae.domain.mapping.interfaces.Mapper;
-import com.hae.domain.mapping.vendor.VendorMapper;
-import com.hae.domain.vendor.Vendor;
-import com.hae.domain.vendor.impl.VendorImpl;
 import com.hae.entities.authentication.UserEntity;
 
 /**
@@ -45,12 +39,11 @@ public class UserMapper implements Mapper {
         userDomain.setUserid(user.getUserid());
         userDomain.setIsAdmin(user.isIsAdmin());
         
-        if (user.getCustomer() != null)
+       /* if (user.getCustomer() != null)
         {
             Customer customer = new CustomerImpl();
             CustomerMapper mapper = new CustomerMapper();
             mapper.mapToDomain(user.getCustomer(), customer);
-            userDomain.setCustomer(customer);
         }
         
         
@@ -62,6 +55,8 @@ public class UserMapper implements Mapper {
             userDomain.setVendor(vendor);
             
         }
+        * 
+        */
     }
 
      

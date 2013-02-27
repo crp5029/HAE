@@ -39,8 +39,8 @@ public class CustomerEntity implements Serializable{
     private List<VendorEntity> vendors;
     
 
-    @OneToMany(mappedBy = "customer")
-    private List<UserEntity> users;
+//    @OneToMany(mappedBy = "customer")
+  //  private List<UserEntity> users;
 
     public long getId() {
         return id;
@@ -66,14 +66,14 @@ public class CustomerEntity implements Serializable{
         this.vendors = vendors;
     }
 
-    public List<UserEntity> getUsers() {
+ /*   public List<UserEntity> getUsers() {
         return users;
     }
 
     public void setUsers(List<UserEntity> users) {
         this.users = users;
     }
-    
+  */  
 
     
     

@@ -26,12 +26,12 @@
    
     <bean id="UserFactory" class="com.hae.factories.authentication.UserFactory">
     </bean>
-    
+<!--  
     <bean id="CustomerFactory" class="com.hae.factories.customer.CustomerFactory">
     </bean>
     
     <bean id="VendorFactory" class="com.hae.factories.vendor.VendorFactory">
     </bean>
-   
+  --> 
    
 </beans>

@@ -31,12 +31,5 @@ public interface User extends FSDomain {
     public String getUserid();
     public void setUserid(String userid);
     public boolean isIsAdmin();
-    public void setIsAdmin(boolean isAdmin);
-    public Customer getCustomer();
-    public void setCustomer(Customer customer);
-    public Vendor getVendor();
-    public void setVendor(Vendor vendor);
-    
-    
-    
+    public void setIsAdmin(boolean isAdmin);   
 }

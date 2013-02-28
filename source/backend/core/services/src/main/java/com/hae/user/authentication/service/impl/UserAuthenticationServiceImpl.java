@@ -17,15 +17,14 @@
 package com.hae.user.authentication.service.impl;
 
 import com.hae.data.repositories.UserRepository;
-import com.hae.domain.authentication.User;
-import com.hae.domain.authentication.impl.UserImpl;
 import com.hae.entities.authentication.UserEntity;
 import com.hae.factories.authentication.UserFactory;
 import com.hae.user.authentication.service.api.UserAuthenticationService;
-import java.util.ArrayList;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.hae.domain.authentication.DatabaseAuthentication;
+import com.hae.domain.authentication.impl.DatabaseAuthenticationImpl;
+import com.hae.user.authentication.exceptions.InvalidUseridPasswordException;
 
 /**
  *
@@ -42,20 +41,18 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
  
     
     @Override
-    public List<User> authenticateUser(String userid, String password)
+    public DatabaseAuthentication authenticateUser(String userid, String password) throws Exception
     {
         UserEntity entity = getUser(userid, password);
-        ArrayList<User> usersList = new ArrayList<User>();
         
-        if (entity != null)
+        if (entity == null)
         {
-            User user = new UserImpl();
-            user = userFactory.createUser(entity, user);
-            usersList.add(user);
+            throw new InvalidUseridPasswordException();
+            //user = userFactory.createUser(entity, user);
         }
-        
-        return usersList;
-        
+        DatabaseAuthentication dbAuthentication = new DatabaseAuthenticationImpl();
+        dbAuthentication.setIsValid(true);
+        return dbAuthentication;
     }
     
     /**

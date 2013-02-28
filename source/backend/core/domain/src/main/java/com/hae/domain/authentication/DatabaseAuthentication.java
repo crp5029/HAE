@@ -24,5 +24,7 @@ public interface DatabaseAuthentication extends Authentication {
 
     
     public void authenticate(User aUser);
+    public boolean isValid();
+    public void setIsValid(boolean isValid);
     
 }

@@ -24,10 +24,21 @@ import com.hae.domain.authentication.User;
  * @author Chris Purtell
  */
 public class DatabaseAuthenticationImpl extends AuthenticationImpl implements DatabaseAuthentication {
+    private boolean isValid;
+    
+    @Override
+    public boolean isValid() {
+        return isValid;
+    }
+
+    @Override
+    public void setIsValid(boolean isValid) {
+        this.isValid = isValid;
+    }
 
     @Override
     public void authenticate(User aUser) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //throw new UnsupportedOperationException("Not supported yet.");
     }
 
     

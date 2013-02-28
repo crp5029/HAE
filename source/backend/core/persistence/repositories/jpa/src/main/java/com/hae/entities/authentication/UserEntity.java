@@ -16,8 +16,6 @@
 
 package com.hae.entities.authentication;
 
-import com.hae.entities.customer.CustomerEntity;
-import com.hae.entities.vendor.VendorEntity;
 import java.io.Serializable;
 import javax.persistence.*;
 
@@ -69,6 +67,7 @@ public class UserEntity implements Serializable {
     public void setUserid(String userid) {
         this.userid = userid;
     }
+    
 /*
     public CustomerEntity getCustomer() {
         return customer;

@@ -17,7 +17,6 @@
 package com.hae.data.repositories;
 
 import com.hae.entities.maintenance.MaintenanceEntity;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**

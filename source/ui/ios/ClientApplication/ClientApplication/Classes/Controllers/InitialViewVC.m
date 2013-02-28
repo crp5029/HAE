@@ -63,11 +63,9 @@
     // Now configure the request descriptor
     RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postRequestMapping objectClass:[User class] rootKeyPath:nil];
     
-    RKObjectMapping *responseUserMapping = [RKObjectMapping mappingForClass:[User class]];
+    RKObjectMapping *responseUserMapping = [RKObjectMapping mappingForClass:[DatabaseAuthentication class]];
     [responseUserMapping addAttributeMappingsFromDictionary:@{
-     @"id" : @"tableId",
-     @"userid" : @"userid",
-     @"password" : @"password"
+     @"valid" : @"isValid"
      }];
     
     //Configure Response descriptor
@@ -91,13 +89,12 @@
     
     RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
                                                                                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                                                       User *aAUser = [User new];
+                                                                                       //User *aAUser = [User new];
+                                                                                       DatabaseAuthentication *dbA = [DatabaseAuthentication new];
                                                                                        NSArray* statuses = [mappingResult array];
                                                                                        NSLog(@"Statuses: %@", statuses);
-                                                                                       aAUser = statuses.lastObject;
-                                                                                       NSLog(@"ID: %@", [aAUser tableId]);
-                                                                                       NSLog(@"UserName: %@", [aAUser userid]);
-                                                                                       NSLog(@"Password: %@", [aAUser password]);
+                                                                                       dbA = statuses.lastObject;
+                                                                                       NSLog(@"VALID???: %@", [dbA isValid]);
                                                                                        
                                                                                        /* NSLog(@"ARRAY SIZE %u", statuses.count);
                                                                                         NSLog(@"ID: %@", aARequest.tableId);
@@ -108,7 +105,7 @@
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
                                                                                    }];
     
-    //operation.targetObject = nil;
+    operation.targetObject = nil;
     [objectManager enqueueObjectRequestOperation:operation];
     
 }

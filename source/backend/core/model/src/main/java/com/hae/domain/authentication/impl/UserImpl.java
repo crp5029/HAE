@@ -24,7 +24,7 @@ import com.hae.domain.authentication.User;
  */
 public class UserImpl implements User {
     
-    private long id;
+    private Long id;
     private String userid;
     private String password;
 
@@ -34,9 +34,19 @@ public class UserImpl implements User {
     }
 
     @Override
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
+    
+    @Override
+    public String getUserid() {
+        return userid;
+    }
+
+    @Override
+    public void setUserid(String userid) {
+        this.userid = userid;
+    } 
     
     @Override
     public String getPassword() {
@@ -47,15 +57,5 @@ public class UserImpl implements User {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    @Override
-    public String getUserid() {
-        return userid;
-    }
-
-    @Override
-    public void setUserid(String userid) {
-        this.userid = userid;
-    } 
 
 }

@@ -25,11 +25,11 @@ import com.hae.domain.FSDomain;
 public interface User extends FSDomain {
 
     public long getId();
-    public void setId(long id);
-    public String getPassword();
-    public void setPassword(String password);
+    public void setId(Long id);
     public String getUserid();
     public void setUserid(String userid);
+    public String getPassword();
+    public void setPassword(String password);
  /*   public boolean isIsAdmin();
     public void setIsAdmin(boolean isAdmin); 
     * 

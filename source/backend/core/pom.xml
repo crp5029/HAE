@@ -32,5 +32,6 @@
         <module>domain-mapping</module>
         <module>domain-factories</module>
         <module>services</module>
+      	<module>spring-security</module>	
     </modules>
 </project>

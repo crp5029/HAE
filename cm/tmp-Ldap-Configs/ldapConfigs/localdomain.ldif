@@ -1,0 +1,75 @@
+dn: dc=localhost,dc=localdomain
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+dc: localhost
+o: localdomain
+description: Full Company Name Domain
+
+# Admin user.
+dn: cn=Admin,dc=localhost,dc=localdomain
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: Admin
+description: LDAP administrator
+userPassword: gecj2b43
+
+dn: ou=people,dc=localhost,dc=localdomain
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=localhost,dc=localdomain
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=u1c227,ou=people,dc=localhost,dc=localdomain
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+uid: u1c227
+sn: Purtell
+givenName: Chris
+cn: Chris 
+displayName: Chris
+#uidNumber: 1000
+#gidNumber: 10000
+userPassword: password
+#gecos: Chris P
+#loginShell: /bin/bash
+#homeDirectory: /Users/chrispurtell/github/HAE
+#shadowExpire: -1
+#shadowFlag: 0
+#shadowWarning: 7
+#shadowMin: 8
+#shadowMax: 999999
+#shadowLastChange: 10877
+mail: removed
+postalCode: 22204 
+#l: 
+#o: 
+mobile: 4124963533
+homePhone: 4124963533
+title: System Administrator
+postalAddress: 4990 Columbia Pike
+initials: CP
+
+#dn: cn=Chris,ou=people,dc=localhost,dc=localdomain
+#objectClass: posixGroup
+#cn: example
+#gidNumber: 10000
+
+
+
+
+#dn: o=localdomain
+#objectClass: top
+#objectClass: organization
+#o: localdomain
+#description: Full Company Name
+
+#dn: cn=AdminManager,o=localdomain
+#objectClass: organizationalRole
+#cn: AdminManager
+#description: LDAP Directory Administrator
+

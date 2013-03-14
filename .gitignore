@@ -80,3 +80,6 @@ cm/hae-db-management/bin/hae/log/logmirror.ctrl
 .DS_Store
 
 cm/hae-db-management/bin/HAE/dbex.lck
+/source/backend/target/
+/source/backend/core/spring-security/.settings/
+/source/backend/core/spring-security/target/

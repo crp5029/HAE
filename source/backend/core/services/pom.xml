@@ -44,7 +44,12 @@
             <artifactId>hae-core-domain-factories</artifactId>
             <version>MAIN-SNAPSHOT</version>
         </dependency>
-       
+      
+        <dependency>
+            <groupId>com.hae.spring.security</groupId>
+            <artifactId>hae-core-spring-security</artifactId>
+            <version>MAIN-SNAPSHOT</version>
+        </dependency>
        
         <dependency>
             <groupId>org.codehaus.jackson</groupId>

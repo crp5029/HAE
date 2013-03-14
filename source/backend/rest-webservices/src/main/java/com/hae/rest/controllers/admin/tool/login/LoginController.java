@@ -46,6 +46,7 @@ public class LoginController {
     DatabaseAuthentication authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) throws Exception 
     {
         response.setStatus(HttpServletResponse.SC_OK);
+        System.out.println("IN LOGIN CONTROLLER");
         return userAuthService.authenticateUser(context.getUserid(), context.getPassword());
     }
     

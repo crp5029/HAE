@@ -1,0 +1,48 @@
+Large
+Hand tossed
+1/2 Pep, Onion
+1/2 Cheese
+
+Mozzarella sticks
+
+2 Litre Pepsi
+
+21.83
+
+
+
+
+
+
+
+*** /usr/local/etc/openldap/slapd.conf
+/etc/openldap/slapd.conf
+/Users/chrispurtell/github/openldap-2.4.33/tests/data/slapd.conf
+
+/Users/chrispurtell/github/openldap-2.4.33/servers/slapd
+/Users/chrispurtell/github:> slapd -> /usr/local/libexec/slapd
+
+
+
+bash-3.2# vi localdomain.ldif
+bash-3.2# pwd
+/usr/local/etc/openldap
+http://www.yolinux.com/TUTORIALS/LinuxTutorialLDAP-SLAPD-LDIF-V2-config.html
+
+slapd  -- Start LDAP
+
+
+Add ldif file
+	/usr/local/etc/openldap:> ldapadd -x -D "cn=Admin,dc=localhost,dc=localdomain" -W -f localdomain.ldif 
+
+Search ldap
+	ldapsearch -h ldap://localhost -p 389 -D cn=Admin,dc=localhost,dc=localdomain -b "cn=Admin,dc=localhost,dc=localdomain" -W
+
+
+Delete record
+	bash-3.2#:> ldapdelete -h localhost -p 389 -v -c -D "cn=Admin,dc=localhost,dc=localdomain" -W
+	ldap_initialize( ldap://localhost:389 )
+	Enter LDAP Password: 
+		ou=people,dc=localhost,dc=localdomain
+	deleting entry "ou=people,dc=localhost,dc=localdomain"
+		ou=people,dc=localhost,dc=localdomain

@@ -22,15 +22,15 @@ import com.hae.factories.authentication.UserFactory;
 import com.hae.user.authentication.service.api.UserAuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-<<<<<<< HEAD
 import com.hae.domain.authentication.DatabaseAuthentication;
+import com.hae.domain.authentication.User;
 import com.hae.domain.authentication.impl.DatabaseAuthenticationImpl;
+import com.hae.domain.authentication.impl.UserImpl;
 import com.hae.user.authentication.exceptions.InvalidUseridPasswordException;
-=======
 import com.hae.security.authenticate.ldap.LdapAuthenticate;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
->>>>>>> Syncing latest ldap configuration
 
 /**
  *
@@ -49,29 +49,20 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
     @Override
     public DatabaseAuthentication authenticateUser(String userid, String password) throws Exception
     {
-<<<<<<< HEAD
-        UserEntity entity = getUser(userid, password);
-=======
-     
-        User user = new UserImpl();
-        ArrayList<User> users = new ArrayList<User>();
         /*UserEntity entity = getUser(userid,password);
-        
->>>>>>> Syncing latest ldap configuration
         
         if (entity == null)
         {
-<<<<<<< HEAD
             throw new InvalidUseridPasswordException();
             //user = userFactory.createUser(entity, user);
         }
         DatabaseAuthentication dbAuthentication = new DatabaseAuthenticationImpl();
         dbAuthentication.setIsValid(true);
         return dbAuthentication;
-=======
            //user = userFactory.createUser(entity, user);
             users.add(userFactory.createUser(entity, user));
         }*/
+        User user = new UserImpl();
         boolean isValid = false;
         
         System.out.println("IN SERVICE IMPL");
@@ -88,17 +79,12 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
         System.out.println("AFTER AUTHENTICATE: " + isValid);
         
         if(isValid){
-            user.setId(1);
+            user.setId(Long.MIN_VALUE);
             user.setUserid("fsadmin");
             user.setPassword("test123");
-            
-            users.add(user);
-            return users; 
         }
         
         return null;
-        
->>>>>>> Syncing latest ldap configuration
     }
     
     /**

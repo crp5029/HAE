@@ -10,39 +10,25 @@
                         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd"
        >
 
+   <context:component-scan  base-package="com.hae"/>
+   <context:annotation-config/>
 
-
-    <bean id="ldapCredientals" class="com.hae.security.properties.LdapProperties">
-       <!-- <constructor-arg value="/ibusales/ibusalesdashboard/ldap.properties" /> -->
-    </bean>
-
-
-    <bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
-        <constructor-arg ref="adContextSource" />
-        <property name="ignorePartialResultException" value ="true"/>
-    </bean>
-
-    <bean id="adContextSource" class="com.hae.ldap.spring.LdapContextSource" init-method="init">
+    <bean id="ldapContextSource" class="com.hae.ldap.spring.LdapContextSource" init-method="init">
        <!-- <property name="ldapProperties" ref="ldapCredientals" /> -->
         <property name="url" value="ldap://localhost:389" />
-        <property name="base" value="DC=localhost,DC=localdomain" />
-      <!--  <property name="userDn" value="CN=srv-isnap-auto1,OU=Plaza,OU=Admin,DC=GEICO,DC=corp,DC=net"/> -->
-        <property name="userDn" value="uid=u1c227,OU=people,DC=localhost,DC=localdomain"/>
-        <property name="password" value="password"/>
-    </bean>
-
-    <bean id="adAuthenticate" class="com.hae.security.authenticate.ldap.LdapAuthenticate">
-        <property name="ldapTemplate" ref="ldapTemplate" />
-        <property name="contextSource" ref="adContextSource" />
+        <property name="base" value="dc=localhost,dc=localdomain" />
+        <property name="userDn" value="cn=Admin,dc=localhost,dc=localdomain"/>
+       <property name="password" value="gecj2b43"/>
     </bean>
     
-<!--
-    <bean id="adPrincipalDao" class="com.geico.cm.env.security.dao.ldap.ad.PrincipalDao">
-        <property name="ldapTemplate" ref="ldapTemplate" />
-        <property name="contextSource" ref="adContextSource" />
+     <bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+        <constructor-arg ref="ldapContextSource" />
     </bean>
--->
-    <ldap-server url="ldap://localhost:389/dc=localhost,dc=localdomain" />
-    <ldap-server root="dc=localhost,dc=localdomain"/>
+    
+    <bean id="ldapAuthenticate" class="com.hae.security.authenticate.ldap.LdapAuthenticate">
+        <property name="ldapTemplate" ref="ldapTemplate" />
+        <property name="ldapContextSource" ref="ldapContextSource" />
+    </bean>
+
 
 </beans>

@@ -44,7 +44,8 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
     
     @Autowired
     private UserRepository userRepository;
- 
+    
+    private LdapAuthenticate adAuthenticate;
     
     @Override
     public DatabaseAuthentication authenticateUser(String userid, String password) throws Exception
@@ -69,9 +70,9 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
         System.out.println("USERID: " + userid);
         System.out.println("PASSWORD: " + password);
         
-        LdapAuthenticate ldapAuthenticate = new LdapAuthenticate();
+        //LdapAuthenticate ldapAuthenticate = new LdapAuthenticate();
         try {
-            isValid = ldapAuthenticate.authenticate(userid, password);
+            isValid = adAuthenticate.authenticate(userid, password);
         } catch (Exception ex) {
             Logger.getLogger(UserAuthenticationServiceImpl.class.getName()).log(Level.SEVERE, null, ex);
         }

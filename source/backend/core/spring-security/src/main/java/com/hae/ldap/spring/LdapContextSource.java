@@ -15,8 +15,8 @@ import com.hae.security.properties.LdapProperties;
  *
  */
 public class LdapContextSource extends org.springframework.ldap.core.support.LdapContextSource {
-
-	private LdapProperties ldapProperties;
+        
+/*	private LdapProperties ldapProperties;
 	
 	
 	public LdapProperties getLdapProperties() {
@@ -26,10 +26,9 @@ public class LdapContextSource extends org.springframework.ldap.core.support.Lda
 	public void setLdapProperties(LdapProperties ldapProperties) {
 		this.ldapProperties = ldapProperties;
 	}
-
+*/
 	public void init()
 	{
 		
-		//this.setPassword(this.ldapProperties.getPassword());
 	}
 }

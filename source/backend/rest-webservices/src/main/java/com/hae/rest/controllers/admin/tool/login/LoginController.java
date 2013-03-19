@@ -16,9 +16,8 @@
 
 package com.hae.rest.controllers.admin.tool.login;
 
-import com.hae.domain.authentication.DatabaseAuthentication;
 import com.hae.domain.authentication.impl.UserImpl;
-import com.hae.user.authentication.service.api.UserAuthenticationService;
+import com.hae.security.authenticate.ldap.LdapAuthenticate;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -35,19 +34,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class LoginController {
     
     
-    
     @Autowired
-    UserAuthenticationService userAuthService;
+    private LdapAuthenticate ldapAuthenticate;
     
     
     @RequestMapping(value = "/admintool/authenticateUser", method = RequestMethod.POST)
     public
     @ResponseBody
-    DatabaseAuthentication authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) throws Exception 
+    boolean authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) throws Exception 
     {
         response.setStatus(HttpServletResponse.SC_OK);
-        System.out.println("IN LOGIN CONTROLLER");
-        return userAuthService.authenticateUser(context.getUserid(), context.getPassword());
+        return ldapAuthenticate.authenticate(context.getUserid(), context.getPassword());
     }
     
     

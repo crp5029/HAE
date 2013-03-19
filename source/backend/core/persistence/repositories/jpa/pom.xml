@@ -13,14 +13,14 @@
     <packaging>jar</packaging>
     <name>HAE - Core - Persistence - Repositories - Jpa Modules</name>
     <organization>
-        <name>Fassserve Project</name>
+        <name>MAKULA Project</name>
     </organization>
     <developers>
         <developer>
             <id>crp5029</id>
             <name>Chris Purtell</name>
             <email>crp5029@gmail.com</email>
-            <organization>springmoving.org</organization>
+            <organization>hae</organization>
             <roles>
                 <role>developer</role>
             </roles>

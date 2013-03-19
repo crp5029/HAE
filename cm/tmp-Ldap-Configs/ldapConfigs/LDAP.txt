@@ -37,6 +37,8 @@ Add ldif file
 
 Search ldap
 	ldapsearch -h ldap://localhost -p 389 -D cn=Admin,dc=localhost,dc=localdomain -b "cn=Admin,dc=localhost,dc=localdomain" -W
+	**ldapsearch -h ldap://localhost -p 389 -D "cn=Admin,dc=localhost,dc=localdomain" -x -w 'gecj2b43'  -b "ou=people,dc=localhost,dc=localdomain" "uid=u1c227"
+	
 
 
 Delete record

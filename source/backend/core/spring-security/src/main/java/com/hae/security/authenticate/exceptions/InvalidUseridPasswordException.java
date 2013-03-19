@@ -6,6 +6,7 @@ package com.hae.security.authenticate.exceptions;
 
 /**
  *
+ * Custom Exception for invalid authentication
  * @author chrispurtell
  */
 public class InvalidUseridPasswordException extends Exception {

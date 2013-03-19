@@ -34,7 +34,7 @@ cn: Chris
 displayName: Chris
 #uidNumber: 1000
 #gidNumber: 10000
-userPassword: password
+userPassword: {MD5}zAPnR6avu8v4vnZorP6+5Q==
 #gecos: Chris P
 #loginShell: /bin/bash
 #homeDirectory: /Users/chrispurtell/github/HAE

@@ -45,6 +45,7 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
     @Autowired
     private UserRepository userRepository;
     
+    @Autowired
     private LdapAuthenticate adAuthenticate;
     
     @Override

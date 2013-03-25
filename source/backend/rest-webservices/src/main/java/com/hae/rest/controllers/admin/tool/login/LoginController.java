@@ -16,6 +16,7 @@
 
 package com.hae.rest.controllers.admin.tool.login;
 
+import com.hae.domain.authentication.DatabaseAuthentication;
 import com.hae.domain.authentication.impl.UserImpl;
 import com.hae.security.authenticate.ldap.LdapAuthenticate;
 import javax.servlet.http.HttpServletResponse;
@@ -41,7 +42,7 @@ public class LoginController {
     @RequestMapping(value = "/admintool/authenticateUser", method = RequestMethod.POST)
     public
     @ResponseBody
-    boolean authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) throws Exception 
+    DatabaseAuthentication authenticateUser(@RequestBody UserImpl context, HttpServletResponse response) throws Exception 
     {
         response.setStatus(HttpServletResponse.SC_OK);
         return ldapAuthenticate.authenticate(context.getUserid(), context.getPassword());

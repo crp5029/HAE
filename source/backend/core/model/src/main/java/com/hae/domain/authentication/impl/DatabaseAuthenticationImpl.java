@@ -36,12 +36,12 @@ public class DatabaseAuthenticationImpl extends AuthenticationImpl implements Da
         this.isValid = isValid;
     }
 
-    @Override
+/*    @Override
     public void authenticate(User aUser) {
         //throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    
+ */   
     
     
     

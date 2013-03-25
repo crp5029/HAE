@@ -100,6 +100,25 @@
                                                                                         NSLog(@"ID: %@", aARequest.tableId);
                                                                                         NSLog(@"DESCRIPTION: %@", aARequest.description);*/
                                                                                         NSLog(@"Mapping Result: %@", mappingResult);
+                                     
+                                                                                       if([[dbA isValid] boolValue])
+                                                                                       {
+                                                                                           [userIdText setText:(@"WORKED")];
+                                                                                           [self performSegueWithIdentifier:@"sequeWelcome" sender:self];
+                                                                                       }
+                                                                                       else
+                                                                                       {
+                                                                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Error"
+                                                                                                message:@"Invalid Userid or Password"
+                                                                                                delegate:nil
+                                                                                                cancelButtonTitle:@"OK" 
+                                                                                                otherButtonTitles:nil];
+                                                                                           
+                                                                                           [alert show];
+                                                                                           
+                                                                                           //LOOK INTO AUTOMATIC REFERENCE COUNTING
+                                                                                           //[alert release];
+                                                                                       }
                                                                                        
                                                                                    } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                                                                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
@@ -108,5 +127,38 @@
     operation.targetObject = nil;
     [objectManager enqueueObjectRequestOperation:operation];
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"sequeWelcome"]) {
+        //[maintenanceServices removeAllObjects];
+        
+        LoginViewController *destViewController = [segue destinationViewController];
+
+        
+        /*
+         RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
+         self.messageText = @"fddsasdasdassfds";
+         maintenanceService = [[MaintenanceService alloc] init];
+         maintenanceService.name = self.messageText;
+         destViewController.maintenanceService = self.maintenanceService;
+      
+        
+        RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
+        maintenanceServices = [[NSMutableArray alloc] init];
+        
+        maintenanceService = [[MaintenanceService alloc] init];
+        maintenanceService.name = @"New Request";
+        maintenanceService.enabled = YES;
+        [maintenanceServices addObject:maintenanceService];
+        
+        maintenanceService = [[MaintenanceService alloc] init];
+        maintenanceService.name = @"Maintenance History";
+        maintenanceService.enabled = YES;
+        [maintenanceServices addObject:maintenanceService];
+        
+        destViewController.maintenanceServices = self.maintenanceServices;   */
+        
+    }
 }
 @end

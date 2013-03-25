@@ -64,7 +64,16 @@
    <dependencies>
    
        <!--  HAE Dependencies -->
-       
+         <dependency>
+            <groupId>com.hae.core.model</groupId>
+            <artifactId>hae-core-model</artifactId>
+            <version>MAIN-SNAPSHOT</version>
+         </dependency>
+         <dependency>
+            <groupId>com.hae.domain</groupId>
+            <artifactId>hae-domain</artifactId>
+            <version>MAIN-SNAPSHOT</version>
+         </dependency>
 
 
 	<!-- Spring dependencies -->

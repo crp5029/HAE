@@ -10,6 +10,7 @@
 #import <RestKit/RestKit.h>
 #import "User.h"
 #import "DatabaseAuthentication.h"
+#import "LoginViewController.h"
 
 @interface InitialViewVC : UIViewController <UITextViewDelegate> {
     

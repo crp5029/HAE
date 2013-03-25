@@ -73,7 +73,7 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
         
         //LdapAuthenticate ldapAuthenticate = new LdapAuthenticate();
         try {
-            isValid = adAuthenticate.authenticate(userid, password);
+//            isValid = adAuthenticate.authenticate(userid, password);
         } catch (Exception ex) {
             Logger.getLogger(UserAuthenticationServiceImpl.class.getName()).log(Level.SEVERE, null, ex);
         }

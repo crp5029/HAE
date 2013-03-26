@@ -49,93 +49,22 @@
 }
 
 - (IBAction)loginButton:(UIButton *)sender {
-    aUser = [User new];
-    [aUser setUserid:[userIdText text]];
-    [aUser setPassword:[passwordText text]];
-    
-    // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
-    RKObjectMapping *postRequestMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
-    [postRequestMapping addAttributeMappingsFromDictionary:@{
-     @"userid" : @"userid",
-     @"password" : @"password",
-     }];
-    
-    // Now configure the request descriptor
-    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postRequestMapping objectClass:[User class] rootKeyPath:nil];
-    
-    RKObjectMapping *responseUserMapping = [RKObjectMapping mappingForClass:[DatabaseAuthentication class]];
-    [responseUserMapping addAttributeMappingsFromDictionary:@{
-     @"valid" : @"isValid"
-     }];
-    
-    //Configure Response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseUserMapping pathPattern:@"/hae/admintool/authenticateUser" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
-    
-    
-    RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
-    [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:@"error" toKeyPath:@"errorMessage"]];
-    
-    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError);
-    RKResponseDescriptor *errorDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:errorMapping pathPattern:nil keyPath:@"errors" statusCodes:statusCodes];
-    
-    
-    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:8080"]];
-    [objectManager addRequestDescriptor:requestDescriptor];
-    [objectManager addResponseDescriptor:responseDescriptor];
-    [objectManager addResponseDescriptor:errorDescriptor];
-    objectManager.requestSerializationMIMEType=RKMIMETypeJSON;
-    
-    NSMutableURLRequest *request = [objectManager requestWithObject:aUser method:RKRequestMethodPOST path:@"/hae/admintool/authenticateUser" parameters:nil];
-    
-    RKObjectRequestOperation *operation = [objectManager objectRequestOperationWithRequest:request
-                                                                                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                                                       //User *aAUser = [User new];
-                                                                                       DatabaseAuthentication *dbA = [DatabaseAuthentication new];
-                                                                                       NSArray* statuses = [mappingResult array];
-                                                                                       NSLog(@"Statuses: %@", statuses);
-                                                                                       dbA = statuses.lastObject;
-                                                                                       NSLog(@"VALID???: %@", [dbA isValid]);
-                                                                                       
-                                                                                       /* NSLog(@"ARRAY SIZE %u", statuses.count);
-                                                                                        NSLog(@"ID: %@", aARequest.tableId);
-                                                                                        NSLog(@"DESCRIPTION: %@", aARequest.description);*/
-                                                                                        NSLog(@"Mapping Result: %@", mappingResult);
-                                     
-                                                                                       if([[dbA isValid] boolValue])
-                                                                                       {
-                                                                                           [userIdText setText:(@"WORKED")];
-                                                                                           [self performSegueWithIdentifier:@"sequeWelcome" sender:self];
-                                                                                       }
-                                                                                       else
-                                                                                       {
-                                                                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Authentication Error"
-                                                                                                message:@"Invalid Userid or Password"
-                                                                                                delegate:nil
-                                                                                                cancelButtonTitle:@"OK" 
-                                                                                                otherButtonTitles:nil];
-                                                                                           
-                                                                                           [alert show];
-                                                                                           
-                                                                                           //LOOK INTO AUTOMATIC REFERENCE COUNTING
-                                                                                           //[alert release];
-                                                                                       }
-                                                                                       
-                                                                                   } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
-                                                                                       NSLog(@"Failed with error: %@", [error localizedDescription]);
-                                                                                   }];
-    
-    operation.targetObject = nil;
-    [objectManager enqueueObjectRequestOperation:operation];
-    
+    [self performSegueWithIdentifier:@"segueLogin" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"sequeWelcome"]) {
+    if ([segue.identifier isEqualToString:@"segueLogin"]) {
         //[maintenanceServices removeAllObjects];
-        
-        LoginViewController *destViewController = [segue destinationViewController];
-
-        
+        //UnauthenticatedNVC *destViewController = [segue destinationViewController];
+       // UnauthenticatedNVC *destViewController = (UnauthenticatedNVC *)segue.destinationViewController;
+        //[self presentViewController:destViewController animated:(TRUE) completion:NULL];
+        [self dismissViewControllerAnimated:YES
+                                 completion:^{
+                                     UnauthenticatedNVC *destViewController = [[UnauthenticatedNVC alloc] init];
+                                     destViewController = (UnauthenticatedNVC *)segue.destinationViewController;
+                                    [self presentViewController:destViewController animated:(TRUE) completion:NULL];
+                                 }];
+    
         /*
          RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
          self.messageText = @"fddsasdasdassfds";

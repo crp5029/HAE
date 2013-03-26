@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 #import "MainTabBarController.h"
+#import "User.h"
+#import "DatabaseAuthentication.h"
+#import "LoginViewController.h"
 
 @interface LoginViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *userIdText;
+@property (weak, nonatomic) IBOutlet UITextField *passwordText;
+@property (nonatomic, strong) User *aUser;
+- (IBAction)loginnButton:(id)sender;
 
 @end

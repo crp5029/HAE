@@ -10,7 +10,8 @@
 #import <RestKit/RestKit.h>
 #import "User.h"
 #import "DatabaseAuthentication.h"
-#import "LoginViewController.h"
+#import "UnauthenticatedNVC.h"
+#import "UnauthenticatedSegue.h"
 
 @interface InitialViewVC : UIViewController <UITextViewDelegate> {
     

@@ -29,11 +29,13 @@
 		2A22BDBA16AC01FD00EC87BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A22BD9216AC01FC00EC87BC /* Foundation.framework */; };
 		2A22BDC216AC01FD00EC87BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A22BDC016AC01FD00EC87BC /* InfoPlist.strings */; };
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
-		2ADB834317006BEF00BEB4BB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB834217006BEF00BEB4BB /* MainTabBarController.m */; };
-		2ADB83461700701300BEB4BB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADB83451700701300BEB4BB /* LoginViewController.m */; };
 		8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */; };
 		8820D5FE16DEEB2500CF4D02 /* DatabaseAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */; };
 		88698DE916D2811300D5606E /* MaintenanceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 88698DE816D2811300D5606E /* MaintenanceRequest.m */; };
+		88C9B6F51700A98B0016C205 /* UnauthenticatedSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9B6F41700A98B0016C205 /* UnauthenticatedSegue.m */; };
+		88C9B6FA1700ACA70016C205 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9B6F71700ACA70016C205 /* LoginViewController.m */; };
+		88C9B6FB1700ACA70016C205 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9B6F91700ACA70016C205 /* MainTabBarController.m */; };
+		88C9B6FE1700ACC50016C205 /* UnauthenticatedNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9B6FD1700ACC50016C205 /* UnauthenticatedNVC.m */; };
 		88FE814B16C990CB00B59C22 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE814916C990CB00B59C22 /* MainStoryboard_iPad.storyboard */; };
 		88FE814C16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE814A16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard */; };
 		88FE815316C990DE00B59C22 /* GuestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 88FE814E16C990DE00B59C22 /* GuestService.m */; };
@@ -119,16 +121,20 @@
 		2A22BDC116AC01FD00EC87BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A22BDC316AC01FD00EC87BC /* ClientApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientApplicationTests.h; sourceTree = "<group>"; };
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
-		2ADB834117006BEF00BEB4BB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		2ADB834217006BEF00BEB4BB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		2ADB83441700701300BEB4BB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		2ADB83451700701300BEB4BB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		8820D5F916DEBA7E00CF4D02 /* InitialViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewVC.h; path = ClientApplication/Classes/Controllers/InitialViewVC.h; sourceTree = SOURCE_ROOT; };
 		8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewVC.m; path = ClientApplication/Classes/Controllers/InitialViewVC.m; sourceTree = SOURCE_ROOT; };
 		8820D5FC16DEEB2500CF4D02 /* DatabaseAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseAuthentication.h; path = ClientApplication/Classes/Models/DatabaseAuthentication.h; sourceTree = SOURCE_ROOT; };
 		8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatabaseAuthentication.m; path = ClientApplication/Classes/Models/DatabaseAuthentication.m; sourceTree = SOURCE_ROOT; };
 		88698DE716D2811300D5606E /* MaintenanceRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaintenanceRequest.h; path = ClientApplication/Classes/Models/MaintenanceRequest.h; sourceTree = SOURCE_ROOT; };
 		88698DE816D2811300D5606E /* MaintenanceRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaintenanceRequest.m; path = ClientApplication/Classes/Models/MaintenanceRequest.m; sourceTree = SOURCE_ROOT; };
+		88C9B6F31700A98B0016C205 /* UnauthenticatedSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnauthenticatedSegue.h; sourceTree = "<group>"; };
+		88C9B6F41700A98B0016C205 /* UnauthenticatedSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnauthenticatedSegue.m; sourceTree = "<group>"; };
+		88C9B6F61700ACA70016C205 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ClientApplication/Classes/Controllers/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		88C9B6F71700ACA70016C205 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ClientApplication/Classes/Controllers/LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		88C9B6F81700ACA70016C205 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = ClientApplication/Classes/Controllers/MainTabBarController.h; sourceTree = SOURCE_ROOT; };
+		88C9B6F91700ACA70016C205 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarController.m; path = ClientApplication/Classes/Controllers/MainTabBarController.m; sourceTree = SOURCE_ROOT; };
+		88C9B6FC1700ACC50016C205 /* UnauthenticatedNVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnauthenticatedNVC.h; path = ClientApplication/Classes/Controllers/UnauthenticatedNVC.h; sourceTree = SOURCE_ROOT; };
+		88C9B6FD1700ACC50016C205 /* UnauthenticatedNVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnauthenticatedNVC.m; path = ClientApplication/Classes/Controllers/UnauthenticatedNVC.m; sourceTree = SOURCE_ROOT; };
 		88FE814916C990CB00B59C22 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPad.storyboard; path = ClientApplication/Classes/Storyboards/MainStoryboard_iPad.storyboard; sourceTree = SOURCE_ROOT; };
 		88FE814A16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPhone.storyboard; path = ClientApplication/Classes/Storyboards/MainStoryboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		88FE814D16C990DE00B59C22 /* GuestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuestService.h; path = ClientApplication/Classes/Models/GuestService.h; sourceTree = SOURCE_ROOT; };
@@ -275,6 +281,7 @@
 		2A22BDFE16AC06A900EC87BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				88C9B6F21700A97C0016C205 /* CustomSegues */,
 				2A22BE2116AC084700EC87BC /* Storyboards */,
 				2A22BE1F16AC07C900EC87BC /* Models */,
 				2A22BE1E16AC07BF00EC87BC /* Controllers */,
@@ -297,6 +304,12 @@
 		2A22BE1E16AC07BF00EC87BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				88C9B6FC1700ACC50016C205 /* UnauthenticatedNVC.h */,
+				88C9B6FD1700ACC50016C205 /* UnauthenticatedNVC.m */,
+				88C9B6F61700ACA70016C205 /* LoginViewController.h */,
+				88C9B6F71700ACA70016C205 /* LoginViewController.m */,
+				88C9B6F81700ACA70016C205 /* MainTabBarController.h */,
+				88C9B6F91700ACA70016C205 /* MainTabBarController.m */,
 				8820D5F916DEBA7E00CF4D02 /* InitialViewVC.h */,
 				8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */,
 				88FE815616C990FB00B59C22 /* GuestServiceConfirmationVC.h */,
@@ -307,10 +320,6 @@
 				88FE815B16C990FB00B59C22 /* RoomMaintenanceTableViewController.m */,
 				88FE816016C990FB00B59C22 /* WakeupCallViewController.h */,
 				88FE816116C990FB00B59C22 /* WakeupCallViewController.m */,
-				2ADB834117006BEF00BEB4BB /* MainTabBarController.h */,
-				2ADB834217006BEF00BEB4BB /* MainTabBarController.m */,
-				2ADB83441700701300BEB4BB /* LoginViewController.h */,
-				2ADB83451700701300BEB4BB /* LoginViewController.m */,
 			);
 			name = Controllers;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Controllers;
@@ -352,6 +361,15 @@
 			name = Storyboards;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Storyboards;
 			sourceTree = "<absolute>";
+		};
+		88C9B6F21700A97C0016C205 /* CustomSegues */ = {
+			isa = PBXGroup;
+			children = (
+				88C9B6F31700A98B0016C205 /* UnauthenticatedSegue.h */,
+				88C9B6F41700A98B0016C205 /* UnauthenticatedSegue.m */,
+			);
+			path = CustomSegues;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -514,8 +532,10 @@
 				88698DE916D2811300D5606E /* MaintenanceRequest.m in Sources */,
 				8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */,
 				8820D5FE16DEEB2500CF4D02 /* DatabaseAuthentication.m in Sources */,
-				2ADB834317006BEF00BEB4BB /* MainTabBarController.m in Sources */,
-				2ADB83461700701300BEB4BB /* LoginViewController.m in Sources */,
+				88C9B6F51700A98B0016C205 /* UnauthenticatedSegue.m in Sources */,
+				88C9B6FA1700ACA70016C205 /* LoginViewController.m in Sources */,
+				88C9B6FB1700ACA70016C205 /* MainTabBarController.m in Sources */,
+				88C9B6FE1700ACC50016C205 /* UnauthenticatedNVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

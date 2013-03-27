@@ -2,4 +2,19 @@
 <Bucket
    type = "1"
    version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "ClientApplication/Classes/Controllers/LoginViewController.m"
+         timestampString = "386092272.054419"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "@synthesize - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil { self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];"
+         landmarkType = "19">
+      </FileBreakpoint>
+   </FileBreakpoints>
 </Bucket>

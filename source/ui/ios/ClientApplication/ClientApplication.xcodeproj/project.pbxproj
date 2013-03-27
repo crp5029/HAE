@@ -29,7 +29,8 @@
 		2A22BDBA16AC01FD00EC87BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A22BD9216AC01FC00EC87BC /* Foundation.framework */; };
 		2A22BDC216AC01FD00EC87BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A22BDC016AC01FD00EC87BC /* InfoPlist.strings */; };
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
-		2A9363331702D76A00444068 /* InitialTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialTableVC.m */; };
+		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
+		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
 		8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */; };
 		8820D5FE16DEEB2500CF4D02 /* DatabaseAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */; };
 		88698DE916D2811300D5606E /* MaintenanceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 88698DE816D2811300D5606E /* MaintenanceRequest.m */; };
@@ -122,8 +123,9 @@
 		2A22BDC116AC01FD00EC87BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A22BDC316AC01FD00EC87BC /* ClientApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientApplicationTests.h; sourceTree = "<group>"; };
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
-		2A9363311702D76A00444068 /* InitialTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialTableVC.h; sourceTree = "<group>"; };
-		2A9363321702D76A00444068 /* InitialTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialTableVC.m; sourceTree = "<group>"; };
+		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
+		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
+		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
 		8820D5F916DEBA7E00CF4D02 /* InitialViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewVC.h; path = ClientApplication/Classes/Controllers/InitialViewVC.h; sourceTree = SOURCE_ROOT; };
 		8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewVC.m; path = ClientApplication/Classes/Controllers/InitialViewVC.m; sourceTree = SOURCE_ROOT; };
 		8820D5FC16DEEB2500CF4D02 /* DatabaseAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseAuthentication.h; path = ClientApplication/Classes/Models/DatabaseAuthentication.h; sourceTree = SOURCE_ROOT; };
@@ -307,8 +309,8 @@
 		2A22BE1E16AC07BF00EC87BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A9363311702D76A00444068 /* InitialTableVC.h */,
-				2A9363321702D76A00444068 /* InitialTableVC.m */,
+				2A9363311702D76A00444068 /* InitialLoginVC.h */,
+				2A9363321702D76A00444068 /* InitialLoginVC.m */,
 				88C9B6FC1700ACC50016C205 /* UnauthenticatedNVC.h */,
 				88C9B6FD1700ACC50016C205 /* UnauthenticatedNVC.m */,
 				88C9B6F61700ACA70016C205 /* LoginViewController.h */,
@@ -351,6 +353,7 @@
 		2A22BE2016AC07D600EC87BC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2A9363521702E45900444068 /* cellBG.png */,
 				2A0A507A16B54DF200E06983 /* JSONKit.h */,
 				2A0A507B16B54DF200E06983 /* JSONKit.m */,
 			);
@@ -491,6 +494,7 @@
 				2A22BDA716AC01FC00EC87BC /* Default-568h@2x.png in Resources */,
 				88FE814B16C990CB00B59C22 /* MainStoryboard_iPad.storyboard in Resources */,
 				88FE814C16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard in Resources */,
+				2A9363531702E45900444068 /* cellBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +545,7 @@
 				88C9B6FA1700ACA70016C205 /* LoginViewController.m in Sources */,
 				88C9B6FB1700ACA70016C205 /* MainTabBarController.m in Sources */,
 				88C9B6FE1700ACC50016C205 /* UnauthenticatedNVC.m in Sources */,
-				2A9363331702D76A00444068 /* InitialTableVC.m in Sources */,
+				2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,34 +6,91 @@
 //  Copyright (c) 2013 Chris Purtell. All rights reserved.
 //
 
-#import "InitialTableVC.h"
+#import "InitialLoginVC.h"
 #import "RoomMaintenanceTableViewController.h"
 
 
-@interface InitialTableVC ()
+@interface InitialLoginVC ()
 
 @end
 
-@implementation InitialTableVC
+@implementation InitialLoginVC
 
 @synthesize maintenanceServices;
 @synthesize maintenanceService;
 @synthesize guestServices;
 @synthesize guestService;
+@synthesize tableView;
+@synthesize uiView;
 
-- (id)initWithStyle:(UITableViewStyle)style
+/*- (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
     return self;
-}
+}*/
+
+/*- (void)loadView {
+
+    //self.view = [[UIView alloc] initWithFrame:CGRectZero];
+    //self.view.backgroundColor = [UIColor whiteColor];
+    
+
+
+    //UIView *uiNewView = [[UIView alloc]initWithFrame:CGRectMake(10,10,150,50)];
+    UIView *uiNewView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    
+    InitialTableVC *myViewController = [[InitialTableVC alloc] initWithNibName:@"MyVC" bundle:nil];
+    myViewController.view.frame = CGRectMake(0, 0, uiNewView.frame.size.width, uiNewView.frame.size.height);
+    
+    //UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
+    //newLabel.text = @"TEST";
+    
+   // self.uiView = uiNewView;
+   
+    
+
+    
+   UITableView *tableNewView = [[UITableView alloc]
+                                 initWithFrame:CGRectMake(10, 200, 300, 200)
+                                 style:UITableViewStylePlain
+                                 ];
+    tableNewView.dataSource = self;
+    tableNewView.delegate = self;
+    
+   uiNewView.autoresizingMask =
+    UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleHeight
+    ;*/
+    
+    
+   // [uiNewView addSubview:newLabel];
+    // self.view = uiNewView;
+    
+    //InitialTableVC *myViewController = [[InitialTableVC alloc] initWithNibName:@"MyView" bundle:nil];
+
+    
+  //  self.tableView = tableNewView;
+   // [self.view addSubview:tableView];
+    //[self.view addSubview:myViewController.view];
+    //[uiView addSubview:tableView];
+   // [self.view addSubview:uiView];
+    //[self.view addSubview:tableView];
+    
+    
+   // [self.view addSubview:uiNewView];
+ /*   [uiNewView addSubview:myViewController.view];
+    self.view = uiNewView;
+    
+    
+    [super loadView];
+    
+}*/
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
     guestService = [[GuestService alloc] init];
     guestServices = [[NSMutableArray alloc] init];
     guestService.name = @"Login";
@@ -51,6 +108,20 @@
     [self setGuestService:guestService];
     [guestServices addObject:guestService];
     
+    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    newLabel.text = @"TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+    
+  //  CGFloat headerHeight = 100;
+  //  UITableView *headerView = [[UITableView alloc] initWithFrame:CGRectMake(100,200,200,100)];
+   // [self.tableView addSubview:headerView];
+   // self.tableView = headerView;
+    
+    
+   // UIView *uiNewView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+   // self.uiView = uiNewView;
+    [self.uiView addSubview:newLabel];
+
+    
     /*
      GuestService *aService = [self.guestServices objectAtIndex:0];
      testLabel.text = aService.name;
@@ -60,6 +131,22 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+   // [self.uiView addSubview:newLabel];
+    
+    
+   /* tableView.autoresizingMask =
+    UIViewAutoresizingFlexibleWidth |
+    UIViewAutoresizingFlexibleHeight
+    ;*/
+    
+    //[self.view addSubview:tableView];
+   // [self.uiView addSubview:self.tableView];
+    
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    [self.view addSubview:uiView];
+    [self.view addSubview:tableView];
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,14 +178,19 @@
 	//cell.textLabel.text = service.name;
     
     static NSString *MyIdentifier = @"MyReuseIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+        UIImageView *cellBG = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cellBG.png"]];
+        GuestService *service = [guestServices objectAtIndex:indexPath.row];
+        cell.backgroundView = cellBG;
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.textLabel.text = service.name;
+        
+        return cell;
     }
-    GuestService *service = [guestServices objectAtIndex:indexPath.row];
-    cell.textLabel.text = service.name;
-    return cell;
+    return nil;
 }
 
 /*

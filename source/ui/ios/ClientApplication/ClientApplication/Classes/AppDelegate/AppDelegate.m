@@ -24,7 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+  //  UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
 	//UINavigationController *navigationController = [[tabBarController viewControllers]objectAtIndex:2];
     //GuestServicesTableViewController *guestServicesTableViewController = [[navigationController viewControllers]objectAtIndex:0];
     // Override point for customization after application launch.

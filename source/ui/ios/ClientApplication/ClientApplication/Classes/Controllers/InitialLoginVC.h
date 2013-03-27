@@ -10,16 +10,18 @@
 #import "MaintenanceService.h"
 #import "GuestService.h"
 
-@interface InitialTableVC : UITableViewController
+@interface InitialLoginVC : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
 
 }
 
 @property (nonatomic, strong) NSMutableArray *maintenanceServices;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) MaintenanceService *maintenanceService;
 @property (nonatomic, strong) NSMutableArray *guestServices;
 @property (nonatomic, strong) GuestService *guestService;
+@property (strong, nonatomic) IBOutlet UIView *uiView;
+
 
 
 

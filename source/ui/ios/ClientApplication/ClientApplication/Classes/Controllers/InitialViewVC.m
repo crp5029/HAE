@@ -56,37 +56,37 @@
     if ([segue.identifier isEqualToString:@"segueLogin"]) {
         //[maintenanceServices removeAllObjects];
         //UnauthenticatedNVC *destViewController = [segue destinationViewController];
-       // UnauthenticatedNVC *destViewController = (UnauthenticatedNVC *)segue.destinationViewController;
+        // UnauthenticatedNVC *destViewController = (UnauthenticatedNVC *)segue.destinationViewController;
         //[self presentViewController:destViewController animated:(TRUE) completion:NULL];
         [self dismissViewControllerAnimated:YES
                                  completion:^{
                                      UnauthenticatedNVC *destViewController = [[UnauthenticatedNVC alloc] init];
                                      destViewController = (UnauthenticatedNVC *)segue.destinationViewController;
-                                    [self presentViewController:destViewController animated:(TRUE) completion:NULL];
+                                     [self presentViewController:destViewController animated:(TRUE) completion:NULL];
                                  }];
-    
+        
         /*
          RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
          self.messageText = @"fddsasdasdassfds";
          maintenanceService = [[MaintenanceService alloc] init];
          maintenanceService.name = self.messageText;
          destViewController.maintenanceService = self.maintenanceService;
-      
-        
-        RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
-        maintenanceServices = [[NSMutableArray alloc] init];
-        
-        maintenanceService = [[MaintenanceService alloc] init];
-        maintenanceService.name = @"New Request";
-        maintenanceService.enabled = YES;
-        [maintenanceServices addObject:maintenanceService];
-        
-        maintenanceService = [[MaintenanceService alloc] init];
-        maintenanceService.name = @"Maintenance History";
-        maintenanceService.enabled = YES;
-        [maintenanceServices addObject:maintenanceService];
-        
-        destViewController.maintenanceServices = self.maintenanceServices;   */
+         
+         
+         RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
+         maintenanceServices = [[NSMutableArray alloc] init];
+         
+         maintenanceService = [[MaintenanceService alloc] init];
+         maintenanceService.name = @"New Request";
+         maintenanceService.enabled = YES;
+         [maintenanceServices addObject:maintenanceService];
+         
+         maintenanceService = [[MaintenanceService alloc] init];
+         maintenanceService.name = @"Maintenance History";
+         maintenanceService.enabled = YES;
+         [maintenanceServices addObject:maintenanceService];
+         
+         destViewController.maintenanceServices = self.maintenanceServices;   */
         
     }
 }

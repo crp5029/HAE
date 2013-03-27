@@ -26,14 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"TESTTTT");
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"TESTTTT");
-    [self performSegueWithIdentifier:@"segueAuthenticate" sender:self];
+   // [self performSegueWithIdentifier:@"segueAuthenticate" sender:self];
     
 }
 
@@ -44,9 +42,9 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"segueAuthenticate"]) {
+    //if ([segue.identifier isEqualToString:@"segueAuthenticate"]) {
         
-        LoginViewController *destViewController = [segue destinationViewController];
+     //   LoginViewController *destViewController = [segue destinationViewController];
         
         
         /*
@@ -72,7 +70,6 @@
          
          destViewController.maintenanceServices = self.maintenanceServices;   */
         
-    }
 }
 
 @end

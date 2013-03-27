@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jJ3-vH-sBc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5Kg-g1-lc4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--View Controller - Social-->
@@ -383,7 +383,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="jJ3-vH-sBc" eventType="touchUpInside" id="lpX-eK-PLu"/>
-                                    <segue destination="5Kg-g1-lc4" kind="custom" identifier="segueLogin" customClass="UnauthenticatedSegue" id="SfF-Nt-p8t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -493,21 +492,54 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-874" y="-591"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--UnauthenticatedNVC-->
         <scene sceneID="Z6j-5V-PWm">
             <objects>
-                <navigationController definesPresentationContext="YES" id="5Kg-g1-lc4" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="5Kg-g1-lc4" customClass="UnauthenticatedNVC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="lyS-93-nT8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Omj-fL-Jc8">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kje-rn-DcK" kind="relationship" relationship="rootViewController" id="VIv-SX-WXV"/>
+                        <segue destination="6aN-jl-feC" kind="relationship" relationship="rootViewController" id="i9g-v3-ee8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAr-4V-Xsi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1380" y="63"/>
+            <point key="canvasLocation" x="-1660" y="19"/>
+        </scene>
+        <!--Initial TableVC-->
+        <scene sceneID="smK-4y-0rk">
+            <objects>
+                <tableViewController id="6aN-jl-feC" customClass="InitialTableVC" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="G49-vD-aut">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2U9-9k-jLX">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6aN-jl-feC" id="W5T-5S-xlX"/>
+                            <outlet property="delegate" destination="6aN-jl-feC" id="Fjq-wr-wfO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hay-cI-lPO"/>
+                    <connections>
+                        <segue destination="kje-rn-DcK" kind="push" identifier="segueLogin" id="GTa-Hw-5Fa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HoC-Ks-Efj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1181" y="32"/>
         </scene>
         <!--Navigation Controller - Guest Services-->
         <scene sceneID="ww0-47-lzt">
@@ -548,6 +580,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
+        <class className="InitialTableVC" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialTableVC.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="InitialViewVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialViewVC.h"/>
             <relationships>
@@ -578,6 +616,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="UnauthenticatedNVC" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UnauthenticatedNVC.h"/>
         </class>
         <class className="WakeupCallViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WakeupCallViewController.h"/>

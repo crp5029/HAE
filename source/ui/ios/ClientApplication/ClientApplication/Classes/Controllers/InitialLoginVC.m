@@ -22,6 +22,7 @@
 @synthesize guestService;
 @synthesize tableView;
 @synthesize uiView;
+@synthesize informationButton;
 
 /*- (id)initWithStyle:(UITableViewStyle)style
 {
@@ -107,46 +108,22 @@
     guestService.enabled = TRUE;
     [self setGuestService:guestService];
     [guestServices addObject:guestService];
-    
+  /*
     UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
-    newLabel.text = @"TESTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT";
+    newLabel.text = @"HMM";
     
-  //  CGFloat headerHeight = 100;
-  //  UITableView *headerView = [[UITableView alloc] initWithFrame:CGRectMake(100,200,200,100)];
-   // [self.tableView addSubview:headerView];
-   // self.tableView = headerView;
-    
-    
-   // UIView *uiNewView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-   // self.uiView = uiNewView;
     [self.uiView addSubview:newLabel];
-
-    
-    /*
-     GuestService *aService = [self.guestServices objectAtIndex:0];
-     testLabel.text = aService.name;
-     */
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-   // [self.uiView addSubview:newLabel];
-    
-    
-   /* tableView.autoresizingMask =
-    UIViewAutoresizingFlexibleWidth |
-    UIViewAutoresizingFlexibleHeight
-    ;*/
-    
-    //[self.view addSubview:tableView];
-   // [self.uiView addSubview:self.tableView];
-    
+    */
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview:uiView];
     [self.view addSubview:tableView];
     [super viewDidLoad];
+    
+    UIImage *informationButtonImage = [UIImage imageNamed:@"Information-Icon.png"];
+    [informationButton setImage:informationButtonImage forState:(UIControlStateNormal)];
+    
+    //informationButton = [[UIButton alloc] ]
 }
 
 - (void)didReceiveMemoryWarning
@@ -171,12 +148,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceCell"];
-	//guestService = [self.guestServices objectAtIndex:indexPath.row];
-	//cell.textLabel.text = guestService.name;
-    //GuestService *service = [self.guestServices objectAtIndex:indexPath.row];
-	//cell.textLabel.text = service.name;
-    
     static NSString *MyIdentifier = @"MyReuseIdentifier";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:MyIdentifier];
 
@@ -250,30 +221,8 @@
     if ([segue.identifier isEqualToString:@"segueLogin"]) {
         [maintenanceServices removeAllObjects];
         
-        
-        /*
-         RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
-         self.messageText = @"fddsasdasdassfds";
-         maintenanceService = [[MaintenanceService alloc] init];
-         maintenanceService.name = self.messageText;
-         destViewController.maintenanceService = self.maintenanceService;
-         */
-        
         RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
-        /*maintenanceServices = [[NSMutableArray alloc] init];
-        
-        maintenanceService = [[MaintenanceService alloc] init];
-        maintenanceService.name = @"New Request";
-        maintenanceService.enabled = YES;
-        [maintenanceServices addObject:maintenanceService];
-        
-        maintenanceService = [[MaintenanceService alloc] init];
-        maintenanceService.name = @"Maintenance History";
-        maintenanceService.enabled = YES;
-        [maintenanceServices addObject:maintenanceService];
-        
-        destViewController.maintenanceServices = self.maintenanceServices;*/
-        
+
     }
 }
 

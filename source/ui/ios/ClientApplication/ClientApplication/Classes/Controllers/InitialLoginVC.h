@@ -22,6 +22,7 @@
 @property (nonatomic, strong) GuestService *guestService;
 @property (strong, nonatomic) IBOutlet UIView *uiView;
 
+@property (strong, nonatomic) IBOutlet UIButton *informationButton;
 
 
 

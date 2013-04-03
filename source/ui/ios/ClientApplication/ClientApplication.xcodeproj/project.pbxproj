@@ -29,6 +29,8 @@
 		2A22BDBA16AC01FD00EC87BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A22BD9216AC01FC00EC87BC /* Foundation.framework */; };
 		2A22BDC216AC01FD00EC87BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A22BDC016AC01FD00EC87BC /* InfoPlist.strings */; };
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
+		2A55AF28170C1C760072667C /* keyWelcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF27170C1C760072667C /* keyWelcome.png */; };
+		2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF29170C25C40072667C /* Information-Icon.png */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
 		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
 		8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */; };
@@ -123,6 +125,8 @@
 		2A22BDC116AC01FD00EC87BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A22BDC316AC01FD00EC87BC /* ClientApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientApplicationTests.h; sourceTree = "<group>"; };
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
+		2A55AF27170C1C760072667C /* keyWelcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyWelcome.png; sourceTree = "<group>"; };
+		2A55AF29170C25C40072667C /* Information-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Information-Icon.png"; sourceTree = "<group>"; };
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
 		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 		2A22BE2016AC07D600EC87BC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2A55AF29170C25C40072667C /* Information-Icon.png */,
+				2A55AF27170C1C760072667C /* keyWelcome.png */,
 				2A9363521702E45900444068 /* cellBG.png */,
 				2A0A507A16B54DF200E06983 /* JSONKit.h */,
 				2A0A507B16B54DF200E06983 /* JSONKit.m */,
@@ -495,6 +501,8 @@
 				88FE814B16C990CB00B59C22 /* MainStoryboard_iPad.storyboard in Resources */,
 				88FE814C16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard in Resources */,
 				2A9363531702E45900444068 /* cellBG.png in Resources */,
+				2A55AF28170C1C760072667C /* keyWelcome.png in Resources */,
+				2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

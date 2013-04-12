@@ -429,17 +429,17 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eqz-Wq-2nM" firstAttribute="centerX" secondItem="68w-Pv-FIx" secondAttribute="centerX" type="default" id="Bli-zK-NLL"/>
-                            <constraint firstItem="JhF-xu-kDd" firstAttribute="trailing" secondItem="GXp-3b-OyO" secondAttribute="trailing" type="default" id="S4C-cm-EjQ"/>
+                            <constraint firstItem="yTE-lQ-wUb" firstAttribute="centerX" secondItem="GXp-3b-OyO" secondAttribute="centerX" type="default" id="3tS-2f-Mjp"/>
+                            <constraint firstItem="eqz-Wq-2nM" firstAttribute="centerX" secondItem="JhF-xu-kDd" secondAttribute="centerX" type="default" id="GnR-Fj-7Hz"/>
                             <constraint firstItem="GXp-3b-OyO" firstAttribute="top" secondItem="EDh-2A-T4c" secondAttribute="top" constant="87" id="SEG-le-3uK"/>
                             <constraint firstItem="JhF-xu-kDd" firstAttribute="leading" secondItem="GXp-3b-OyO" secondAttribute="leading" type="default" id="Usv-Ci-4Ml"/>
                             <constraint firstItem="68w-Pv-FIx" firstAttribute="top" secondItem="EDh-2A-T4c" secondAttribute="top" constant="61" id="VaW-dB-EiM"/>
                             <constraint firstItem="JhF-xu-kDd" firstAttribute="top" secondItem="EDh-2A-T4c" secondAttribute="top" constant="166" id="VmJ-q3-aV7"/>
-                            <constraint firstItem="eqz-Wq-2nM" firstAttribute="top" secondItem="EDh-2A-T4c" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Z7o-mk-9s4"/>
                             <constraint firstItem="GXp-3b-OyO" firstAttribute="centerX" secondItem="68w-Pv-FIx" secondAttribute="centerX" type="default" id="ZAM-Bd-xRB"/>
-                            <constraint firstItem="68w-Pv-FIx" firstAttribute="centerX" secondItem="yTE-lQ-wUb" secondAttribute="centerX" type="default" id="fTD-AS-4Tr"/>
                             <constraint firstItem="yTE-lQ-wUb" firstAttribute="top" secondItem="EDh-2A-T4c" secondAttribute="top" constant="135" id="fp8-og-VWh"/>
-                            <constraint firstItem="eqz-Wq-2nM" firstAttribute="centerX" secondItem="EDh-2A-T4c" secondAttribute="centerX" type="default" id="viM-wh-6ub"/>
+                            <constraint firstItem="yTE-lQ-wUb" firstAttribute="centerX" secondItem="EDh-2A-T4c" secondAttribute="centerX" type="default" id="o6B-dg-ew7"/>
+                            <constraint firstItem="JhF-xu-kDd" firstAttribute="centerX" secondItem="yTE-lQ-wUb" secondAttribute="centerX" type="default" id="v8J-sV-ZqY"/>
+                            <constraint firstAttribute="bottom" secondItem="eqz-Wq-2nM" secondAttribute="bottom" constant="93" id="yPO-ql-PkW"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

@@ -12,8 +12,10 @@
 #import "User.h"
 #import "DatabaseAuthentication.h"
 #import "LoginViewController.h"
+#import "KBKeyboardHandler.h"
+#import "KBKeyboardHandlerDelegate.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController<KBKeyboardHandlerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *userIdText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;

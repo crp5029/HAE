@@ -13,6 +13,9 @@
 @end
 
 @implementation LoginViewController
+{
+    KBKeyboardHandler *keyboard;
+}
 
 @synthesize userIdText;
 @synthesize passwordText;
@@ -32,9 +35,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonPressed:)];
-    
+   // keyboard = [[KBKeyboardHandler alloc] init];
+    //keyboard.delegate = self;
+    //keyboard = [[KBKeyboardHandler alloc] init];
+    //keyboard.delegate = self;
+    self.userIdText.delegate = self;
+    self.passwordText.delegate = self;
 
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,14 +60,28 @@
 {
     [self performSegueWithIdentifier:@"sequeAuthenticated" sender:self];
 }*/
- 
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [[self view] endEditing:TRUE];
+}
  
- 
- - (IBAction)doneButtonPressed:(id)sender
- {
- [self dismissViewControllerAnimated:YES completion:nil];
- }
+/*- (void)keyboardSizeChanged:(CGSize)delta
+{
+    // Resize / reposition your views here. All actions performed here
+    // will appear animated.
+    // delta is the difference between the previous size of the keyboard
+    // and the new one.
+    // For instance when the keyboard is shown,
+    // delta may has width=768, height=264,
+    // when the keyboard is hidden: width=-768, height=-264.
+    // Use keyboard.frame.size to get the real keyboard size.
+    
+    // Sample:
+    CGRect frame = self.view.frame;
+    frame.size.height -= delta.height;
+    self.view.frame = frame;
+}*/
 
 - (IBAction)loginButton:(id)sender {
     aUser = [User new];

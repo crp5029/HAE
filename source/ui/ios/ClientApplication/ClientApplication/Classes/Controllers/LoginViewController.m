@@ -63,7 +63,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [[self view] endEditing:TRUE];
+   // [[self view] endEditing:TRUE];
 }
  
 /*- (void)keyboardSizeChanged:(CGSize)delta

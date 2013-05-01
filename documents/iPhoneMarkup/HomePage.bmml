@@ -43,7 +43,7 @@
         <text>Announcements</text>
       </controlProperties>
     </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::TitleWindow" x="554" y="121" w="232" h="327" measuredW="450" measuredH="400" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::TitleWindow" x="554" y="121" w="232" h="301" measuredW="450" measuredH="400" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
         <dragger>false</dragger>
         <minimize>false</minimize>
@@ -75,9 +75,9 @@
         <text>Canadian%20Resort%20Towers</text>
       </controlProperties>
     </control>
-    <control controlID="23" controlTypeID="com.balsamiq.mockups::Button" x="255" y="364" w="81" h="49" measuredW="79" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Button" x="255" y="364" w="96" h="49" measuredW="95" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Locations</text>
+        <text>Destinations</text>
       </controlProperties>
     </control>
     <control controlID="24" controlTypeID="com.balsamiq.mockups::Icon" x="138" y="124" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="17" locked="false" isInGroup="-1">
@@ -86,10 +86,10 @@
         <icon>GearIcon%7Csmall</icon>
       </controlProperties>
     </control>
-    <control controlID="25" controlTypeID="com.balsamiq.mockups::Accordion" x="554" y="146" w="213" h="276" measuredW="150" measuredH="159" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Accordion" x="554" y="146" w="213" h="269" measuredW="150" measuredH="159" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <selectedIndex>0</selectedIndex>
-        <text>Notification%20Title%201%0ANotification%20Title%202%0ANotification%20Title%203</text>
+        <text>News%0AIndulge%0AFollow%20Us</text>
       </controlProperties>
     </control>
     <control controlID="26" controlTypeID="com.balsamiq.mockups::Tooltip" x="597" y="228" w="107" h="78" measuredW="108" measuredH="0" zOrder="19" locked="false" isInGroup="-1">
@@ -144,6 +144,14 @@
     <control controlID="38" controlTypeID="com.balsamiq.mockups::Icon" x="1040" y="124" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="28" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>JumpBackIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::ButtonBar" x="554" y="415" w="235" h="33" measuredW="199" measuredH="27" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>%2C%2CloginCreate%26bm%3BloginCreate.bmml%26bm%3BloginCreate.bmml%26bm%3BloginCreate.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22663%2C395%2C729%2C428%22%20href%3D%22loginCreate.bmml%22%20alt%3D%22loginCreate%22%20id%3D%2239%22/%3E%0A</map>
+        <selectedIndex>2</selectedIndex>
+        <text>Book%2C%20Information%2C%20Login</text>
       </controlProperties>
     </control>
   </controls>

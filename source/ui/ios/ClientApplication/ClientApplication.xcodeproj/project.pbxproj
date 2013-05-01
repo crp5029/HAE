@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0A507C16B54DF200E06983 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A507B16B54DF200E06983 /* JSONKit.m */; };
 		2A0A50F416B5F39100E06983 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0A50EB16B5F28D00E06983 /* libRestKit.a */; };
 		2A0A510416B5F4B100E06983 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0A510316B5F4B100E06983 /* CFNetwork.framework */; };
 		2A0A510616B5F4B800E06983 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0A510516B5F4B800E06983 /* CoreData.framework */; };
@@ -33,7 +32,9 @@
 		2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF29170C25C40072667C /* Information-Icon.png */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
 		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
-		2ABCB5511730DB5300B7E6A7 /* defaultBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABCB5501730DB5300B7E6A7 /* defaultBG.png */; };
+		2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA06B9217311B7200989F8D /* settingsIcon.png */; };
+		2AA6860C1730DF6500B33A58 /* defaultBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6860B1730DF6500B33A58 /* defaultBG.png */; };
+		2AB9CA8917312206004E3C44 /* notificationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AB9CA8817312206004E3C44 /* notificationIcon.png */; };
 		2AC6B8D41717EBE60076C474 /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */; };
 		8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */; };
 		8820D5FE16DEEB2500CF4D02 /* DatabaseAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */; };
@@ -100,8 +101,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A0A507A16B54DF200E06983 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = Helpers/JSONKit.h; sourceTree = "<group>"; };
-		2A0A507B16B54DF200E06983 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = Helpers/JSONKit.m; sourceTree = "<group>"; };
 		2A0A50E016B5F28D00E06983 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "ClientApplication/Classes/Helpers/RestKit-0.20.0-pre6/RestKit.xcodeproj"; sourceTree = "<group>"; };
 		2A0A510316B5F4B100E06983 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2A0A510516B5F4B800E06983 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -132,7 +131,9 @@
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
 		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
-		2ABCB5501730DB5300B7E6A7 /* defaultBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultBG.png; sourceTree = "<group>"; };
+		2AA06B9217311B7200989F8D /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsIcon.png; path = Helpers/settingsIcon.png; sourceTree = "<group>"; };
+		2AA6860B1730DF6500B33A58 /* defaultBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = defaultBG.png; path = Helpers/defaultBG.png; sourceTree = "<group>"; };
+		2AB9CA8817312206004E3C44 /* notificationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notificationIcon.png; path = Helpers/notificationIcon.png; sourceTree = "<group>"; };
 		2AC6B8D21717EBE60076C474 /* KBKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBKeyboardHandler.h; path = Helpers/KBKeyboardHandler.h; sourceTree = "<group>"; };
 		2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBKeyboardHandler.m; path = Helpers/KBKeyboardHandler.m; sourceTree = "<group>"; };
 		2AC6B8D51717EC140076C474 /* KBKeyboardHandlerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KBKeyboardHandlerDelegate.h; path = Helpers/KBKeyboardHandlerDelegate.h; sourceTree = "<group>"; };
@@ -363,15 +364,15 @@
 		2A22BE2016AC07D600EC87BC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2ABCB5501730DB5300B7E6A7 /* defaultBG.png */,
+				2AB9CA8817312206004E3C44 /* notificationIcon.png */,
+				2AA06B9217311B7200989F8D /* settingsIcon.png */,
+				2AA6860B1730DF6500B33A58 /* defaultBG.png */,
 				2AC6B8D51717EC140076C474 /* KBKeyboardHandlerDelegate.h */,
 				2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */,
 				2AC6B8D21717EBE60076C474 /* KBKeyboardHandler.h */,
 				2A55AF29170C25C40072667C /* Information-Icon.png */,
 				2A55AF27170C1C760072667C /* keyWelcome.png */,
 				2A9363521702E45900444068 /* cellBG.png */,
-				2A0A507A16B54DF200E06983 /* JSONKit.h */,
-				2A0A507B16B54DF200E06983 /* JSONKit.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -513,7 +514,9 @@
 				2A9363531702E45900444068 /* cellBG.png in Resources */,
 				2A55AF28170C1C760072667C /* keyWelcome.png in Resources */,
 				2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */,
-				2ABCB5511730DB5300B7E6A7 /* defaultBG.png in Resources */,
+				2AA6860C1730DF6500B33A58 /* defaultBG.png in Resources */,
+				2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */,
+				2AB9CA8917312206004E3C44 /* notificationIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +577,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */,
-				2A0A507C16B54DF200E06983 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

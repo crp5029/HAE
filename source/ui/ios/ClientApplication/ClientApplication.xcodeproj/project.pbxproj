@@ -33,6 +33,7 @@
 		2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF29170C25C40072667C /* Information-Icon.png */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
 		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
+		2ABCB5511730DB5300B7E6A7 /* defaultBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABCB5501730DB5300B7E6A7 /* defaultBG.png */; };
 		2AC6B8D41717EBE60076C474 /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */; };
 		8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */; };
 		8820D5FE16DEEB2500CF4D02 /* DatabaseAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */; };
@@ -131,6 +132,7 @@
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
 		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
+		2ABCB5501730DB5300B7E6A7 /* defaultBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultBG.png; sourceTree = "<group>"; };
 		2AC6B8D21717EBE60076C474 /* KBKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBKeyboardHandler.h; path = Helpers/KBKeyboardHandler.h; sourceTree = "<group>"; };
 		2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBKeyboardHandler.m; path = Helpers/KBKeyboardHandler.m; sourceTree = "<group>"; };
 		2AC6B8D51717EC140076C474 /* KBKeyboardHandlerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KBKeyboardHandlerDelegate.h; path = Helpers/KBKeyboardHandlerDelegate.h; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		2A22BE2016AC07D600EC87BC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2ABCB5501730DB5300B7E6A7 /* defaultBG.png */,
 				2AC6B8D51717EC140076C474 /* KBKeyboardHandlerDelegate.h */,
 				2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */,
 				2AC6B8D21717EBE60076C474 /* KBKeyboardHandler.h */,
@@ -510,6 +513,7 @@
 				2A9363531702E45900444068 /* cellBG.png in Resources */,
 				2A55AF28170C1C760072667C /* keyWelcome.png in Resources */,
 				2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */,
+				2ABCB5511730DB5300B7E6A7 /* defaultBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

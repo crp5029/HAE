@@ -20,6 +20,7 @@
 @synthesize userIdText;
 @synthesize passwordText;
 @synthesize aUser;
+@synthesize separateLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +42,8 @@
     //keyboard.delegate = self;
     self.userIdText.delegate = self;
     self.passwordText.delegate = self;
+    separateLabel.layer.borderColor = [UIColor blackColor].CGColor;
+    separateLabel.layer.borderWidth = 1.0;
 
 }
 

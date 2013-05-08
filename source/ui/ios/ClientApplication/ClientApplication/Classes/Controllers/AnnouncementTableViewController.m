@@ -7,16 +7,20 @@
 //
 
 #import "AnnouncementTableViewController.h"
+#import "SectionHeaderView.h"
+#import "TableSection.h"
 
-@interface AnnouncementTableViewController (){
-    bool *sectionOpen[3];
-}
+#define DEFAULT_ROW_HEIGHT 78
+#define HEADER_HEIGHT 45
 
-@end
 
 @implementation AnnouncementTableViewController
-@synthesize guestServices;
-@synthesize guestService;
+
+@synthesize announcementArray;
+@synthesize aAnnouncement;
+@synthesize guestServiceName;
+@synthesize sectionArray;
+@synthesize openSectionIndex;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -31,140 +35,187 @@
 {
     [super viewDidLoad];
     
-    guestService = [[GuestService alloc] init];
-    guestServices = [[NSMutableArray alloc] init];
-    guestService.name = @"News";
-    guestService.enabled = TRUE;
-    guestService.description = @"THIS IS A FUCKING TEST";
-    [self setGuestService:guestService];
-    [guestServices addObject:guestService];
-    guestService = [[GuestService alloc] init];
-    guestService.name = @"Indulge";
-    guestService.enabled = TRUE;
-    guestService.description = @"fdsadfdsafdsafdsafdsafdsafdsafdsafdsaffdsafsa";
-    [self setGuestService:guestService];
-    [guestServices addObject:guestService];
-    guestService = [[GuestService alloc] init];
-    guestService.name = @"Follow Us";
-    guestService.enabled = TRUE;
-    guestService.description = @"fdsadfdsafdsafdsafdsafdsafdsafdsafdsaffdsafsa";
-    [self setGuestService:guestService];
-    [guestServices addObject:guestService];
+    aAnnouncement = [[Announcement alloc] init];
+    announcementArray = [[NSMutableArray alloc] init];
+    aAnnouncement.header = @"News";
+    aAnnouncement.body = @"THIS IS A FUCKING TEST";
+    [self setAAnnouncement:aAnnouncement];
+    [announcementArray addObject:aAnnouncement];
+    aAnnouncement = [[Announcement alloc] init];
+    aAnnouncement.header = @"Indulge";
+    aAnnouncement.body = @"Get Money";
+    [self setAAnnouncement:aAnnouncement];
+    [announcementArray addObject:aAnnouncement];
+    aAnnouncement = [[Announcement alloc] init];
+    aAnnouncement.header = @"Follow Us";
+    aAnnouncement.body = @"Fuck Bitches";
+    [self setAAnnouncement:aAnnouncement];
+    [announcementArray addObject:aAnnouncement];
+    
+    self.sectionArray=[[NSMutableArray alloc]init];
+    for (int i=0; i<=10; i++) {
+        TableSection *section=[[TableSection alloc]init];
+       // section.sectionHeader=[NSString stringWithFormat:@"Header %d",i];
+        section.sectionRows=[[NSMutableArray alloc]init];
+        for (int i=0; i<=10; i++) {
+            [section.sectionRows addObject:[NSString stringWithFormat:@"Row %d",i]];
+        }
+        [self.sectionArray addObject:section];
+    }
+    
+    
+    self.sectionArray=[[NSMutableArray alloc]init];
+    Announcement *anAnnouncement;
+    for (int i=0; i < announcementArray.count; i++) {
+        TableSection *section=[[TableSection alloc]init];
+        anAnnouncement = [announcementArray objectAtIndex:(i)];
+        section.sectionHeader=anAnnouncement.header;
+        section.sectionRows=[[NSMutableArray alloc]init];
+        for (int j=0; j < 1; j++) {
+            [section.sectionRows addObject:[anAnnouncement body]];
+        }
+        [self.sectionArray addObject:section];
+    }
+    
+    self.tableView.sectionHeaderHeight = HEADER_HEIGHT;
+    self.openSectionIndex = NSNotFound;
+}
+
+#pragma mark - Table view data source
+-(UIView*)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section {
     
     /*
-     GuestService *aService = [self.guestServices objectAtIndex:0];
-     testLabel.text = aService.name;
+     Create the section header views lazily.
      */
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+	TableSection *aSection=[sectionArray objectAtIndex:section];
+    if (!aSection.sectionHeaderView) {
+        aSection.sectionHeaderView = [[SectionHeaderView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.tableView.bounds.size.width, HEADER_HEIGHT) title:aSection.sectionHeader section:section delegate:self];
+        
+    }
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    return aSection.sectionHeaderView;
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return [self.sectionArray count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    TableSection *aSection=[sectionArray objectAtIndex:section];
+    // Return the number of rows in the section.
+    return aSection.open ? [aSection.sectionRows count]:0;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TableSection *aSection=[sectionArray objectAtIndex:indexPath.section];
+    static NSString *CellIdentifier = @"guestCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
+    cell.textLabel.text=[aSection.sectionRows objectAtIndex:indexPath.row];
+    return cell;
+}
+
+
+-(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)sectionOpened {
+    
+    TableSection *aSection=[sectionArray objectAtIndex:sectionOpened];
+    aSection.open=YES;
+    
+    /*
+     Create an array containing the index paths of the rows to insert: These correspond to the rows for each quotation in the current section.
+     */
+    NSInteger countOfRowsToInsert = [aSection.sectionRows count];
+    NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < countOfRowsToInsert; i++) {
+        [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:i inSection:sectionOpened]];
+    }
+    
+    /*
+     Create an array containing the index paths of the rows to delete: These correspond to the rows for each quotation in the previously-open section, if there was one.
+     */
+    NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+    
+    NSInteger previousOpenSectionIndex = self.openSectionIndex;
+    if (previousOpenSectionIndex != NSNotFound) {
+        TableSection *previousOpenSection=[sectionArray objectAtIndex:previousOpenSectionIndex];
+        previousOpenSection.open=NO;
+        [previousOpenSection.sectionHeaderView toggleOpenWithUserAction:NO];
+        NSInteger countOfRowsToDelete = [previousOpenSection.sectionRows count];
+        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
+            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:previousOpenSectionIndex]];
+        }
+        
+        
+    }
+    
+    // Style the animation so that there's a smooth flow in either direction.
+    UITableViewRowAnimation insertAnimation;
+    UITableViewRowAnimation deleteAnimation;
+    if (previousOpenSectionIndex == NSNotFound || sectionOpened < previousOpenSectionIndex) {
+        insertAnimation = UITableViewRowAnimationTop;
+        deleteAnimation = UITableViewRowAnimationBottom;
+    }
+    else {
+        insertAnimation = UITableViewRowAnimationBottom;
+        deleteAnimation = UITableViewRowAnimationTop;
+    }
+    
+    // Apply the updates.
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:insertAnimation];
+    [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:deleteAnimation];
+    [self.tableView endUpdates];
+    self.openSectionIndex = sectionOpened;
+    
+    
+}
+-(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
+    
+    /*
+     Create an array of the index paths of the rows in the section that was closed, then delete those rows from the table view.
+     */
+    
+	TableSection *aSection = [self.sectionArray objectAtIndex:sectionClosed];
+	
+    aSection.open = NO;
+    
+    NSInteger countOfRowsToDelete = [self.tableView numberOfRowsInSection:sectionClosed];
+    
+    if (countOfRowsToDelete > 0) {
+        NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
+            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:sectionClosed]];
+        }
+        [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationTop];
+    }
+    self.openSectionIndex = NSNotFound;
+}
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+}
+
+- (IBAction)backButton:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    return [guestServices count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceCell"];
-	//guestService = [self.guestServices objectAtIndex:indexPath.row];
-	//cell.textLabel.text = guestService.name;
-    //GuestService *service = [self.guestServices objectAtIndex:indexPath.row];
-	//cell.textLabel.text = service.name;
-    
-    static NSString *MyIdentifier = @"guestCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
-    }
-    GuestService *service = [guestServices objectAtIndex:indexPath.row];
-    cell.textLabel.text = service.name;
-    return cell;
-}
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath  {
-	if (sectionOpen[indexPath.row]) {
-		return 240;///it's open
-	} else {
-		return 45;///it's closed
-	}
-    
-}
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    ///turn them all off
-	sectionOpen[0]=NO;
-	sectionOpen[1]=NO;
-	sectionOpen[2]=NO;
-    
-	///open this one
-	sectionOpen[indexPath.row]=YES;
-    
-    ///animate the opening and expand the row
-	[self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
-    UITableViewCell *cell = (UITableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
-    cell.detailTextLabel.text=@"TEST";
-    
-}
-
-- (IBAction)backButton:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:nil];
 }
 @end

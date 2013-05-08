@@ -7,13 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GuestService.h"
+#import "Announcement.h"
+#import "SectionHeaderView.h"
 
-@interface AnnouncementTableViewController : UITableViewController
-- (IBAction)backButton:(id)sender;
-@property (nonatomic, strong) NSMutableArray *guestServices;
+
+@interface AnnouncementTableViewController : UITableViewController<SectionHeaderViewDelegate> {
+    
+}
+
+@property (nonatomic, strong) NSMutableArray *sectionArray;
+@property (nonatomic, assign) NSInteger openSectionIndex;
+@property (nonatomic, strong) NSMutableArray *announcementArray;
 @property (nonatomic, strong) NSString *guestServiceName;
-@property (nonatomic, strong) GuestService *guestService;
+@property (nonatomic, strong) Announcement *aAnnouncement;
+
+//- (IBAction)backButton:(id)sender;
+
 
 
 

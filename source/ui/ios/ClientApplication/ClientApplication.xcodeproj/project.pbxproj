@@ -33,6 +33,9 @@
 		2A896AF5173A238700EFFFB4 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896AF4173A238700EFFFB4 /* InformationViewController.m */; };
 		2A896AFB173A252700EFFFB4 /* NotificationsNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896AFA173A252700EFFFB4 /* NotificationsNavigationViewController.m */; };
 		2A896B04173A427D00EFFFB4 /* AnnouncementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B03173A427D00EFFFB4 /* AnnouncementTableViewController.m */; };
+		2A896B07173A51A800EFFFB4 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B06173A51A800EFFFB4 /* TableSection.m */; };
+		2A896B0A173A527E00EFFFB4 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B09173A527E00EFFFB4 /* SectionHeaderView.m */; };
+		2A896B0D173A670200EFFFB4 /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B0C173A670200EFFFB4 /* Announcement.m */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
 		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
 		2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA06B9217311B7200989F8D /* settingsIcon.png */; };
@@ -137,6 +140,12 @@
 		2A896AFA173A252700EFFFB4 /* NotificationsNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsNavigationViewController.m; sourceTree = "<group>"; };
 		2A896B02173A427D00EFFFB4 /* AnnouncementTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementTableViewController.h; sourceTree = "<group>"; };
 		2A896B03173A427D00EFFFB4 /* AnnouncementTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementTableViewController.m; sourceTree = "<group>"; };
+		2A896B05173A51A800EFFFB4 /* TableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableSection.h; sourceTree = "<group>"; };
+		2A896B06173A51A800EFFFB4 /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableSection.m; sourceTree = "<group>"; };
+		2A896B08173A527E00EFFFB4 /* SectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionHeaderView.h; sourceTree = "<group>"; };
+		2A896B09173A527E00EFFFB4 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
+		2A896B0B173A670200EFFFB4 /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
+		2A896B0C173A670200EFFFB4 /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
 		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
@@ -371,6 +380,12 @@
 				88FE815216C990DE00B59C22 /* User.m */,
 				8820D5FC16DEEB2500CF4D02 /* DatabaseAuthentication.h */,
 				8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */,
+				2A896B05173A51A800EFFFB4 /* TableSection.h */,
+				2A896B06173A51A800EFFFB4 /* TableSection.m */,
+				2A896B08173A527E00EFFFB4 /* SectionHeaderView.h */,
+				2A896B09173A527E00EFFFB4 /* SectionHeaderView.m */,
+				2A896B0B173A670200EFFFB4 /* Announcement.h */,
+				2A896B0C173A670200EFFFB4 /* Announcement.m */,
 			);
 			name = Models;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Models;
@@ -587,6 +602,9 @@
 				2A896AF5173A238700EFFFB4 /* InformationViewController.m in Sources */,
 				2A896AFB173A252700EFFFB4 /* NotificationsNavigationViewController.m in Sources */,
 				2A896B04173A427D00EFFFB4 /* AnnouncementTableViewController.m in Sources */,
+				2A896B07173A51A800EFFFB4 /* TableSection.m in Sources */,
+				2A896B0A173A527E00EFFFB4 /* SectionHeaderView.m in Sources */,
+				2A896B0D173A670200EFFFB4 /* Announcement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

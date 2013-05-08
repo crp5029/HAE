@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic) BOOL enabled;
+@property (nonatomic) NSString *description;
 
 @end

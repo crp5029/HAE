@@ -30,6 +30,9 @@
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
 		2A55AF28170C1C760072667C /* keyWelcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF27170C1C760072667C /* keyWelcome.png */; };
 		2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF29170C25C40072667C /* Information-Icon.png */; };
+		2A896AF5173A238700EFFFB4 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896AF4173A238700EFFFB4 /* InformationViewController.m */; };
+		2A896AFB173A252700EFFFB4 /* NotificationsNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896AFA173A252700EFFFB4 /* NotificationsNavigationViewController.m */; };
+		2A896B04173A427D00EFFFB4 /* AnnouncementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B03173A427D00EFFFB4 /* AnnouncementTableViewController.m */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
 		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
 		2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA06B9217311B7200989F8D /* settingsIcon.png */; };
@@ -128,6 +131,12 @@
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
 		2A55AF27170C1C760072667C /* keyWelcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyWelcome.png; sourceTree = "<group>"; };
 		2A55AF29170C25C40072667C /* Information-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Information-Icon.png"; sourceTree = "<group>"; };
+		2A896AF3173A238700EFFFB4 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		2A896AF4173A238700EFFFB4 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		2A896AF9173A252700EFFFB4 /* NotificationsNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsNavigationViewController.h; sourceTree = "<group>"; };
+		2A896AFA173A252700EFFFB4 /* NotificationsNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsNavigationViewController.m; sourceTree = "<group>"; };
+		2A896B02173A427D00EFFFB4 /* AnnouncementTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementTableViewController.h; sourceTree = "<group>"; };
+		2A896B03173A427D00EFFFB4 /* AnnouncementTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementTableViewController.m; sourceTree = "<group>"; };
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
 		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
@@ -338,6 +347,12 @@
 				88FE815B16C990FB00B59C22 /* RoomMaintenanceTableViewController.m */,
 				88FE816016C990FB00B59C22 /* WakeupCallViewController.h */,
 				88FE816116C990FB00B59C22 /* WakeupCallViewController.m */,
+				2A896AF3173A238700EFFFB4 /* InformationViewController.h */,
+				2A896AF4173A238700EFFFB4 /* InformationViewController.m */,
+				2A896AF9173A252700EFFFB4 /* NotificationsNavigationViewController.h */,
+				2A896AFA173A252700EFFFB4 /* NotificationsNavigationViewController.m */,
+				2A896B02173A427D00EFFFB4 /* AnnouncementTableViewController.h */,
+				2A896B03173A427D00EFFFB4 /* AnnouncementTableViewController.m */,
 			);
 			name = Controllers;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Controllers;
@@ -569,6 +584,9 @@
 				88C9B6FE1700ACC50016C205 /* UnauthenticatedNVC.m in Sources */,
 				2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */,
 				2AC6B8D41717EBE60076C474 /* KBKeyboardHandler.m in Sources */,
+				2A896AF5173A238700EFFFB4 /* InformationViewController.m in Sources */,
+				2A896AFB173A252700EFFFB4 /* NotificationsNavigationViewController.m in Sources */,
+				2A896B04173A427D00EFFFB4 /* AnnouncementTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

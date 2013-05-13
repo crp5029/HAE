@@ -1,0 +1,49 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="389" measuredH="558" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::iPhone" x="107" y="48" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Button" x="221" y="368" w="-1" h="-1" measuredW="54" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Switch" x="275" y="328" w="-1" h="-1" measuredW="68" measuredH="28" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="147" y="332" w="-1" h="-1" measuredW="109" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Keep%20me%20logged%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextArea" x="147" y="214" w="45" h="41" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::TextArea" x="200" y="214" w="45" h="41" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::TextArea" x="256" y="214" w="45" h="41" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::TextArea" x="313" y="214" w="45" h="41" measuredW="200" measuredH="140" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::ComboBox" x="214" y="285" w="-1" h="-1" measuredW="69" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Status%0AOnline%0ADo%20Not%20Disturb%0AInvisible</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::ButtonBar" x="130" y="446" w="236" h="30" measuredW="205" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>3</selectedIndex>
+        <size>10</size>
+        <text>Account%2C%20Service%2C%20Order%2C%20Social</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

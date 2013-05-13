@@ -1,0 +1,17 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="361" measuredH="570" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="79" y="60" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Alert" x="102" y="218" w="233" h="142" measuredW="200" measuredH="149" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Social%20Center%0ASeems%20this%20is%20your%20first%20time%20here%2Cwould%20you%20like%20to%20create%20a%20signon%20privacy%20pin%0AYes%2C%20No</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::ButtonBar" x="105" y="460" w="236" h="30" measuredW="205" measuredH="24" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>3</selectedIndex>
+        <size>10</size>
+        <text>Account%2C%20Service%2C%20Order%2C%20Social</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

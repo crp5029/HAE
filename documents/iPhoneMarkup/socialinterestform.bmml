@@ -1,0 +1,33 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="564" measuredH="362" mockupW="510" mockupH="282">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="54" y="80" w="-1" h="-1" measuredW="510" measuredH="282" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <orientation>landscape</orientation>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::ProgressBar" x="159" y="242" w="-1" h="-1" measuredW="100" measuredH="20" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::ProgressBar" x="355" y="242" w="-1" h="-1" measuredW="100" measuredH="20" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::ProgressBar" x="355" y="176" w="-1" h="-1" measuredW="100" measuredH="20" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::ProgressBar" x="159" y="176" w="-1" h="-1" measuredW="100" measuredH="20" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="144" y="211" w="136" h="-1" measuredW="88" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Outing%20Actions</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="144" y="149" w="136" h="-1" measuredW="97" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Personal%20effects</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="319" y="149" w="136" h="-1" measuredW="84" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Life%20Optimizer</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="319" y="211" w="136" h="-1" measuredW="72" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Local%20Alerts</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

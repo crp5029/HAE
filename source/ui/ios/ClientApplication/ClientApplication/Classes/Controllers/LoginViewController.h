@@ -15,6 +15,7 @@
 #import "KBKeyboardHandler.h"
 #import "KBKeyboardHandlerDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import "CreateAccountViewController.h"
 
 @interface LoginViewController : UIViewController<KBKeyboardHandlerDelegate>
 
@@ -23,5 +24,6 @@
 @property (nonatomic, strong) User *aUser;
 - (IBAction)loginButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *separateLabel;
+- (IBAction)createAccountButton:(id)sender;
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NotificationsNavigationViewController.h"
+#import "AnnouncementTableViewController.h"
 
 @interface InformationViewController : UIViewController
 

@@ -35,7 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)notificationsTransitionButton:(id)sender {
+/*- (IBAction)notificationsTransitionButton:(id)sender {
     [self performSegueWithIdentifier:@"segueUnauthenticatedNotifications" sender:self];
 }
 
@@ -49,35 +49,12 @@
         //[self presentViewController:destViewController animated:(TRUE) completion:NULL];
         [self dismissViewControllerAnimated:YES
                                  completion:^{
-                                     NotificationsNavigationViewController *destViewController = [[NotificationsNavigationViewController alloc] init];
-                                     destViewController = (NotificationsNavigationViewController *)segue.destinationViewController;
+                                     AnnouncementTableViewController *destViewController = [[AnnouncementTableViewController alloc] init];
+                                     destViewController = (AnnouncementTableViewController *)segue.destinationViewController;
                                      [self presentViewController:destViewController animated:(TRUE) completion:NULL];
                                  }];
         
-        /*
-         RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
-         self.messageText = @"fddsasdasdassfds";
-         maintenanceService = [[MaintenanceService alloc] init];
-         maintenanceService.name = self.messageText;
-         destViewController.maintenanceService = self.maintenanceService;
-         
-         
-         RoomMaintenanceTableViewController *destViewController = [segue destinationViewController];
-         maintenanceServices = [[NSMutableArray alloc] init];
-         
-         maintenanceService = [[MaintenanceService alloc] init];
-         maintenanceService.name = @"New Request";
-         maintenanceService.enabled = YES;
-         [maintenanceServices addObject:maintenanceService];
-         
-         maintenanceService = [[MaintenanceService alloc] init];
-         maintenanceService.name = @"Maintenance History";
-         maintenanceService.enabled = YES;
-         [maintenanceServices addObject:maintenanceService];
-         
-         destViewController.maintenanceServices = self.maintenanceServices;   */
-        
     }
-}
+}*/
 
 @end

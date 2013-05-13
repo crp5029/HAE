@@ -13,5 +13,14 @@
 @synthesize tableId;
 @synthesize userid;
 @synthesize password;
+@synthesize firstName;
+@synthesize lastName;
+@synthesize streetName;
+@synthesize city;
+@synthesize state;
+@synthesize zipcode;
+@synthesize country;
+@synthesize phone;
+@synthesize email;
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A061D6F1740520C003767A8 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A061D6E1740520C003767A8 /* CreateAccountViewController.m */; };
+		2A061D751740C703003767A8 /* BookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A061D741740C702003767A8 /* BookingViewController.m */; };
+		2A061D781740EC23003767A8 /* LocationComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A061D771740EC22003767A8 /* LocationComboBox.m */; };
 		2A0A50F416B5F39100E06983 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0A50EB16B5F28D00E06983 /* libRestKit.a */; };
 		2A0A510416B5F4B100E06983 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0A510316B5F4B100E06983 /* CFNetwork.framework */; };
 		2A0A510616B5F4B800E06983 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A0A510516B5F4B800E06983 /* CoreData.framework */; };
@@ -110,6 +112,10 @@
 /* Begin PBXFileReference section */
 		2A061D6D1740520C003767A8 /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		2A061D6E1740520C003767A8 /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		2A061D731740C702003767A8 /* BookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingViewController.h; sourceTree = "<group>"; };
+		2A061D741740C702003767A8 /* BookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingViewController.m; sourceTree = "<group>"; };
+		2A061D761740EC22003767A8 /* LocationComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationComboBox.h; sourceTree = "<group>"; };
+		2A061D771740EC22003767A8 /* LocationComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationComboBox.m; sourceTree = "<group>"; };
 		2A0A50E016B5F28D00E06983 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "ClientApplication/Classes/Helpers/RestKit-0.20.0-pre6/RestKit.xcodeproj"; sourceTree = "<group>"; };
 		2A0A510316B5F4B100E06983 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2A0A510516B5F4B800E06983 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -367,6 +373,10 @@
 				2A896B03173A427D00EFFFB4 /* AnnouncementTableViewController.m */,
 				2A061D6D1740520C003767A8 /* CreateAccountViewController.h */,
 				2A061D6E1740520C003767A8 /* CreateAccountViewController.m */,
+				2A061D731740C702003767A8 /* BookingViewController.h */,
+				2A061D741740C702003767A8 /* BookingViewController.m */,
+				2A061D761740EC22003767A8 /* LocationComboBox.h */,
+				2A061D771740EC22003767A8 /* LocationComboBox.m */,
 			);
 			name = Controllers;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Controllers;
@@ -611,6 +621,8 @@
 				2A896B0A173A527E00EFFFB4 /* SectionHeaderView.m in Sources */,
 				2A896B0D173A670200EFFFB4 /* Announcement.m in Sources */,
 				2A061D6F1740520C003767A8 /* CreateAccountViewController.m in Sources */,
+				2A061D751740C703003767A8 /* BookingViewController.m in Sources */,
+				2A061D781740EC23003767A8 /* LocationComboBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

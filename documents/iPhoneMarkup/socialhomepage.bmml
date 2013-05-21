@@ -1,0 +1,123 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1010" measuredH="514" mockupW="879" mockupH="514">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="131" y="4" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::CoverFlow" x="160" y="146" w="224" h="106" measuredW="493" measuredH="198" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>http%3A//farm3.staticflickr.com/2604/3860801467_4e8337b28c.jpg</src>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Menu" x="160" y="297" w="224" h="-1" measuredW="150" measuredH="135" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>2</selectedIndex>
+        <text>User%20Profile%20%3E%0A%3D%0APost%20Thread%20%3E%0A%20%3D%0ANotifications%20%3E%0A%20%0AFollowing%20%3E%0A%3D%0ARecommendation%20%3E</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::HelpButton" x="368" y="110" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Icon" x="265" y="109" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>HomeIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Icon" x="161" y="111" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>LockOpenIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="230" y="128" w="85" h="-1" measuredW="55" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>Interests</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::List" x="416" y="95" w="283" h="358" measuredW="100" measuredH="405" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Interest%20Browser%0A-Feed%20%20%28default%3AGeneral%29%0A%09Communities%20%28dropdown%3A%0A%09%09%09%09Sports%0A%09%09%09%09Travel%0A%09%09%09%09Marketplace%20etc%29%09%0A-Meeting%20%28default%3AGeneral%29%0A%09Gatherings%20%28dropdown%3A%0A%09%09%09%09activities%0A%09%09%09%09Nightlife%0A%09%09%09%09Adventures%0A%09%09%09%09Activities%20etc%29%0A-Sponsored%20Events%0A%09%0APublicTrending%0A%09twitter%20feed%20@connect%20twitter%20account%20and%20post%20directly%20%0AChat%0A%09Private%0A%09Public</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::iPhone" x="728" y="0" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="8" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::ComboBox" x="756" y="182" w="228" h="-1" measuredW="108" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Thread%20Label%0AMeet%20up</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::FieldSet" x="756" y="241" w="225" h="152" measuredW="200" measuredH="170" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Car%20pool</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="__group__" x="807" y="408" w="132" h="13" measuredW="132" measuredH="13" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+      </controlProperties>
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::RoundButton" x="0" y="0" w="12" h="13" measuredW="32" measuredH="32" zOrder="0" locked="false" isInGroup="12"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::RoundButton" x="24" y="0" w="12" h="13" measuredW="32" measuredH="32" zOrder="1" locked="false" isInGroup="12">
+          <controlProperties>
+            <borderColor>0</borderColor>
+            <color>16777215</color>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::RoundButton" x="48" y="0" w="12" h="13" measuredW="32" measuredH="32" zOrder="2" locked="false" isInGroup="12">
+          <controlProperties>
+            <bold>false</bold>
+            <borderColor>545684</borderColor>
+            <color>7317724</color>
+            <shape>circle</shape>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::RoundButton" x="72" y="0" w="12" h="13" measuredW="32" measuredH="32" zOrder="3" locked="false" isInGroup="12"/>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::RoundButton" x="96" y="0" w="12" h="13" measuredW="32" measuredH="32" zOrder="4" locked="false" isInGroup="12"/>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::RoundButton" x="120" y="0" w="12" h="13" measuredW="32" measuredH="32" zOrder="5" locked="false" isInGroup="12"/>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::VSplitter" x="756" y="393" w="226" h="-1" measuredW="100" measuredH="11" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::ComboBox" x="826" y="206" w="-1" h="-1" measuredW="86" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Filter%20Tag</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::VSplitter" x="756" y="126" w="226" h="-1" measuredW="100" measuredH="11" zOrder="14" locked="false" isInGroup="-1"/>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="769" y="257" w="200" h="120" measuredW="200" measuredH="80" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Look%20for%20a%20bi-weekly%20ride%20to%0ALeesburg%2C%20VA%2C%20Tuesdays%20and%20Thursday%0AFrom%20730%3A8%3A30AM%20to%20530%3A630PM%0A%20%0AAny%20Interest%20PM%20me.%0AThanks</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::HelpButton" x="963" y="107" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="16" locked="false" isInGroup="-1"/>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Icon" x="860" y="108" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>HomeIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Icon" x="756" y="106" w="-1" h="-1" measuredW="16" measuredH="16" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>LockOpenIcon%7Cxsmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Label" x="821" y="161" w="-1" h="-1" measuredW="103" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <text>Post%20your%20thread</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::CheckBox" x="853" y="370" w="128" h="22" measuredW="113" measuredH="22" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Interest%20parties</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::CheckBox" x="756" y="370" w="62" h="22" measuredW="55" measuredH="22" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Public</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ComboBox" x="756" y="137" w="224" h="-1" measuredW="143" measuredH="24" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Site%20Map%20Navigator%0AMy%20Questions%0APublic%20Events%0AInterest%20Events%0A%3ESports%0A%3EPets%0A%3ETravel%0A%3EMarketplace%0A%3ELost%20%26%20Found%0ALocal%20Guides%20%26%20Recommendations%0A%3ESocial%0A%3EActivities%20%26%20Adventures%0A%3ERestaurants%0A%3ETransportation%0A%3EDeals</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

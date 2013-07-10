@@ -16,7 +16,7 @@
 
 package com.hae.user.authentication.service.impl;
 
-import com.hae.data.repositories.UserRepository;
+import com.hae.repositories.UserRepository;
 import com.hae.entities.authentication.UserEntity;
 import com.hae.factories.authentication.UserFactory;
 import com.hae.user.authentication.service.api.UserAuthenticationService;

@@ -16,8 +16,8 @@
 
 package com.hae.vendor.service.impl;
 
-import com.hae.data.repositories.CustomerRepository;
-import com.hae.data.repositories.VendorRepository;
+import com.hae.repositories.CustomerRepository;
+import com.hae.repositories.VendorRepository;
 import com.hae.domain.customer.Customer;
 import com.hae.domain.mapping.vendor.VendorMapper;
 import com.hae.domain.vendor.Vendor;
@@ -81,7 +81,7 @@ public class VendorServiceImpl implements VendorService {
     {
         VendorEntity entity = getVendorById(vendor.getId());
         vendorMapper.mapFromDomain(entity, vendor);
-        saveVendor(entity);
+       // saveVendor(entity);
     }
     
     
@@ -105,15 +105,6 @@ public class VendorServiceImpl implements VendorService {
         return vendorRepository.findOne(id);
     }
     
-    /**
-     * Save a vendor to the db
-     * @param entity 
-     */
-    private void saveVendor(VendorEntity entity)
-    {
-        vendorRepository.save(entity);
-        
-    }
     
 
 }

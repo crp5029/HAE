@@ -29,6 +29,12 @@
     
     
    <dependencies>
+       
+        <dependency>
+            <groupId>com.hae.spring.security</groupId>
+            <artifactId>hae-core-spring-security</artifactId>
+            <version>MAIN-SNAPSHOT</version>
+        </dependency>
    
         <!-- HAE Dependencies -->
        
@@ -44,30 +50,12 @@
             <artifactId>hae-core-domain-factories</artifactId>
             <version>MAIN-SNAPSHOT</version>
         </dependency>
-      
+        
         <dependency>
-            <groupId>com.hae.spring.security</groupId>
-            <artifactId>hae-core-spring-security</artifactId>
+            <groupId>com.hae.core.persistence.repositores</groupId>
+            <artifactId>persistence-jpa-repositories</artifactId>
             <version>MAIN-SNAPSHOT</version>
         </dependency>
-       
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>1.7.1</version>
-        </dependency>   
-
-       <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.7.1</version>
-       </dependency>
-       
-       <dependency>
-           <groupId>org.codehaus.jackson</groupId>
-           <artifactId>jackson-xc</artifactId>
-           <version>1.7.1</version>
-       </dependency>
 
      </dependencies>
 

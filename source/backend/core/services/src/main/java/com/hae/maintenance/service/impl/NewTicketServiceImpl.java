@@ -16,12 +16,12 @@
 
 package com.hae.maintenance.service.impl;
 
-import com.hae.data.repositories.MaintenanceRepository;
 import com.hae.domain.maintenance.MaintenanceRequest;
 import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
 import com.hae.entities.maintenance.MaintenanceEntity;
 import com.hae.factories.maintenanceRequest.MaintenanceRequestFactory;
 import com.hae.maintenance.service.api.NewTicketService;
+import com.hae.repositories.MaintenanceRepository;
 import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;

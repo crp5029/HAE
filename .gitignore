@@ -83,3 +83,6 @@ cm/hae-db-management/bin/HAE/dbex.lck
 /source/backend/target/
 /source/backend/core/spring-security/.settings/
 /source/backend/core/spring-security/target/
+/source/backend/core/persistence/repositories/jpa-repositories/target/
+/source/backend/core/persistence/jpa-entities/target/
+/source/backend/core/persistence/jpa-entities/.settings/

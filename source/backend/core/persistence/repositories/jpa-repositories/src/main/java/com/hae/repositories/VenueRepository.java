@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.hae.data.repositories;
+package com.hae.repositories;
 
-import com.hae.entities.maintenance.MaintenanceEntity;
+import com.hae.entities.venue.VenueEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author Chris Purtell
  */
-public interface MaintenanceRepository extends CrudRepository<MaintenanceEntity, Long>{
-    
+public interface VenueRepository extends CrudRepository<VenueEntity, Long>{
 
 }

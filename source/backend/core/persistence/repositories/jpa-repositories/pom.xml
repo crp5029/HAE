@@ -3,15 +3,15 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-         <groupId>com.hae.core.persistence.repositores</groupId>
-         <artifactId>hae-core-persistence-repositories</artifactId>
+         <groupId>com.hae.core.persistence</groupId>
+         <artifactId>repositories</artifactId>
          <version>MAIN-SNAPSHOT</version>
     </parent>
-    <groupId>com.hae.core.persistence.repositores.jpa</groupId>
-    <artifactId>hae-core-persistence-repositories-jpa</artifactId>
+    <groupId>com.hae.core.persistence.repositores</groupId>
+    <artifactId>persistence-jpa-repositories</artifactId>
     <version>MAIN-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>HAE - Core - Persistence - Repositories - Jpa Modules</name>
+    <name>HAE - Core - Persistence - JPA Repositories</name>
     <organization>
         <name>MAKULA Project</name>
     </organization>
@@ -35,6 +35,15 @@
         </repository>
     </repositories>
     <dependencies>
+
+   <!-- HAE Dependencies -->
+        <dependency>
+            <groupId>com.hae.core.persistence</groupId>
+            <artifactId>persistence-jpa-entities</artifactId>
+            <version>MAIN-SNAPSHOT</version>
+        </dependency>
+
+    <!-- Eclipse Dependencies -->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>

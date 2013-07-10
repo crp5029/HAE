@@ -17,8 +17,8 @@
 package com.hae.customer.service.impl;
 
 import com.hae.customer.service.api.CustomerService;
-import com.hae.data.repositories.CustomerRepository;
-import com.hae.data.repositories.VendorRepository;
+import com.hae.repositories.CustomerRepository;
+import com.hae.repositories.VendorRepository;
 import com.hae.domain.mapping.customer.CustomerMapper;
 import com.hae.domain.mapping.vendor.VendorMapper;
 import com.hae.domain.vendor.Vendor;
@@ -81,7 +81,7 @@ public class CustomerServiceImpl implements CustomerService {
     {
         VendorEntity entity = getVendorById(vendor.getId());
         vendorMapper.mapFromDomain(entity, vendor);
-        saveVendor(entity);
+       // saveVendor(entity);
     }
     
     
@@ -104,16 +104,5 @@ public class CustomerServiceImpl implements CustomerService {
     {
         return vendorRepository.findOne(id);
     }
-    
-    /**
-     * Save a vendor to the db
-     * @param entity 
-     */
-    private void saveVendor(VendorEntity entity)
-    {
-        vendorRepository.save(entity);   
-    }
-    
-    
 
 }

@@ -7,8 +7,8 @@
     	<artifactId>hae-core</artifactId>
     	<version>MAIN-SNAPSHOT</version>
     </parent>
-    <groupId>com.hae.core.persistence</groupId>
-    <artifactId>hae-core-persistence</artifactId>
+    <groupId>com.hae.core</groupId>
+    <artifactId>persistence</artifactId>
     <version>MAIN-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>HAE - Core - Persistence Module</name>
@@ -27,13 +27,65 @@
     </developers>
     
     <modules>
+	<module>jpa-entities</module>
         <module>repositories</module>
     </modules>
     
-    <dependencies>
-    
-    
-    </dependencies>
+        <dependencies>
+
+
+                <!--Hibernate Jars -->
+                <dependency>
+                        <groupId>org.hibernate.javax.persistence</groupId>
+                        <artifactId>hibernate-jpa-2.0-api</artifactId>
+                        <version>1.0.1.Final</version>
+                        <exclusions>
+                                <exclusion>
+                                        <groupId>org.slf4j</groupId>
+                                        <artifactId>slf4j-api</artifactId>
+                                </exclusion>
+                        </exclusions>
+                </dependency>
+
+                <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-entitymanager</artifactId>
+                        <version>${hibernate.version}</version>
+                        <exclusions>
+                                <exclusion>
+                                        <groupId>org.slf4j</groupId>
+                                        <artifactId>slf4j-api</artifactId>
+                                </exclusion>
+                        </exclusions>
+                </dependency>
+
+
+                <!-- Eclipse Link -->
+                <dependency>
+                        <groupId>org.eclipse.persistence</groupId>
+                        <artifactId>eclipselink</artifactId>
+                        <version>2.5.0</version>
+                        <exclusions>
+                                <exclusion>
+                                        <groupId>org.slf4j</groupId>
+                                        <artifactId>slf4j-api</artifactId>
+                                </exclusion>
+                        </exclusions>
+                </dependency>
+                <dependency>
+                        <groupId>org.eclipse.persistence</groupId>
+                        <artifactId>javax.persistence</artifactId>
+                        <version>2.1.0</version>
+                        <exclusions>
+                                <exclusion>
+                                        <groupId>org.slf4j</groupId>
+                                        <artifactId>slf4j-api</artifactId>
+                                </exclusion>
+                        </exclusions>
+                </dependency>
+
+        </dependencies>
+
     
     
 </project>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hae.data.repositories;
+package com.hae.repositories;
 
 import com.hae.entities.menu.MenuEntity;
 import org.springframework.data.repository.CrudRepository;

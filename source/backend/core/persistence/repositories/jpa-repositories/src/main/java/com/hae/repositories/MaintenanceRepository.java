@@ -14,20 +14,16 @@
  * limitations under the License.
  */
 
-package com.hae.data.repositories;
+package com.hae.repositories;
 
-import com.hae.entities.authentication.UserEntity;
-import org.springframework.data.jpa.repository.Query;
+import com.hae.entities.maintenance.MaintenanceEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author Chris Purtell
  */
-public interface UserRepository extends CrudRepository<UserEntity, Long> {
+public interface MaintenanceRepository extends CrudRepository<MaintenanceEntity, Long>{
+    
 
-    
-    @Query("select u from UserEntity u where u.userid = ?1 and u.password = ?2")
-    UserEntity findByUseridPassword(String userid, String password);
-    
 }

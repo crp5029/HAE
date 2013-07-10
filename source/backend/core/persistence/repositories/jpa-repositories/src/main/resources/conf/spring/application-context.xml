@@ -10,8 +10,7 @@
                            http://www.springframework.org/schema/data/jpa
                            http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-    <import resource="infrastructure.xml" />
-    <jpa:repositories base-package="com.hae.data.repositories" />
+   <jpa:repositories base-package="com.hae.data.repositories" />
 
 
 </beans>

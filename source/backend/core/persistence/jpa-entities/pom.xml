@@ -8,10 +8,10 @@
          <version>MAIN-SNAPSHOT</version>
     </parent>
     <groupId>com.hae.core.persistence</groupId>
-    <artifactId>repositories</artifactId>
+    <artifactId>persistence-jpa-entities</artifactId>
     <version>MAIN-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>HAE - Core - Persistence - Repositories Modules</name>
+    <packaging>jar</packaging>
+    <name>HAE - Core - Persistence - JPA Entities</name>
     <organization>
         <name>HAE</name>
     </organization>
@@ -26,8 +26,5 @@
         </developer>
     </developers>
     
-    <modules>
-        <module>jpa-repositories</module>
-    </modules>
     
 </project>

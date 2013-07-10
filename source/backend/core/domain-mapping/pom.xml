@@ -38,11 +38,11 @@
           <version>MAIN-SNAPSHOT</version>
        </dependency>
        
-       <dependency>
-           <groupId>com.hae.core.persistence.repositores.jpa</groupId>
-           <artifactId>hae-core-persistence-repositories-jpa</artifactId>
-           <version>MAIN-SNAPSHOT</version>
-       </dependency>
+        <dependency>
+            <groupId>com.hae.core.persistence</groupId>
+            <artifactId>persistence-jpa-entities</artifactId>
+            <version>MAIN-SNAPSHOT</version>
+        </dependency>
        
        
         <dependency>

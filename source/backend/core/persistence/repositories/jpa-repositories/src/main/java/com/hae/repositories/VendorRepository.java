@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.hae.data.repositories;
+package com.hae.repositories;
 
 import com.hae.entities.customer.CustomerEntity;
 import com.hae.entities.vendor.VendorEntity;

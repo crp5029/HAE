@@ -17,14 +17,14 @@
 package com.hae.vendor.service.impl;
 
 import com.hae.repositories.CustomerRepository;
-import com.hae.repositories.VendorRepository;
+//import com.hae.repositories.VendorRepository;
 import com.hae.domain.customer.Customer;
-import com.hae.domain.mapping.vendor.VendorMapper;
+//import com.hae.domain.mapping.vendor.VendorMapper;
 import com.hae.domain.vendor.Vendor;
 import com.hae.domain.vendor.impl.VendorImpl;
 import com.hae.entities.customer.CustomerEntity;
-import com.hae.entities.vendor.VendorEntity;
-import com.hae.factories.vendor.VendorFactory;
+//import com.hae.entities.vendor.VendorEntity;
+//import com.hae.factories.vendor.VendorFactory;
 import com.hae.vendor.service.api.VendorService;
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,20 +34,22 @@ import org.springframework.stereotype.Service;
  *
  * @author Chris Purtell
  */
-@Service("vendorService")
+//@Service("vendorService")
 public class VendorServiceImpl implements VendorService {
     
-    @Autowired
+  /*  @Autowired
     VendorFactory vendorFactory; 
     
     @Autowired
     private VendorRepository vendorRepository;
     
     @Autowired
-    private CustomerRepository customerRepository;
-    
-    @Autowired
     private VendorMapper vendorMapper;
+    * 
+    */
+    
+   // @Autowired
+  //  private CustomerRepository customerRepository;
     
     
     /**
@@ -60,7 +62,7 @@ public class VendorServiceImpl implements VendorService {
     public ArrayList<Vendor> getAllVendors(long customerId)
     {
         
-        CustomerEntity customerEntity = customerRepository.findOne(customerId);
+     /*   CustomerEntity customerEntity = customerRepository.findOne(customerId);
         ArrayList<Vendor> vendors = new ArrayList<Vendor>();
         
         
@@ -71,7 +73,8 @@ public class VendorServiceImpl implements VendorService {
             vendors.add(vendor);
         }
         
-        return vendors;
+        return vendors;*/
+        return null;
         
     }
     
@@ -79,8 +82,8 @@ public class VendorServiceImpl implements VendorService {
     @Override
     public void saveVendor(Vendor vendor)
     {
-        VendorEntity entity = getVendorById(vendor.getId());
-        vendorMapper.mapFromDomain(entity, vendor);
+        //VendorEntity entity = getVendorById(vendor.getId());
+        //vendorMapper.mapFromDomain(entity, vendor);
        // saveVendor(entity);
     }
     
@@ -90,21 +93,19 @@ public class VendorServiceImpl implements VendorService {
      * Get all vendors for a customer
      * @return 
      */
-    private Iterable<VendorEntity> getVendorsForCustomer(CustomerEntity customer)
+   /* private Iterable<VendorEntity> getVendorsForCustomer(CustomerEntity customer)
     {
         
         return vendorRepository.findByCustomer(customer);
     }
     
     
-    /** 
-     * Get Vendor by id
-     */
+  
     private VendorEntity getVendorById(long id)
     {
         return vendorRepository.findOne(id);
     }
-    
+    */
     
 
 }

@@ -18,12 +18,12 @@ package com.hae.customer.service.impl;
 
 import com.hae.customer.service.api.CustomerService;
 import com.hae.repositories.CustomerRepository;
-import com.hae.repositories.VendorRepository;
+//import com.hae.repositories.VendorRepository;
 import com.hae.domain.mapping.customer.CustomerMapper;
-import com.hae.domain.mapping.vendor.VendorMapper;
+//import com.hae.domain.mapping.vendor.VendorMapper;
 import com.hae.domain.vendor.Vendor;
 import com.hae.domain.vendor.impl.VendorImpl;
-import com.hae.entities.vendor.VendorEntity;
+//import com.hae.entities.vendor.VendorEntity;
 import com.hae.factories.customer.CustomerFactory;
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,14 +43,15 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepository customerRepository;
     
     @Autowired
-    private VendorRepository vendorRepository;
-    
-    @Autowired
     private CustomerMapper customerMapper;
-    
+  
+  /*  
     @Autowired
     private VendorMapper vendorMapper;
     
+    @Autowired
+    private VendorRepository vendorRepository;
+   */ 
     
     /**
      * 
@@ -61,7 +62,7 @@ public class CustomerServiceImpl implements CustomerService {
    @Override
     public ArrayList<Vendor> getAllVendors()
     {
-        
+     /*   
         ArrayList<Vendor> vendors = new ArrayList<Vendor>();
         
         for (VendorEntity entity : getVendors())
@@ -70,17 +71,17 @@ public class CustomerServiceImpl implements CustomerService {
             vendorMapper.mapToDomain(entity, vendor);
             vendors.add(vendor);
         }
-        
-        return vendors;
-        
+        */
+       // return vendors;
+        return null;
     }
     
     
     @Override
     public void saveVendor(Vendor vendor)
     {
-        VendorEntity entity = getVendorById(vendor.getId());
-        vendorMapper.mapFromDomain(entity, vendor);
+       // VendorEntity entity = getVendorById(vendor.getId());
+       // vendorMapper.mapFromDomain(entity, vendor);
        // saveVendor(entity);
     }
     
@@ -90,19 +91,17 @@ public class CustomerServiceImpl implements CustomerService {
      * Get all vendors from the db
      * @return 
      */
-    private Iterable<VendorEntity> getVendors()
+  /*  private Iterable<VendorEntity> getVendors()
     {
         
         return vendorRepository.findAll();
+        
     }
     
-    
-    /**
-     * Get Vendor by id
-     */
+ 
     private VendorEntity getVendorById(long id)
     {
         return vendorRepository.findOne(id);
     }
-
+*/
 }

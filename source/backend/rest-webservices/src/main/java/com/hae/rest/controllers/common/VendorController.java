@@ -37,7 +37,7 @@ public class VendorController {
 
     
     
-    @Autowired
+   /* @Autowired
     VendorService vendorService;
     
     
@@ -59,7 +59,7 @@ public class VendorController {
         response.setStatus(HttpServletResponse.SC_OK);
         vendorService.saveVendor(vendor);
     }
-    
+   */ 
     
     
 }

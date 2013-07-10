@@ -20,10 +20,10 @@
 
     <context:annotation-config/>
    
-   
+   <!--
     <bean id="VendorMapper" class="com.hae.domain.mapping.vendor.VendorMapper">
     </bean>
-    
+    -->
     <bean id="CustomerMapper" class="com.hae.domain.mapping.customer.CustomerMapper">
     </bean>
     

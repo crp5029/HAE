@@ -86,3 +86,9 @@ cm/hae-db-management/bin/HAE/dbex.lck
 /source/backend/core/persistence/repositories/jpa-repositories/target/
 /source/backend/core/persistence/jpa-entities/target/
 /source/backend/core/persistence/jpa-entities/.settings/
+*.log
+
+*.out
+
+apache-tomcat-7.0.39/logs/localhost_access_log.2013-05-08.txt
+apache-tomcat-7.0.39/logs/*.txt

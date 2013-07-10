@@ -17,7 +17,7 @@
 package com.hae.entities.customer;
 
 import com.hae.entities.authentication.UserEntity;
-import com.hae.entities.vendor.VendorEntity;
+//import com.hae.entities.vendor.VendorEntity;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
@@ -35,8 +35,8 @@ public class CustomerEntity implements Serializable{
     private Long id;
     private String name;
     
-    @OneToMany(mappedBy = "customer")
-    private List<VendorEntity> vendors;
+   // @OneToMany(mappedBy = "customer")
+   // private List<VendorEntity> vendors;
     
 
 //    @OneToMany(mappedBy = "customer")
@@ -57,7 +57,7 @@ public class CustomerEntity implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-
+/*
     public List<VendorEntity> getVendors() {
         return vendors;
     }
@@ -66,7 +66,7 @@ public class CustomerEntity implements Serializable{
         this.vendors = vendors;
     }
 
- /*   public List<UserEntity> getUsers() {
+    public List<UserEntity> getUsers() {
         return users;
     }
 

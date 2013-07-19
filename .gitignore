@@ -92,3 +92,5 @@ cm/hae-db-management/bin/HAE/dbex.lck
 
 apache-tomcat-7.0.39/logs/localhost_access_log.2013-05-08.txt
 apache-tomcat-7.0.39/logs/*.txt
+
+apache-tomcat-7.0.39/webapps/*

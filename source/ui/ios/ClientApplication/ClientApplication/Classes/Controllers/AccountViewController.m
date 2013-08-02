@@ -7,7 +7,15 @@
 //
 
 #import "AccountViewController.h"
+#import "GuestServiceConfirmationVC.h"
 
+#import "SectionHeaderView.h"
+#import "TableSection.h"
+
+#import "AccountInformationView.h"
+
+#define DEFAULT_ROW_HEIGHT 78
+#define HEADER_HEIGHT 45
 
 @interface AccountViewController ()
 
@@ -16,12 +24,19 @@
 @implementation AccountViewController
 
 
-@synthesize x;
 @synthesize labelArray;
 @synthesize label;
 @synthesize tableView;
-@synthesize uiScrollView;
-@synthesize aButton;
+
+@synthesize maintenanceServices;
+@synthesize maintenanceService;
+@synthesize guestServices;
+@synthesize guestService;
+
+@synthesize sectionArray;
+@synthesize openSectionIndex;
+
+
 
 
 
@@ -29,108 +44,75 @@
 {
     [super viewDidLoad];
     
-    labelArray = [[NSMutableArray alloc] init];
-    
-    aButton = [[StandardTableButton alloc] init];
-    [aButton setTitle:@"hello world" forState:UIControlStateNormal];
-    [aButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    //[self setAButton:aButton];
-    [labelArray addObject:aButton];
-    
-   /* label = [[UILabel alloc] init];
-    label.text = @"First Name";
-    [self setLabel:label];
-    [labelArray addObject:label];
-   
-    label = [[UILabel alloc] init];
-    label.text = @"Last Name";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"Street Name";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"City";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"State";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"Zip Code";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"Country";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"Phone Number";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"Email";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"User Name";
-    [self setLabel:label];
-    [labelArray addObject:label];
-    
-    label = [[UILabel alloc] init];
-    label.text = @"Password";
-    [self setLabel:label];
-    [labelArray addObject:label];
-   */ 
-    tableView = [[UITableView alloc] initWithFrame:CGRectMake(20, 35, 250, 300)];
-                 
+    guestService = [[GuestService alloc] init];
+    guestServices = [[NSMutableArray alloc] init];
+    guestService.name = @"Account Information";
+    guestService.enabled = TRUE;
+    [self setGuestService:guestService];
+    [guestServices addObject:guestService];
+    guestService = [[GuestService alloc] init];
+    guestService.name = @"Itinerary";
+    guestService.enabled = TRUE;
+    [self setGuestService:guestService];
+    [guestServices addObject:guestService];
+    guestService = [[GuestService alloc] init];
+    guestService.name = @"Manage Guest Accounts";
+    guestService.enabled = TRUE;
+    [self setGuestService:guestService];
+    [guestServices addObject:guestService];
+    guestService = [[GuestService alloc] init];
+    guestService.name = @"Account History";
+    guestService.enabled = TRUE;
+    [self setGuestService:guestService];
+    [guestServices addObject:guestService];
 
-    
-    
-    x = 0;
-    /*  guestService = [[GuestService alloc] init];
-     guestServices = [[NSMutableArray alloc] init];
-     guestService.name = @"GRRR";
-     guestService.enabled = TRUE;
-     [self setGuestService:guestService];
-     [guestServices addObject:guestService];
-     guestService = [[GuestService alloc] init];
-     guestService.name = @"Browse Application";
-     guestService.enabled = TRUE;
-     [self setGuestService:guestService];
-     [guestServices addObject:guestService];
-     guestService = [[GuestService alloc] init];
-     guestService.name = @"Activate Account";
-     guestService.enabled = TRUE;
-     [self setGuestService:guestService];
-     [guestServices addObject:guestService];
-     
-     guestService = [[GuestService alloc] init];
-     guestService.name = @"One More Account";
-     guestService.enabled = TRUE;
-     [self setGuestService:guestService];
-     [guestServices addObject:guestService];
-     /*
-     UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
-     newLabel.text = @"HMM";
-     
-     [self.uiView addSubview:newLabel];
-     */
     tableView.dataSource = self;
     tableView.delegate = self;
-    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [uiScrollView addSubview:tableView];
     
+/*    self.sectionArray=[[NSMutableArray alloc]init];
+    for (int i=0; i<=10; i++) {
+        TableSection *section=[[TableSection alloc]init];
+        // section.sectionHeader=[NSString stringWithFormat:@"Header %d",i];
+        section.sectionRows=[[NSMutableArray alloc]init];
+        for (int i=0; i<=10; i++) {
+            [section.sectionRows addObject:[NSString stringWithFormat:@"Row %d",i]];
+        }
+        [self.sectionArray addObject:section];
+    }
+*/    
+    
+    self.sectionArray=[[NSMutableArray alloc]init];
+    for (int i=0; i < guestServices.count; i++) {
+        TableSection *section=[[TableSection alloc]init];
+        guestService = [guestServices objectAtIndex:(i)];
+        section.sectionHeader=guestService.name;
+        section.sectionRows=[[NSMutableArray alloc]init];
+        for (int j=0; j < 1; j++) {
+            [section.sectionRows addObject:[[UIView alloc]init]];
+        }
+        [self.sectionArray addObject:section];
+    }
+    
+    self.tableView.sectionHeaderHeight = HEADER_HEIGHT;
+    self.openSectionIndex = NSNotFound;
+    
+     
+}
+
+#pragma mark - Table view data source
+-(UIView*)tableView:(UITableView*)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    /*
+     Create the section header views lazily.
+     */
+	TableSection *aSection=[sectionArray objectAtIndex:section];
+    if (!aSection.sectionHeaderView) {
+        aSection.sectionHeaderView = [[SectionHeaderView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.tableView.bounds.size.width, HEADER_HEIGHT) title:aSection.sectionHeader section:section delegate:self];
+        
+    }
+    
+    
+    return aSection.sectionHeaderView;
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -150,99 +132,127 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [self.sectionArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    TableSection *aSection=[sectionArray objectAtIndex:section];
     // Return the number of rows in the section.
-    return [labelArray count];
+    return aSection.open ? [aSection.sectionRows count]:0;
+}
+
+-(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionOpened:(NSInteger)sectionOpened {
+    
+    TableSection *aSection=[sectionArray objectAtIndex:sectionOpened];
+    aSection.open=YES;
+    
+    /*
+     Create an array containing the index paths of the rows to insert: These correspond to the rows for each quotation in the current section.
+     */
+    NSInteger countOfRowsToInsert = [aSection.sectionRows count];
+    NSMutableArray *indexPathsToInsert = [[NSMutableArray alloc] init];
+    for (NSInteger i = 0; i < countOfRowsToInsert; i++) {
+        [indexPathsToInsert addObject:[NSIndexPath indexPathForRow:i inSection:sectionOpened]];
+    }
+    
+    /*
+     Create an array containing the index paths of the rows to delete: These correspond to the rows for each quotation in the previously-open section, if there was one.
+     */
+    NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+    
+    NSInteger previousOpenSectionIndex = self.openSectionIndex;
+    if (previousOpenSectionIndex != NSNotFound) {
+        TableSection *previousOpenSection=[sectionArray objectAtIndex:previousOpenSectionIndex];
+        previousOpenSection.open=NO;
+        [previousOpenSection.sectionHeaderView toggleOpenWithUserAction:NO];
+        NSInteger countOfRowsToDelete = [previousOpenSection.sectionRows count];
+        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
+            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:previousOpenSectionIndex]];
+        }
+        
+        
+    }
+    
+    // Style the animation so that there's a smooth flow in either direction.
+    UITableViewRowAnimation insertAnimation;
+    UITableViewRowAnimation deleteAnimation;
+    if (previousOpenSectionIndex == NSNotFound || sectionOpened < previousOpenSectionIndex) {
+        insertAnimation = UITableViewRowAnimationTop;
+        deleteAnimation = UITableViewRowAnimationBottom;
+    }
+    else {
+        insertAnimation = UITableViewRowAnimationBottom;
+        deleteAnimation = UITableViewRowAnimationTop;
+    }
+    
+    // Apply the updates.
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:indexPathsToInsert withRowAnimation:insertAnimation];
+    [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:deleteAnimation];
+    [self.tableView endUpdates];
+    self.openSectionIndex = sectionOpened;
+    
+    
+}
+-(void)sectionHeaderView:(SectionHeaderView*)sectionHeaderView sectionClosed:(NSInteger)sectionClosed {
+    
+    /*
+     Create an array of the index paths of the rows in the section that was closed, then delete those rows from the table view.
+     */
+    
+	TableSection *aSection = [self.sectionArray objectAtIndex:sectionClosed];
+	
+    aSection.open = NO;
+    
+    NSInteger countOfRowsToDelete = [self.tableView numberOfRowsInSection:sectionClosed];
+    
+    if (countOfRowsToDelete > 0) {
+        NSMutableArray *indexPathsToDelete = [[NSMutableArray alloc] init];
+        for (NSInteger i = 0; i < countOfRowsToDelete; i++) {
+            [indexPathsToDelete addObject:[NSIndexPath indexPathForRow:i inSection:sectionClosed]];
+        }
+        [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationTop];
+    }
+    self.openSectionIndex = NSNotFound;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellLabel = @"labelCell";
-    UITableViewCell *cell;
-    UITextField *textField;
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceCell"];
+	//guestService = [self.guestServices objectAtIndex:indexPath.row];
+	//cell.textLabel.text = guestService.name;
+    //GuestService *service = [self.guestServices objectAtIndex:indexPath.row];
+	//cell.textLabel.text = service.name;
     
-    UIButton *textLabel;
-    //UILabel *textLabel;
-    
-    self.x = self.x +1;
-    //  for(int *y = 0; y < self.x; y++){
-    //     NSLog(@"TEST");
-    // }
+    static NSString *MyIdentifier = @"accountNavigation";
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellLabel];
-        textLabel = [[UIButton alloc] initWithFrame:CGRectMake(5, 0, cell.frame.size.width-10, cell.frame.size.height / 2)];
-        textLabel.backgroundColor = [UIColor redColor];
-        //textLabel.font=[UIFont fontWithName:@"Arial" size:12];
-        //textLabel.textColor = [UIColor redColor];
-        textField = [[UITextField alloc] initWithFrame:CGRectMake(5, cell.frame.size.height / 2, cell.frame.size.width-10, cell.frame.size.height / 2)];
-        textField.borderStyle = round(3.0);
-        
-        UIButton *aLabel = [labelArray objectAtIndex:indexPath.row];
-        [textLabel setTitle:@"hello world" forState:UIControlStateNormal];
-        //textLabel.text = aLabel.text;
-        //cell.textLabel.frame = CGRectMake(0, 15, cell.frame.size.width, cell.frame.size.height / 2);
-        //cell.textLabel.font=[UIFont fontWithName:@"Arial" size:10];
-        //cell.textLabel.textAlignment = NSTextAlignmentLeft;
-        //cell.textLabel.text = aLabel.text;
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-        [cell addSubview:textLabel];
-        [cell addSubview:textField];
-        
-        
-        return cell;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    return nil;
+    //GuestService *service = [guestServices objectAtIndex:indexPath.row];
+    
+    /*
+    UITextField *textLabel = [[UITextField alloc] initWithFrame:CGRectMake(5, 0, cell.frame.size.width-10, cell.frame.size.height / 2)];
+    textLabel.font=[UIFont fontWithName:@"Arial" size:12];
+    textLabel.text=@"HELLO";
+    [cell addSubview:textLabel];
+     */
+    AccountInformationView *aView = [[AccountInformationView alloc] init];
+    [cell addSubview:aView];
+
+    return cell;
 }
 
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-
-- (IBAction)backButton:(id)sender {
-    [self dismissViewControllerAnimated:NO completion:nil];
 }
+
+
 
 @end
 

@@ -15,8 +15,9 @@
     IBOutlet UILabel *testLabel;
 }
 
-@property (nonatomic, strong) NSMutableArray *maintenanceServices;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSMutableArray *maintenanceServices;
 @property (nonatomic, strong) MaintenanceService *maintenanceService;
 @property (nonatomic, strong) NSMutableArray *guestServices;
 @property (nonatomic, strong) GuestService *guestService;

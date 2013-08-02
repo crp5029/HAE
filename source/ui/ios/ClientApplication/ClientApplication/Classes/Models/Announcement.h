@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *tableId;
 @property (nonatomic, strong) NSString *header;
 @property (nonatomic, strong) NSString *body;
+
 //variable to add extra functionaly; "Book now with this deal!"
 //@property (nonatomic, strong) NSString *body;
 

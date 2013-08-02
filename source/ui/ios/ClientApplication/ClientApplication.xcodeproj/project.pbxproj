@@ -31,6 +31,7 @@
 		2A22BDBA16AC01FD00EC87BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A22BD9216AC01FC00EC87BC /* Foundation.framework */; };
 		2A22BDC216AC01FD00EC87BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A22BDC016AC01FD00EC87BC /* InfoPlist.strings */; };
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
+		2A2B99A017AB937900DDE33B /* AccountInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B999F17AB937900DDE33B /* AccountInformationView.m */; };
 		2A55AF28170C1C760072667C /* keyWelcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF27170C1C760072667C /* keyWelcome.png */; };
 		2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF29170C25C40072667C /* Information-Icon.png */; };
 		2A7245B417993952005B9377 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7245B317993952005B9377 /* AccountViewController.m */; };
@@ -143,6 +144,8 @@
 		2A22BDC116AC01FD00EC87BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2A22BDC316AC01FD00EC87BC /* ClientApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClientApplicationTests.h; sourceTree = "<group>"; };
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
+		2A2B999E17AB937900DDE33B /* AccountInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInformationView.h; sourceTree = "<group>"; };
+		2A2B999F17AB937900DDE33B /* AccountInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInformationView.m; sourceTree = "<group>"; };
 		2A55AF27170C1C760072667C /* keyWelcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyWelcome.png; sourceTree = "<group>"; };
 		2A55AF29170C25C40072667C /* Information-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Information-Icon.png"; sourceTree = "<group>"; };
 		2A7245B217993952005B9377 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
@@ -411,6 +414,8 @@
 				2A896B0C173A670200EFFFB4 /* Announcement.m */,
 				2A7245B8179951F3005B9377 /* StandardTableButton.h */,
 				2A7245B9179951F3005B9377 /* StandardTableButton.m */,
+				2A2B999E17AB937900DDE33B /* AccountInformationView.h */,
+				2A2B999F17AB937900DDE33B /* AccountInformationView.m */,
 			);
 			name = Models;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Models;
@@ -635,6 +640,7 @@
 				2A061D781740EC23003767A8 /* LocationComboBox.m in Sources */,
 				2A7245B417993952005B9377 /* AccountViewController.m in Sources */,
 				2A7245BA179951F3005B9377 /* StandardTableButton.m in Sources */,
+				2A2B99A017AB937900DDE33B /* AccountInformationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

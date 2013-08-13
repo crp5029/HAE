@@ -10,15 +10,23 @@
 
 @implementation AccountInformationView
 
+@synthesize valueLabel;
+@synthesize textLabel;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        frame = CGRectMake(5, 0, 322, 320);
-        UITextField *textLabel = [[UITextField alloc] initWithFrame:CGRectMake(6, 0, 100, 100)];
+        self.frame = CGRectMake(5, 0, 322, 10);
+        textLabel = [[UITextField alloc] initWithFrame:CGRectMake(6, 0, 100, 20)];
+        valueLabel = [[UITextField alloc] initWithFrame:CGRectMake(200, 0, 100, 20)];
         textLabel.font=[UIFont fontWithName:@"Arial" size:12];
-        textLabel.text=@"TEST";
+        textLabel.text=@"Current Balance: ";
+        valueLabel.font=[UIFont fontWithName:@"Arial" size:12];
+        valueLabel.text=@"$100.00";
+    
         [self addSubview:textLabel];
+        [self addSubview:valueLabel];
 
     }
     return self;

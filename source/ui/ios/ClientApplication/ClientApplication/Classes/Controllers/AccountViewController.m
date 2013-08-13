@@ -219,12 +219,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ServiceCell"];
-	//guestService = [self.guestServices objectAtIndex:indexPath.row];
-	//cell.textLabel.text = guestService.name;
-    //GuestService *service = [self.guestServices objectAtIndex:indexPath.row];
-	//cell.textLabel.text = service.name;
-    
     static NSString *MyIdentifier = @"accountNavigation";
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
@@ -232,15 +226,12 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    //GuestService *service = [guestServices objectAtIndex:indexPath.row];
     
     /*
     UITextField *textLabel = [[UITextField alloc] initWithFrame:CGRectMake(5, 0, cell.frame.size.width-10, cell.frame.size.height / 2)];
-    textLabel.font=[UIFont fontWithName:@"Arial" size:12];
-    textLabel.text=@"HELLO";
-    [cell addSubview:textLabel];
-     */
-    AccountInformationView *aView = [[AccountInformationView alloc] init];
+*/
+    AccountInformationView *aView = [[AccountInformationView alloc] initWithFrame:CGRectMake(5, 0, 10, 10)];
+    aView.textLabel.text=@"TEST";
     [cell addSubview:aView];
 
     return cell;

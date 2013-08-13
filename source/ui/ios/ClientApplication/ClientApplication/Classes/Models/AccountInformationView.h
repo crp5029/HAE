@@ -10,5 +10,7 @@
 
 @interface AccountInformationView : UIView <UITextFieldDelegate>
 
+@property (nonatomic, strong) UITextField *textLabel;
+@property (nonatomic, strong) UITextField *valueLabel;
 
 @end

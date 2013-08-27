@@ -1,0 +1,36 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="880" measuredH="580" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="31" controlTypeID="__group__" x="625" y="198" w="224" h="299" measuredW="224" measuredH="299" zOrder="3" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Accordion" x="0" y="0" w="224" h="299" measuredW="150" measuredH="159" zOrder="0" locked="false" isInGroup="31">
+          <controlProperties>
+            <selectedIndex>0</selectedIndex>
+            <text>Question%201%0AQuestion2%0AQuestion%203</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Tooltip" x="45" y="89" w="113" h="85" measuredW="111" measuredH="0" zOrder="1" locked="false" isInGroup="31">
+          <controlProperties>
+            <text>Accordion</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::iPhone" x="598" y="70" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties/>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::TextInput" x="625" y="171" w="224" h="-1" measuredW="46" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>F.A.Q</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Icon" x="625" y="172" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>infoterms%26bm%3Binfoterms.bmml%26bm%3Binfoterms.bmml%26bm%3Binfoterms.bmml</href>
+        <icon>SimpleArrowIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2227%2C102%2C51%2C126%22%20href%3D%22infoterms.bmml%22%20alt%3D%22infoterms%22%20id%3D%2236%22/%3E</map>
+        <rotation>180</rotation>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

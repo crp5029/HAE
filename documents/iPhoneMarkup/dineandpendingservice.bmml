@@ -1,0 +1,14 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="498" measuredH="415" mockupW="453" mockupH="395">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::SiteMap" x="60" y="20" w="-1" h="-1" measuredW="438" measuredH="190" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>-Dine-in%20Assist%0A--InRoom%20Dining%0A--Partner%20specials%0A--Booking%20recommendations</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::SiteMap" x="45" y="225" w="-1" h="-1" measuredW="340" measuredH="190" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pending%20Orders%0A-Maintance%0A-Conceirge%20%0A-Eatery</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

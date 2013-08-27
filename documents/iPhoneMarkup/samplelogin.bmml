@@ -1,0 +1,45 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="480" measuredH="565" mockupW="282" mockupH="510">
+  <controls>
+    <control controlID="19" controlTypeID="__group__" x="198" y="55" w="282" h="510" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="0" y="0" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="19"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="121" y="209" w="-1" h="-1" measuredW="54" measuredH="27" zOrder="1" locked="false" isInGroup="19">
+          <controlProperties>
+            <text>Login</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Switch" x="170" y="253" w="-1" h="-1" measuredW="68" measuredH="28" zOrder="2" locked="false" isInGroup="19"/>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="50" y="133" w="-1" h="-1" measuredW="59" measuredH="21" zOrder="3" locked="false" isInGroup="19">
+          <controlProperties>
+            <text>username</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::MenuBar" x="30" y="395" w="241" h="29" measuredW="227" measuredH="29" zOrder="4" locked="false" isInGroup="19">
+          <controlProperties>
+            <text>Home%2C%20Edit%2C%20View%2C%20Settings</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::TextInput" x="121" y="130" w="117" h="-1" measuredW="79" measuredH="26" zOrder="5" locked="false" isInGroup="19">
+          <controlProperties>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::TextInput" x="121" y="167" w="117" h="-1" measuredW="79" measuredH="26" zOrder="6" locked="false" isInGroup="19">
+          <controlProperties>
+            <text/>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="49" y="169" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="7" locked="false" isInGroup="19">
+          <controlProperties>
+            <text>password</text>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="44" y="256" w="-1" h="-1" measuredW="109" measuredH="21" zOrder="8" locked="false" isInGroup="19">
+          <controlProperties>
+            <text>Keep%20me%20logged%20in</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

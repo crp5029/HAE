@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>login</title>
+		<meta name="description" content="Login Portal" />
+		<meta name="author" content="eapugo" />
+		<meta name="organization" content="MKSolutions"/>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+		<script type="text/javascript" src="js/ajax.js"></script>
+	</head>
+
+	<body>
+		<div>
+			
+			<header class="logtext">
+				<h2>PORTAL</h2>
+			</header>
+				<div id="login_input">
+				<p>
+					<form class="userform">
+											<div id="user_input">
+												<input name="uname" type="text" size="30" value="Enter Your User ID" onfocus="if(this.value=='Enter Your User ID'){this.value=''};" 	onblur="if(this.value==''){this.value='Enter Your User ID'};" id="user" /> 
+											</div>
+											
+											<div id="user_input">
+												<input name="upass" type="password" size="30" value="Password" onfocus="if(this.value=='Password'){this.value=''};" 	onblur="if(this.value==''){this.value='Password'};" id="pass" /> 
+											</div>
+					
+											
+									<div id="loginResult"></div>
+											
+					
+				
+		
+					<input type="submit" id="connect" value="LOGIN" size="50" />
+					</form>
+					</p>
+				<p><a href="javascript:$.pageslide.close()">CLOSE</a></p>
+				
+			</div>
+			<div>
+
+			</div>
+			<br />
+			<hr />
+			<footer>
+            	<p class="copyright">Copyright &copy; MK Solutions All rights reserved
+            	</p>
+			</footer>
+		</div>
+	</body>
+</html>

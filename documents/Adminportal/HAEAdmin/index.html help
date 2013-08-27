@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>"Under Construction" Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Under Construction Template&rdquo; Documentation by &ldquo;Madalin Tudose&rdquo; v1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Under Construction Template&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 18/Dec/2011<br>
+					By: Madalin Tudose<br>
+					Email: <a href="mailto:madalintudose@gmail.com">madalintudose@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for downloading my template. If you have any questions that are beyond the scope of this help file, please feel free to email via my email at <a href="mailto:madalintudose@gmail.com">madalintudose@gmail.com</a>. Thank you so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#php">PHP - How to Customize the "Subscribe Form"</a></li>			
+			<li><a href="#psdFiles">PSD Files</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong> HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>The template is using a single html file called index.html </p>
+		<p>If you want to change the text, you can do it from this file.</p>
+		<hr>
+
+		<h3 id="cssFiles"><strong>CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using a single CSS file in this template. </p> 
+
+		<p>The file contains all of the specific stylings for the page. The file is separated into sections using:</p>  
+
+<pre>	/* === Font Styles === */
+
+	some code
+
+	/* === General Styles === */
+	
+	some code
+	
+	/* === Header Styles === */
+	
+	some code
+	
+	/* === Content Styles === */
+	
+	some code
+	
+	/* === jQuery Countdown Styles === */		
+
+	some code	
+</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports three Javascript files.</p>
+		
+		<ol>
+			<li>jQuery Library</li>
+			<li>jQuery CountDown Plugin</li>
+			<li>jQuery Carousel Plugin</li>
+		</ol>
+		  
+		<ol>
+			<li>To customize the countdown is very simple.</li>
+			<li>All you have to do is to change a date, in my example is December 10, 2012:
+<pre>	$(function () {
+var austDay = new Date("December 10, 2012 02:15:00");
+    $('#defaultCountdown').countdown({until: austDay, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, and {sn} {sl}'});
+    $('#year').text(austDay.getFullYear());
+    });
+</pre>
+			</li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="PHP"><strong>PHP - How to Customize the "Subscribe Form"</strong> - <a href="#toc">top</a></h3>
+		
+		<p>To make the subscribe form sending emails to your email address, open the "emailform.php" file, go to line 5 and change the email "template@ourtuts.com" with your own email.</p>
+
+		<p>Because the template is using a PHP file, you have to upload the template on a server in order to make the subscribe form to work.</p> 
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've included the PSD File of the template :</p>
+		
+			<ol>
+				<li>layout-design.psd</li>
+			</ol>
+		
+		<p>If you'd like to change the design of the template, open "layout-design.psd" and make the necessary adjustments.</p> 
+		
+		<hr>
+		
+		<h3 id="credits"><strong>Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>If you need more icons for social area, follow the link below:</p>
+		
+		<ul>
+			<li><a href="http://www.smashingmagazine.com/2010/04/15/the-ultimate-free-web-designer-s-icon-set-750-icons-incl-psd-sources/" target="_blank">Addictive Flavour Icon Set</a></li>
+
+		</ul>
+		
+		
+		<hr>
+		
+		<p>Once again, thank you so much for downloading this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template. No guarantees, but I'll do my best to assist.</p> 
+		
+		<p class="append-bottom alt large"><strong>Madalin Tudose</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

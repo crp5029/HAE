@@ -1,0 +1,53 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="854" measuredH="565" mockupW="656" mockupH="532">
+  <controls>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::iPhone" x="198" y="55" w="-1" h="-1" measuredW="282" measuredH="510" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="319" y="264" w="-1" h="-1" measuredW="54" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Switch" x="368" y="308" w="-1" h="-1" measuredW="68" measuredH="28" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="248" y="188" w="-1" h="-1" measuredW="59" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>username</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::MenuBar" x="228" y="450" w="241" h="29" measuredW="227" measuredH="29" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Home%2C%20Edit%2C%20View%2C%20Settings</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::TextInput" x="319" y="185" w="117" h="-1" measuredW="79" measuredH="26" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::TextInput" x="319" y="222" w="117" h="-1" measuredW="79" measuredH="26" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::Label" x="247" y="224" w="-1" h="-1" measuredW="57" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>password</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="242" y="311" w="-1" h="-1" measuredW="109" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Keep%20me%20logged%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::TextInput" x="626" y="33" w="224" h="-1" measuredW="94" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>Privacy%20Policy</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::TextArea" x="626" y="60" w="228" h="299" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>At%20Makula%20we%20recognize%20that%20privacy%20is%20important.%20This%20Privacy%20Policy%20%28%u201CPolicy%u201D%29%20applies%20to%20your%20use%20of%20the%20Makula%20applications%20on%20all%20platforms%20%28the%20%u201CApplication%u201D%20or%20%u201CApplications%u201D%29%2C%20the%20related%20services%20we%20provide%20%28%u201CMakula%20Solutions%u201D%29%20and%20the%20Site.%20Unless%20otherwise%20defined%20in%20this%20Privacy%20Policy%2C%20capitalized%20terms%20used%20in%20this%20Privacy%20Policy%20have%20the%20same%20meanings%20as%20in%20our%20Terms%20of%20Service%20%28%u201CTOS%u201D%29%0A%20%0AIf%20you%20have%20any%20questions%20or%20comments%20about%20this%20Policy%20or%20our%20privacy%20practices%2C%20or%20to%20report%20any%20violations%20of%20the%20TOS%20or%20abuse%20of%20an%20Application%2C%20the%20Makula%20Services%20or%20the%20Site%2C%20please%20contact%20us%20at%20privacy@mkgold.com%0A%20%0AEND%20</text>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -40,7 +40,7 @@ body {
 }
 
 body {
-	background: #aaaaaa url(images/bg.jpg) repeat scroll 0 0
+	background: #aaaaaa url(../images/bg.jpg) repeat scroll 0 0
 }
 
 .container {
@@ -49,7 +49,7 @@ body {
 }
 
 #main {
-	background: url(images/page_background.png) no-repeat scroll 0 0;
+	background: url(../images/page_background.png) no-repeat scroll 0 0;
 	margin: 0 auto;
 	padding: 0;
 	height: 430px;
@@ -59,15 +59,15 @@ body {
 
 #header {
 	margin: 0px;
-	margin-top: 80px;
+	margin-top: 50px;
 	margin-bottom: 10px;
-	height: 50px;
+	height: 65px;
 }
 
 #logo {
 	position: relative;
 	float: left;
-	padding-left: 42px;
+	padding-left: 38px;
 }
 
 #contact_details {
@@ -111,7 +111,7 @@ body {
 }
 
 .counter {
-	background: url(images/counter_bg.png) no-repeat scroll center 57px;
+	background: url(../images/counter_bg.png) no-repeat scroll center 57px;
 	width: 780px;
 	height: 150px;
 	border-top: 1px solid #4f4f4f;
@@ -156,7 +156,6 @@ body {
 
 #pagetext {
 
-	float: right;
 	width: 740px;
 	overflow: hidden;
 	position: relative;
@@ -209,7 +208,7 @@ body {
 	line-height: 40px;
 }
 input#user {
-	background: url(images/mail-bg.png) no-repeat scroll 0 0;
+	background: url(../images/mail-bg.png) no-repeat scroll 0 0;
 	width: 217px;
 	height: 42px;
 	border: 0 none;
@@ -220,7 +219,7 @@ input#user {
 	line-height: 40px;
 }
 input#pass {
-	background: url(images/mail-bg.png) no-repeat scroll 0 0;
+	background: url(../images/mail-bg.png) no-repeat scroll 0 0;
 	width: 217px;
 	height: 42px;
 	border: 0 none;
@@ -237,7 +236,7 @@ input#pass {
 }
 
 input#connect {
-	background: url(images/button.png) no-repeat scroll 0 0;
+	background: url(../images/button.png) no-repeat scroll 0 0;
 	width: 92px;
 	height: 43px;
 	border: 0 none;
@@ -316,23 +315,23 @@ a.next {
 }
 
 #slidertext ul li a.twitter {
-	background: url(images/twitter.png) no-repeat scroll 0 0
+	background: url(../images/twitter.png) no-repeat scroll 0 0
 }
 
 #slidertext ul li a.google {
-	background: url(images/google.png) no-repeat scroll 0 0
+	background: url(../images/google.png) no-repeat scroll 0 0
 }
 
 #slidertext ul li a.yahoo {
-	background: url(images/yahoo.png) no-repeat scroll 0 0
+	background: url(../images/yahoo.png) no-repeat scroll 0 0
 }
 
 #slidertext ul li a.facebook {
-	background: url(images/facebook.png) no-repeat scroll 0 0
+	background: url(../images/facebook.png) no-repeat scroll 0 0
 }
 
-#slidertext ul li a.stumbleupon {
-	background: url(images/stumbleupon.png) no-repeat scroll 0 0
+#slidertext ul li a.instagram {
+	background: url(../images/instagram.png) no-repeat scroll 0 0
 }
 
 #subscribeform {
@@ -341,7 +340,7 @@ a.next {
 }
 
 input#email {
-	background: url(images/mail-bg.png) no-repeat scroll 0 0;
+	background: url(../images/mail-bg.png) no-repeat scroll 0 0;
 	width: 217px;
 	height: 42px;
 	border: 0 none;
@@ -353,7 +352,7 @@ input#email {
 }
 
 input#submit {
-	background: url(images/button.png) no-repeat scroll 0 0;
+	background: url(../images/button.png) no-repeat scroll 0 0;
 	width: 92px;
 	height: 43px;
 	border: 0 none;

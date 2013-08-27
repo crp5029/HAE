@@ -4,27 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Site under construction</title>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
 <script type="text/javascript" src="js/jcarousellite1.0.1_min.js"></script>
-<script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
 
 
 <!-- jquery countdown-->
 <script type="text/javascript">
 $(function () {
-var austDay = new Date("December 10, 2012 02:15:00");
+var austDay = new Date("December 10, 2013 02:15:00");
     $('#defaultCountdown').countdown({until: austDay, layout: '{dn} {dl}, {hn} {hl}, {mn} {ml}, and {sn} {sl}'});
     $('#year').text(austDay.getFullYear());
     });
 </script>
-<!--jquery alert-->
-<script type="text/javascript">
-	$(function () {
-		$( "#admin" ).dialog();
-	})
+
 </script>
 <!-- jquery slider -->
 <script type="text/javascript">
@@ -37,30 +32,17 @@ $(function() {
 });
 </script>
 
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.pageslide.min.js"></script>
 <!-- jquery pageslider -->
-<script type="text/javascript">
-
-		function slider () {
-			$("a.admin").pageslide({ 
-				direction: "left", 
-				modal: true 
-			});
-		}
-</script>
-
-<!--script for IE6-image transparency recover-->
-<!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.7a-min.js"></script>
 <script>
-  /* EXAMPLE */
-  DD_belatedPNG.fix('#logo img,#main,.counter,.twitter,.flickr,.facebook,.youtube,.skype,.stumbleupon, #submit,.prev img,.next img,#email');
-  
+	$("a.admin").pageslide();
 </script>
-<![endif]--> 
 
 </head>
 
-<body>
+<body style="margin-left: 8px;">
+
 
 
 <div class="container">
@@ -74,11 +56,13 @@ $(function() {
         <div id="contact_details">
         	<p><a href="#">support@mksolutions.com</a></p>
 			<p><a href="#">www.makulasolutions.com</a></p>
-		  
-        <div id="admin"  onclick="alert()">
-        	<p><a href="#">Login</a></p>
+        	<a href="_login.html" class="admin">Login</a>
+<script type="text/javascript" src="js/jquery.pageslide.min.js"></script>		
+		<script>
+	$("a.admin").pageslide();
+		</script>
         </div>
-        </div><!--end contact details-->
+        
 	</div><!--end header-->
               <div style="clear:both"></div> 
               
@@ -125,27 +109,27 @@ $(function() {
                                          <a href="#" class="twitter">Follow Us on Twitter</a>
                                          <a href="#" class="yahoo">Follow Us on Yahoo</a>
                                          <a href="#" class="facebook">Like Us on Facebook</a>
-                                         <a href="#" class="stumbleupon">Stumble Us on Stumbleupon</a>
+                                         <a href="#" class="Instagram">Snapshot onto Instagram</a>
                                          </div>
                                      </li><!-- Slider item -->
                                  
-                                 	<li>
+                                 	 <li>
                                          <h3>Some words about us</h3>
+                                         <div class="social">
                                          <p>Our goal is to perfect the process of stateless connectivity within closed networks using a lightweight integratable application that enhanced daily needs.</p>
-                                        
-                                 
+                                         </div>
                                 	 </li><!-- Slider item -->
                             
                                 </ul>
                             
-             	 </div><!-- End of slidertext -->
+             	 		</div><!-- End of slidertext -->
     
-              </div><!-- End of sliderwrap -->
-<a class="next" href="#"><img src="images/next.png" alt=""/></a>
-
+              		</div><!-- End of sliderwrap -->
+						<a class="next" href="#">
+							<img src="images/next.png" alt=""/>
+						</a>
 					<!--slider next button-->
              	
-                  
                   </div><!--end details-->  
                   <!--/div-->
                   

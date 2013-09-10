@@ -1,0 +1,23 @@
+<databaseChangeLog
+    xmlns = "http://www.liquibase.org/xml/ns/dbchangelog/1.9"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation = "http://www.liquibase.org/xml/ns/dbchangelog/1.9
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+    <changeSet id = "1" author = "Chris Purtell">
+        <comment>Adding Maintenance Services</comment>
+        
+        
+	<insert tableName = "MAINTENANCE_SVCS">
+    	<column name = "NAME" value = "Request Apartment Maintenance"/>
+    	<column name = "DESCRIPTION" value = "Click here to schedule a new maintenance request"/>
+    	<column name = "ENABLED" valueNumeric = "1"/>
+	</insert>
+	
+	<insert tableName = "MAINTENANCE_SVCS">
+    	<column name = "NAME" value = "Maintenance History"/>
+    	<column name = "DESCRIPTION" value = "Click here to view the status of pending ordersand past orders and view past history"/>
+    	<column name = "ENABLED" valueNumeric = "1"/>
+	</insert>
+
+    </changeSet>
+</databaseChangeLog>

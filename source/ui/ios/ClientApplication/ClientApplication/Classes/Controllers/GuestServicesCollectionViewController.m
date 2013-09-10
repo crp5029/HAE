@@ -31,6 +31,7 @@
 
 #import "GuestServicesCollectionViewController.h"
 
+
 #import <QuartzCore/QuartzCore.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
@@ -48,6 +49,7 @@
 @end
 
 @implementation GuestServicesCollectionViewController
+
 
 - (void)viewDidLoad
 {
@@ -149,7 +151,8 @@
     
 	NSLog(@"%@", [self.collectionView.collectionViewLayout layoutAttributesForItemAtIndexPath:theIndexPath]);
 	NSURL *theURL = [self.assets objectAtIndex:theIndexPath.row];
-	NSLog(@"%@", theURL);
+    [self performSegueWithIdentifier:@"segueServices" sender:self];
+	//NSLog(@"%@", theURL);
 }
 
 

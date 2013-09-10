@@ -35,6 +35,22 @@
 {
     [super viewDidLoad];
     
+    RESTConstructor *restConstructor = [RESTConstructor alloc];
+    restConstructor.mappingClass = maintenanceService;
+    restConstructor.requestMappingDictionary = @{
+                                                 @"description" : @"description"
+                                                 };
+    restConstructor.responseMappingDictionary = @{
+                                                  @"id" : @"tableId",
+                                                  @"description" : @"description"
+                                                  };
+    restConstructor.requestURL = @"/hae/admintool/getMaintenanceRequests";
+    
+    NSObject *service = [NSObject alloc];
+    service = [restConstructor testGet];
+    NSLog(@"TESTING: %@", service.description);
+    
+    
     
     /*
      

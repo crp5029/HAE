@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoomMaintenanceTableViewController.h"
 
 @interface GuestServicesCollectionViewController : UICollectionViewController
+
 
 @end

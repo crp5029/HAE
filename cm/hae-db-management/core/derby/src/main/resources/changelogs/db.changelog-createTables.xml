@@ -15,13 +15,6 @@
             <column name = "USERID" type = "varchar(250)"/>
             <column name = "PASSWORD" type = "varchar(25)"/>
         </createTable>
-
-        <createTable tableName = "CUSTOMER">
-            <column name = "id" type = "bigint" autoIncrement="true">
-                <constraints primaryKey = "true" nullable = "false"/>
-            </column>
-            <column name = "NAME" type = "varchar(100)"/>
-        </createTable>
         
         <createTable tableName = "MAINTENANCE">
             <column name = "id" type = "bigint" autoIncrement="true">
@@ -29,6 +22,22 @@
             </column>
             <column name = "DESCRIPTION" type = "varchar(300)"/>
         </createTable> 
+
+        <createTable tableName = "MAINTENANCE_SVCS">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(30)"/>
+            <column name = "DESCRIPTION" type = "varchar(300)"/>
+            <column name = "ENABLED" type = "int"/>
+        </createTable> 
+
+        <createTable tableName = "CUSTOMER">
+            <column name = "id" type = "bigint" autoIncrement="true">
+                <constraints primaryKey = "true" nullable = "false"/>
+            </column>
+            <column name = "NAME" type = "varchar(100)"/>
+        </createTable>
 
         <createTable tableName = "VENDOR">
             <column name = "id" type = "bigint" autoIncrement="true">

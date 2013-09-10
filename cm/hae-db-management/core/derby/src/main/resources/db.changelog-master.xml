@@ -8,6 +8,7 @@
    <!--  <include file = "changelogs/db.changelog-addInitialData.xml"/> Moved to a seperate project -->
     <include file = "changelogs/db.changelog-verizon-center.xml"/>
     <include file = "changelogs/db.changelog-addAdminUserAcct.xml"/>
+    <include file = "changelogs/db.changelog-addMaintenanceServices.xml"/>
     
     
    

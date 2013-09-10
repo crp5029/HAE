@@ -44,6 +44,7 @@
 		2A896B0D173A670200EFFFB4 /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B0C173A670200EFFFB4 /* Announcement.m */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
 		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
+		2A9C5C2917DF1A76001D494F /* RESTConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C5C2817DF1A76001D494F /* RESTConstructor.m */; };
 		2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA06B9217311B7200989F8D /* settingsIcon.png */; };
 		2AA6860C1730DF6500B33A58 /* defaultBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6860B1730DF6500B33A58 /* defaultBG.png */; };
 		2AB7979F17CC85C3000BBB05 /* CBetterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979417CC85C2000BBB05 /* CBetterCollectionViewCell.m */; };
@@ -178,6 +179,8 @@
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
 		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
+		2A9C5C2717DF1A76001D494F /* RESTConstructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTConstructor.h; path = Helpers/RESTConstructor.h; sourceTree = "<group>"; };
+		2A9C5C2817DF1A76001D494F /* RESTConstructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTConstructor.m; path = Helpers/RESTConstructor.m; sourceTree = "<group>"; };
 		2AA06B9217311B7200989F8D /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsIcon.png; path = Helpers/settingsIcon.png; sourceTree = "<group>"; };
 		2AA6860B1730DF6500B33A58 /* defaultBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = defaultBG.png; path = Helpers/defaultBG.png; sourceTree = "<group>"; };
 		2AB7979317CC85C2000BBB05 /* CBetterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBetterCollectionViewCell.h; path = Coverflow/CBetterCollectionViewCell.h; sourceTree = "<group>"; };
@@ -484,6 +487,8 @@
 				2A55AF29170C25C40072667C /* Information-Icon.png */,
 				2A55AF27170C1C760072667C /* keyWelcome.png */,
 				2A9363521702E45900444068 /* cellBG.png */,
+				2A9C5C2717DF1A76001D494F /* RESTConstructor.h */,
+				2A9C5C2817DF1A76001D494F /* RESTConstructor.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				2AB797AA17CC9411000BBB05 /* GuestServicesCollectionViewController.m in Sources */,
 				2AB797AD17CC9510000BBB05 /* GuestServicesCollectionViewCell.m in Sources */,
 				2AB797B117CC96EC000BBB05 /* CCoverflowTitleView.m in Sources */,
+				2A9C5C2917DF1A76001D494F /* RESTConstructor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

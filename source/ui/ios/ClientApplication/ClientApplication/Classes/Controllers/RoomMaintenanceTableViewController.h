@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MaintenanceService.h"
+#import "RESTConstructor.h"
 
 @interface RoomMaintenanceTableViewController : UITableViewController{
     IBOutlet UILabel *testLabel;

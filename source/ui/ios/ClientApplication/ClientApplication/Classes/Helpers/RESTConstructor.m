@@ -22,34 +22,31 @@
 @synthesize request;
 @synthesize requestMappingDictionary;
 @synthesize responseMappingDictionary;
-@synthesize mappingClass;
 @synthesize requestURL;
 @synthesize aRequest;
+@synthesize requestResult;
 
 
-- (NSObject *)testGet
+- (RKObjectRequestOperation *)testGet:(NSString *)className
 {
     aRequest = [MaintenanceRequest new];
+    requestResult = [[NSArray alloc] init];
     [aRequest setDescription:@"TEST"];
-    //[aRequest setDescription:[txtViewData text]];
     
+    Class classFromString = NSClassFromString(className);
+
     // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
-    postRequestMapping = [RKObjectMapping requestMapping ]; // Shortcut for [RKObjectMapping mappingForClass:[NSMutableDictionary class] ]
-    
-    /*[postRequestMapping addAttributeMappingsFromDictionary:@{
-     @"description" : @"description"
-     }];*/
+    postRequestMapping = [RKObjectMapping requestMapping ]; 
     
     [postRequestMapping addAttributeMappingsFromDictionary:requestMappingDictionary];
     
     // Now configure the request descriptor
-    requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postRequestMapping objectClass:[MaintenanceRequest class] rootKeyPath:nil];
+    requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:postRequestMapping objectClass:classFromString rootKeyPath:nil];
     
-    responseMapping = [RKObjectMapping mappingForClass:[MaintenanceRequest class]];
+    responseMapping = [RKObjectMapping mappingForClass:classFromString];
     [responseMapping addAttributeMappingsFromDictionary:responseMappingDictionary];
     //Configure Response descriptor
-   /* responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping pathPattern:@"/hae/admintool/getMaintenanceRequests" keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
-    */
+
      responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:responseMapping pathPattern:requestURL keyPath:nil statusCodes:[NSIndexSet indexSetWithIndex:200]];
     
     errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
@@ -68,32 +65,26 @@
      request = [objectManager requestWithObject:aRequest method:RKRequestMethodPOST path:requestURL parameters:nil];
     
     operation = [objectManager objectRequestOperationWithRequest:request
-                                                                                   success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                                                                       NSObject *aARequest = mappingClass;
-                                                                                       
-                                                                                       
-                                                                                       
-                                                                                       NSArray* statuses = [mappingResult array];
-                                                                                       NSLog(@"DESCRIPTION: %@", statuses);
-                                                                                       mappingClass = statuses.lastObject;
-                                                                                        NSLog(@"ARRAY SIZE %u", statuses.count);
-                                                                                       //NSLog(@"ID: %@", aARequest.tableId);
-                                                                                      // NSLog(@"DESCRIPTION: %@", aARequest.description);
-                                                                                       NSLog(@"Success block: %@", mappingResult);
-                                                                                       /* NSEnumerator *enumerator = [statuses objectEnumerator];
-                                                                                        MaintenanceRequest *aTest = [MaintenanceRequest new];
-                                                                                        
-                                                                                        while (aTest = [enumerator nextObject]) {
-                                                                                        NSLog(@"aTest:  %@", aTest.tableId);
-                                                                                        NSLog(@"aTest:  %@", aTest.description);
-                                                                                        }*/
-                                                                                   } failure: ^(RKObjectRequestOperation *operation, NSError *error) {
-                                                                                       NSLog(@"Failed with error: %@", [error localizedDescription]);
-                                                                                   }];
+                                    success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                        //requestResult = [mappingResult array];
+                                        //NSLog(@"ARRAY COUNT: %lu", (unsigned long)requestResult.count);
+                                        //NSLog(@"Success block: %@", requestResult);
+                                    }
+                                    failure: ^(RKObjectRequestOperation *operation, NSError *error) {
+                                        NSLog(@"Failed with error: %@", [error localizedDescription]);
+                                    }];
     
     [objectManager enqueueObjectRequestOperation:operation];
-    
-    return mappingClass;
+
+    return operation;
 }
+
+/*- (id)makeObjectOfClass:(Class)aClass
+{
+    assert([aClass instancesRespondToSelector:@selector(reset)]);
+    //id *newInstance = [aClass createInstance];
+   // [managedObjects addObject:newInstance];
+    return newInstance;
+}*/
 @end
 

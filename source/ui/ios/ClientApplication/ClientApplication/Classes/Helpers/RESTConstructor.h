@@ -28,13 +28,14 @@
 //@property(nonatomic, strong) NSObject *aRequest;
 @property(nonatomic, strong) NSDictionary *requestMappingDictionary;
 @property(nonatomic, strong) NSDictionary *responseMappingDictionary;
-@property(nonatomic, strong) NSObject *mappingClass;
+@property(nonatomic, strong) NSArray *requestResult;
 
 @property(nonatomic, strong) NSString *requestURL;
 
 @property (nonatomic, strong) MaintenanceRequest *aRequest;
 
-- (NSObject *) testGet;
+
+- (RKObjectRequestOperation *) testGet:(NSString *)className;
 
 
 

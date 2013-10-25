@@ -20,6 +20,10 @@
 @synthesize maintenanceServices;
 @synthesize maintenanceServiceName;
 @synthesize maintenanceService;
+@synthesize operation;
+@synthesize requestResult;
+@synthesize maintenanceRequest;
+
 //@synthesize testLabel;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -34,9 +38,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self getMaintenanceRequests];
     
+
+}
+
+- (void)getMaintenanceRequests
+{
+    maintenanceRequest = [[MaintenanceRequest alloc]init];
     RESTConstructor *restConstructor = [RESTConstructor alloc];
-    restConstructor.mappingClass = maintenanceService;
+
     restConstructor.requestMappingDictionary = @{
                                                  @"description" : @"description"
                                                  };
@@ -45,39 +56,16 @@
                                                   @"description" : @"description"
                                                   };
     restConstructor.requestURL = @"/hae/admintool/getMaintenanceRequests";
-    
-    NSObject *service = [NSObject alloc];
-    service = [restConstructor testGet];
-    NSLog(@"TESTING: %@", service.description);
-    
-    
-    
-    /*
-     
-    testLabel.text = self.maintenanceService.name;
-    
-    */
-    
-    //maintenanceService = [self.services objectAtIndex:0];
-	//testLabel.text = self.maintenanceService.name;
-    
-    
-    
-    
-    //MaintenanceService *service = [maintenanceServices objectAtIndex:0];
-    //maintenanceService.name = @"dfsfsdafdasf";
-    //maintenanceServiceName = maintenanceService.name;
-    
-    //maintenanceService.name = @"DFJDKSL";
-  //  maintenanceService = [self.maintenanceServices objectAtIndex:0];
-   // testLabel.text = self.maintenanceService.name;
-    
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    operation = [restConstructor testGet:(NSStringFromClass([maintenanceRequest class]))];
+    
+    while(!operation.isFinished){
+        
+    }
+    requestResult = [operation.mappingResult array];
+    //NSLog(@"ArrayTest: %@", [requestResult.lastObject tableId]);
+    //NSLog(@"TESTINGGGGGmotherFucker: %@", operation.mappingResult);
+    //NSLog(@"TESTINGGGGGmotherFucker: %@", operation.HTTPRequestOperation.responseString);
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,14 +85,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.maintenanceServices count];
+    NSLog(@"NumberOfRowsInSection: %d", [self.requestResult count]);
+    return [self.requestResult count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"maintenanceCell"];
-	MaintenanceService *service = [self.maintenanceServices objectAtIndex:indexPath.row];
-	cell.textLabel.text = service.name;
+	MaintenanceRequest *service = [self.requestResult objectAtIndex:indexPath.row];
+	cell.textLabel.text = service.description;
     
     // Configure the cell...
     
@@ -173,7 +162,7 @@
     {
         GuestServiceConfirmationVC *destViewController = [segue destinationViewController];
         NSInteger selected = [[self.tableView indexPathForSelectedRow] row];
-        destViewController.maintenanceService = [maintenanceServices objectAtIndex:selected];
+        destViewController.maintenanceService = [requestResult objectAtIndex:selected];
         
         //[maintenanceServices removeAllObjects];
     }

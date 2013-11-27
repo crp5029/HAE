@@ -29,11 +29,10 @@
 
 - (RKObjectRequestOperation *)testGet:(NSString *)className
 {
-    aRequest = [MaintenanceRequest new];
+    Class classFromString = NSClassFromString(className);
+    aRequest = [classFromString new];
     requestResult = [[NSArray alloc] init];
     [aRequest setDescription:@"TEST"];
-    
-    Class classFromString = NSClassFromString(className);
 
     // Configure a request mapping for our Article class. We want to send back title, body, and publicationDate
     postRequestMapping = [RKObjectMapping requestMapping ]; 
@@ -69,6 +68,7 @@
                                         //requestResult = [mappingResult array];
                                         //NSLog(@"ARRAY COUNT: %lu", (unsigned long)requestResult.count);
                                         //NSLog(@"Success block: %@", requestResult);
+                                        NSLog(@"Success block: Returned Object - %@", className);
                                     }
                                     failure: ^(RKObjectRequestOperation *operation, NSError *error) {
                                         NSLog(@"Failed with error: %@", [error localizedDescription]);

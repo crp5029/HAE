@@ -60,12 +60,9 @@
     operation = [restConstructor testGet:(NSStringFromClass([maintenanceRequest class]))];
     
     while(!operation.isFinished){
-        
+        //NSLog(@"WAITING....");
     }
     requestResult = [operation.mappingResult array];
-    //NSLog(@"ArrayTest: %@", [requestResult.lastObject tableId]);
-    //NSLog(@"TESTINGGGGGmotherFucker: %@", operation.mappingResult);
-    //NSLog(@"TESTINGGGGGmotherFucker: %@", operation.HTTPRequestOperation.responseString);
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,7 +82,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"NumberOfRowsInSection: %d", [self.requestResult count]);
+    //NSLog(@"NumberOfRowsInSection: %d", [self.requestResult count]);
     return [self.requestResult count];
 }
 

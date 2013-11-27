@@ -5,7 +5,8 @@
 #  Chris Purtell
 #  November 20, 2011
 
-. ./config_env.sh
+BASEDIR=$(dirname "$0")
+. $BASEDIR/config_env.sh
 cd $SMDATABASE_HOME
 $DERBY_INSTALL_PATH/startNetworkServer
 

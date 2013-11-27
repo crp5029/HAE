@@ -1,3 +1,3 @@
 export DERBY_INSTALL_PATH=/usr/share/derby/bin/
-export SMDATABASE_HOME=$PWD
-export SCRIPTS_HOME=$PWD
+export SMDATABASE_HOME=$(dirname "$0")
+export SCRIPTS_HOME=$(dirname "$0")

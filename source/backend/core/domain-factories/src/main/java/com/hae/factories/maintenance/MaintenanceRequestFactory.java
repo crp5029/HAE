@@ -2,11 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hae.factories.maintenanceRequest;
+package com.hae.factories.maintenance;
 
 import com.hae.domain.maintenance.MaintenanceRequest;
-import com.hae.domain.mapping.maintenanceRequest.MaintenanceRequestMapper;
-import com.hae.entities.maintenance.MaintenanceEntity;
+import com.hae.domain.mapping.maintenance.MaintenanceRequestMapper;
+import com.hae.entities.maintenance.MaintenanceRequestEntity;
 
 /**
  *
@@ -19,15 +19,15 @@ public class MaintenanceRequestFactory {
      * @param entity
      * @return 
      */
-    public MaintenanceEntity createRequest(MaintenanceRequest maintenanceRequest)
+    public MaintenanceRequestEntity createRequest(MaintenanceRequest maintenanceRequest)
     {
-        MaintenanceEntity entity = new MaintenanceEntity();
+        MaintenanceRequestEntity entity = new MaintenanceRequestEntity();
         MaintenanceRequestMapper mapper = new MaintenanceRequestMapper();
         mapper.mapFromDomain(entity, maintenanceRequest);
         return entity;
     }
     
-    public MaintenanceRequest getRequest(MaintenanceEntity entity, MaintenanceRequest maintenanceRequest)
+    public MaintenanceRequest getRequest(MaintenanceRequestEntity entity, MaintenanceRequest maintenanceRequest)
     {
         MaintenanceRequestMapper mapper = new MaintenanceRequestMapper();
         mapper.mapToDomain(entity, maintenanceRequest);

@@ -26,7 +26,9 @@
             </roles>
         </developer>
     </developers>
-    
+<build>
+    <finalName>hae</finalName>
+</build>    
    <dependencies>
         
         <!-- HAE Dependencies -->

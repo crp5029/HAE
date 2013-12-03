@@ -10,7 +10,9 @@
 
 @interface MaintenanceService : NSObject
 
+@property (nonatomic, strong) NSString *serviceId;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *description;
 @property (nonatomic) BOOL enabled;
 
 @end

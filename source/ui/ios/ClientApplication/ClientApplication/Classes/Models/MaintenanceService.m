@@ -10,7 +10,9 @@
 
 @implementation MaintenanceService
 
+@synthesize serviceId;
 @synthesize name;
+@synthesize description;
 @synthesize enabled;
 
 @end

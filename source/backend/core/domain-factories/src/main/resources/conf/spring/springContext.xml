@@ -33,7 +33,10 @@
     <bean id="VendorFactory" class="com.hae.factories.vendor.VendorFactory">
     </bean>
     -->
-    <bean id="MaintenanceRequestFactory" class="com.hae.factories.maintenanceRequest.MaintenanceRequestFactory">
+    <bean id="MaintenanceRequestFactory" class="com.hae.factories.maintenance.MaintenanceRequestFactory">
+    </bean>
+    
+    <bean id="MaintenanceServiceFactory" class="com.hae.factories.maintenance.MaintenanceServiceFactory">
     </bean>
    
    

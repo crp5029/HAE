@@ -27,11 +27,15 @@
     <bean id="CustomerMapper" class="com.hae.domain.mapping.customer.CustomerMapper">
     </bean>
     
-    <bean id="MaintenanceRequestMapper" class="com.hae.domain.mapping.maintenanceRequest.MaintenanceRequestMapper">
-    </bean>
-    
     <bean id="UserMapper" class="com.hae.domain.mapping.authentication.UserMapper">
     </bean>
+
+    <bean id="MaintenanceRequestMapper" class="com.hae.domain.mapping.maintenance.MaintenanceRequestMapper">
+    </bean>
+    
+    <bean id="MaintenanceServiceMapper" class="com.hae.domain.mapping.maintenance.MaintenanceServiceMapper">
+    </bean>
+    
    
    
 </beans>

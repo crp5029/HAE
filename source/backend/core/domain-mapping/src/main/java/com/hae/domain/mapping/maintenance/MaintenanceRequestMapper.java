@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.hae.domain.mapping.maintenanceRequest;
+package com.hae.domain.mapping.maintenance;
 
 import com.hae.domain.FSDomain;
 import com.hae.domain.maintenance.MaintenanceRequest;
 import com.hae.domain.mapping.interfaces.Mapper;
-import com.hae.entities.maintenance.MaintenanceEntity;
+import com.hae.entities.maintenance.MaintenanceRequestEntity;
 
 
 /**
@@ -33,7 +33,7 @@ public class MaintenanceRequestMapper implements Mapper {
     @Override
     public <E, D extends FSDomain> void mapToDomain(E entity, D domain) 
     {
-        MaintenanceEntity maintenanceEntity = (MaintenanceEntity) entity;
+        MaintenanceRequestEntity maintenanceEntity = (MaintenanceRequestEntity) entity;
         MaintenanceRequest maintenanceDomain = (MaintenanceRequest) domain;
         maintenanceDomain.setId(maintenanceEntity.getId());
         maintenanceDomain.setDescription(maintenanceEntity.getDescription());
@@ -44,7 +44,7 @@ public class MaintenanceRequestMapper implements Mapper {
     public <E, D extends FSDomain> void mapFromDomain(E entity, D domain) 
     {
         MaintenanceRequest maintenanceDomain = (MaintenanceRequest) domain;
-        MaintenanceEntity maintenanceEntity = (MaintenanceEntity) entity;
+        MaintenanceRequestEntity maintenanceEntity = (MaintenanceRequestEntity) entity;
         maintenanceEntity.setDescription(maintenanceDomain.getDescription());
     }
     

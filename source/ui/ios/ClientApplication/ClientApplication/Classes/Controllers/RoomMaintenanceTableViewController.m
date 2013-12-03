@@ -45,6 +45,8 @@
 
 - (void)getMaintenanceRequests
 {
+    maintenanceService = [[MaintenanceService alloc]init];
+  /* 
     maintenanceRequest = [[MaintenanceRequest alloc]init];
     RESTConstructor *restConstructor = [RESTConstructor alloc];
 
@@ -58,6 +60,29 @@
     restConstructor.requestURL = @"/hae/admintool/getMaintenanceRequests";
 
     operation = [restConstructor testGet:(NSStringFromClass([maintenanceRequest class]))];
+  */
+    
+    
+    RESTConstructor *restConstructor = [RESTConstructor alloc];
+    
+    restConstructor.requestMappingDictionary = @{
+                                                 @"description" : @"description"
+                                                 };
+    restConstructor.responseMappingDictionary = @{
+                                                  @"id" : @"serviceId",
+                                                  @"name" : @"name",
+                                                  @"description" : @"description",
+                                                  @"enabled" : @"enabled"
+                                                  };
+    restConstructor.requestURL = @"/hae/admintool/getMaintenanceServices";
+    
+    operation = [restConstructor testGet:(NSStringFromClass([maintenanceService class]))];
+    
+    
+    
+    
+    
+    
     
     while(!operation.isFinished){
         //NSLog(@"WAITING....");

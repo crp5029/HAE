@@ -16,14 +16,14 @@
 
 package com.hae.repositories;
 
-import com.hae.entities.maintenance.MaintenanceRequestEntity;
+import com.hae.entities.maintenance.MaintenanceServiceEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author Chris Purtell
  */
-public interface MaintenanceRepository extends CrudRepository<MaintenanceRequestEntity, Long>{
+public interface MaintenanceServiceRepository extends CrudRepository<MaintenanceServiceEntity, Long>{
     
 
 }

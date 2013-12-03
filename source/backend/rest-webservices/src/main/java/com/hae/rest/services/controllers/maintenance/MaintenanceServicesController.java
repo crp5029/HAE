@@ -16,9 +16,10 @@
 
 package com.hae.rest.services.controllers.maintenance;
 
-import com.hae.domain.maintenance.MaintenanceRequest;
-import com.hae.domain.maintenance.impl.MaintenanceRequestImpl;
-import com.hae.maintenance.service.api.NewTicketService;
+import com.hae.domain.maintenance.MaintenanceService;
+import com.hae.domain.maintenance.impl.MaintenanceServiceImpl;
+import com.hae.maintenance.service.api.MaintenanceServices;
+
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,31 +34,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Chris Purtell
  */
 @Controller
-public class NewMaintenanceController {
+public class MaintenanceServicesController {
     
     @Autowired
-    NewTicketService newTicketService;
-    
-    
-    @RequestMapping(value = "/admintool/processNewMaintenanceTicket", method = RequestMethod.POST)
+    MaintenanceServices maintenanceServices;
+
+    @RequestMapping(value = "/admintool/getMaintenanceServices", method = RequestMethod.POST)
     public
     @ResponseBody
-    MaintenanceRequest processNewMaintenanceTicket(@RequestBody MaintenanceRequestImpl context, HttpServletResponse response) 
+    List<MaintenanceService> getMaintenanceServices(@RequestBody MaintenanceServiceImpl context, HttpServletResponse response) 
     {
         response.setStatus(HttpServletResponse.SC_OK);
-        newTicketService.addNewMaintenanceRequest(context);
-        return null;
-    }
-    
-    @RequestMapping(value = "/admintool/getMaintenanceRequests", method = RequestMethod.POST)
-    public
-    @ResponseBody
-    List<MaintenanceRequest> getMaintenanceRequests(@RequestBody MaintenanceRequestImpl context, HttpServletResponse response) 
-    {
-        response.setStatus(HttpServletResponse.SC_OK);
-        return newTicketService.getMaintenanceRequests();
-     
-        //return aList;
+        return maintenanceServices.getMaintenanceServices();
     }
             
 }

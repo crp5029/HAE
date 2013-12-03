@@ -2,18 +2,19 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hae.domain.maintenanceRequest.impl;
+package com.hae.domain.maintenance.impl;
 
-import com.hae.domain.maintenance.MaintenanceRequest;
+import com.hae.domain.maintenance.MaintenanceService;
 
 /**
  *
  * @author chrispurtell
  */
-public class MaintenanceRequestImpl implements MaintenanceRequest {
-    
+public class MaintenanceServiceImpl implements MaintenanceService {
+
     private long id;
     private String description;
+    private boolean enabled;
 
     @Override
     public long getId() {
@@ -34,5 +35,15 @@ public class MaintenanceRequestImpl implements MaintenanceRequest {
     public String getDescription() {
         return description;
     }
-       
+
+    @Override
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    @Override
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+      
 }

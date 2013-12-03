@@ -25,7 +25,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="MAINTENANCE")
-public class MaintenanceEntity implements Serializable{
+public class MaintenanceRequestEntity implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

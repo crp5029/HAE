@@ -17,9 +17,9 @@
 package com.hae.maintenance.service.impl;
 
 import com.hae.domain.maintenance.MaintenanceRequest;
-import com.hae.domain.maintenanceRequest.impl.MaintenanceRequestImpl;
-import com.hae.entities.maintenance.MaintenanceEntity;
-import com.hae.factories.maintenanceRequest.MaintenanceRequestFactory;
+import com.hae.domain.maintenance.impl.MaintenanceRequestImpl;
+import com.hae.entities.maintenance.MaintenanceRequestEntity;
+import com.hae.factories.maintenance.MaintenanceRequestFactory;
 import com.hae.maintenance.service.api.NewTicketService;
 import com.hae.repositories.MaintenanceRepository;
 import java.util.ArrayList;
@@ -54,9 +54,9 @@ public class NewTicketServiceImpl implements NewTicketService {
     public List<MaintenanceRequest> getMaintenanceRequests()
     {
         ArrayList<MaintenanceRequest> maintenanceRequests = new ArrayList<MaintenanceRequest>();
-        List<MaintenanceEntity> maintenanceRequestList = (List<MaintenanceEntity>) maintenanceRepository.findAll();
+        List<MaintenanceRequestEntity> maintenanceRequestList = (List<MaintenanceRequestEntity>) maintenanceRepository.findAll();
         
-        for (MaintenanceEntity aEntity : maintenanceRequestList)
+        for (MaintenanceRequestEntity aEntity : maintenanceRequestList)
         {
             MaintenanceRequest request = new MaintenanceRequestImpl();
             maintenanceRequests.add(maintenanceRequestFactory.getRequest(aEntity, request));

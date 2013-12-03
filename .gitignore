@@ -94,3 +94,10 @@ apache-tomcat-7.0.39/logs/localhost_access_log.2013-05-08.txt
 apache-tomcat-7.0.39/logs/*.txt
 
 apache-tomcat-7.0.39/webapps/*
+/source/backend/core/domain-mapping/.settings/
+/source/backend/core/domain/.settings/
+/source/backend/core/persistence/repositories/jpa-repositories/.settings/
+/source/backend/core/model/.settings/
+/source/backend/rest-webservices/.settings/
+/source/backend/core/services/.settings/
+/source/backend/core/domain-factories/.settings/

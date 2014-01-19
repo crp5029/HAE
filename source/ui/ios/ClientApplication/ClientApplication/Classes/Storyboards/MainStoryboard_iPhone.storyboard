@@ -151,7 +151,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="6Pl-XP-FNG" id="Tiq-t2-nBU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Room Maintenance" id="W9A-q7-vck"/>
+                    <navigationItem key="navigationItem" title="Room Maintenance" id="W9A-q7-vck">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VZF-6T-hy7"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="186-Sb-YX8">
+                            <connections>
+                                <action selector="backButton:" destination="6Pl-XP-FNG" id="F3Z-Bs-mdA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="z9Z-3W-9pd" kind="push" identifier="confirmationSegue" id="uKl-j3-vqb"/>
                     </connections>
@@ -1287,135 +1294,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="notificationIcon.png" width="39" height="36"/>
         <image name="settingsIcon.png" width="39" height="36"/>
     </resources>
-    <classes>
-        <class className="AccountViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AccountViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AnnouncementTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnnouncementTableViewController.h"/>
-        </class>
-        <class className="BookingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BookingViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="contactButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="scheduleHelpView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="separateLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CBetterCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CBetterCollectionViewCell.h"/>
-        </class>
-        <class className="CCoverflowCollectionViewLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CCoverflowCollectionViewLayout.h"/>
-        </class>
-        <class className="CReflectionView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CReflectionView.h"/>
-        </class>
-        <class className="CreateAccountViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateAccountViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="backButton:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="GuestServiceConfirmationVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuestServiceConfirmationVC.h"/>
-            <relationships>
-                <relationship kind="action" name="testAction:"/>
-                <relationship kind="action" name="testGet:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="testButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="txtViewData" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="GuestServicesCollectionViewCell" superclassName="CBetterCollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuestServicesCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="reflectionImageView" candidateClass="CReflectionView"/>
-            </relationships>
-        </class>
-        <class className="GuestServicesCollectionViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuestServicesCollectionViewController.h"/>
-        </class>
-        <class className="GuestServicesTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuestServicesTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InformationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InformationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="notificationsTransitionButton:"/>
-            </relationships>
-        </class>
-        <class className="InitialLoginVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialLoginVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="informationButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="uiView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="InitialViewVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialViewVC.h"/>
-            <relationships>
-                <relationship kind="action" name="activateAccountButton:"/>
-                <relationship kind="action" name="loginButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="sessionKeyText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="userIdText" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="createAccountButton:"/>
-                <relationship kind="action" name="loginButton:"/>
-                <relationship kind="outlet" name="passwordText" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="separateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="userIdText" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MainTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTabBarController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RoomMaintenanceTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RoomMaintenanceTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UnauthenticatedNVC" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UnauthenticatedNVC.h"/>
-        </class>
-        <class className="WakeupCallViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WakeupCallViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="submitButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="timeView" candidateClass="UIDatePicker"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

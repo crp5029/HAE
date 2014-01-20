@@ -32,8 +32,6 @@
 		2A22BDC216AC01FD00EC87BC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A22BDC016AC01FD00EC87BC /* InfoPlist.strings */; };
 		2A22BDC516AC01FD00EC87BC /* ClientApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */; };
 		2A2B99A017AB937900DDE33B /* AccountInformationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B999F17AB937900DDE33B /* AccountInformationView.m */; };
-		2A55AF28170C1C760072667C /* keyWelcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF27170C1C760072667C /* keyWelcome.png */; };
-		2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A55AF29170C25C40072667C /* Information-Icon.png */; };
 		2A7245B417993952005B9377 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7245B317993952005B9377 /* AccountViewController.m */; };
 		2A7245BA179951F3005B9377 /* StandardTableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7245B9179951F3005B9377 /* StandardTableButton.m */; };
 		2A896AF5173A238700EFFFB4 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896AF4173A238700EFFFB4 /* InformationViewController.m */; };
@@ -42,24 +40,26 @@
 		2A896B07173A51A800EFFFB4 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B06173A51A800EFFFB4 /* TableSection.m */; };
 		2A896B0A173A527E00EFFFB4 /* SectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B09173A527E00EFFFB4 /* SectionHeaderView.m */; };
 		2A896B0D173A670200EFFFB4 /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B0C173A670200EFFFB4 /* Announcement.m */; };
+		2A90F183188CC2A300BCE183 /* CBetterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F178188CC2A300BCE183 /* CBetterCollectionViewCell.m */; };
+		2A90F184188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F17A188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.m */; };
+		2A90F185188CC2A300BCE183 /* CCoverflowCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F17C188CC2A300BCE183 /* CCoverflowCollectionViewLayout.m */; };
+		2A90F186188CC2A300BCE183 /* CInterpolator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F17E188CC2A300BCE183 /* CInterpolator.mm */; };
+		2A90F187188CC2A300BCE183 /* CReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F180188CC2A300BCE183 /* CReflectionView.m */; };
+		2A90F188188CC2A300BCE183 /* Interpolator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F181188CC2A300BCE183 /* Interpolator.cpp */; };
+		2A90F18F188CC3C600BCE183 /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A90F18D188CC3C600BCE183 /* KBKeyboardHandler.m */; };
+		2A90F198188CC4A400BCE183 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F191188CC4A400BCE183 /* cellBG.png */; };
+		2A90F199188CC4A400BCE183 /* defaultBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F192188CC4A400BCE183 /* defaultBG.png */; };
+		2A90F19A188CC4A400BCE183 /* Information-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F193188CC4A400BCE183 /* Information-Icon.png */; };
+		2A90F19B188CC4A400BCE183 /* keyWelcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F194188CC4A400BCE183 /* keyWelcome.png */; };
+		2A90F19C188CC4A400BCE183 /* maintenance.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F195188CC4A400BCE183 /* maintenance.jpg */; };
+		2A90F19D188CC4A400BCE183 /* notificationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F196188CC4A400BCE183 /* notificationIcon.png */; };
+		2A90F19E188CC4A400BCE183 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A90F197188CC4A400BCE183 /* settingsIcon.png */; };
 		2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9363321702D76A00444068 /* InitialLoginVC.m */; };
-		2A9363531702E45900444068 /* cellBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A9363521702E45900444068 /* cellBG.png */; };
 		2A9C5C2917DF1A76001D494F /* RESTConstructor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9C5C2817DF1A76001D494F /* RESTConstructor.m */; };
-		2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA06B9217311B7200989F8D /* settingsIcon.png */; };
-		2AA6860C1730DF6500B33A58 /* defaultBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6860B1730DF6500B33A58 /* defaultBG.png */; };
-		2AB7979F17CC85C3000BBB05 /* CBetterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979417CC85C2000BBB05 /* CBetterCollectionViewCell.m */; };
-		2AB797A017CC85C3000BBB05 /* CBetterCollectionViewLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979617CC85C3000BBB05 /* CBetterCollectionViewLayoutAttributes.m */; };
-		2AB797A117CC85C3000BBB05 /* CCoverflowCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979817CC85C3000BBB05 /* CCoverflowCollectionViewLayout.m */; };
-		2AB797A217CC85C3000BBB05 /* CInterpolator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979A17CC85C3000BBB05 /* CInterpolator.mm */; };
-		2AB797A317CC85C3000BBB05 /* CReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979C17CC85C3000BBB05 /* CReflectionView.m */; };
-		2AB797A417CC85C3000BBB05 /* Interpolator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7979D17CC85C3000BBB05 /* Interpolator.cpp */; };
 		2AB797AA17CC9411000BBB05 /* GuestServicesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB797A917CC9411000BBB05 /* GuestServicesCollectionViewController.m */; };
 		2AB797AD17CC9510000BBB05 /* GuestServicesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB797AC17CC9510000BBB05 /* GuestServicesCollectionViewCell.m */; };
 		2AB797B117CC96EC000BBB05 /* CCoverflowTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB797AF17CC96EC000BBB05 /* CCoverflowTitleView.m */; };
 		2AB797B217CC96EC000BBB05 /* CCoverflowTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB797B017CC96EC000BBB05 /* CCoverflowTitleView.xib */; };
-		2AB797B617CC97AE000BBB05 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 2AB797B517CC97AE000BBB05 /* Images */; };
-		2AB9CA8917312206004E3C44 /* notificationIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AB9CA8817312206004E3C44 /* notificationIcon.png */; };
-		2AC6B8D41717EBE60076C474 /* KBKeyboardHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */; };
 		8820D5FB16DEBA7E00CF4D02 /* InitialViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */; };
 		8820D5FE16DEEB2500CF4D02 /* DatabaseAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8820D5FD16DEEB2500CF4D02 /* DatabaseAuthentication.m */; };
 		88698DE916D2811300D5606E /* MaintenanceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 88698DE816D2811300D5606E /* MaintenanceRequest.m */; };
@@ -158,8 +158,6 @@
 		2A22BDC416AC01FD00EC87BC /* ClientApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClientApplicationTests.m; sourceTree = "<group>"; };
 		2A2B999E17AB937900DDE33B /* AccountInformationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountInformationView.h; sourceTree = "<group>"; };
 		2A2B999F17AB937900DDE33B /* AccountInformationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountInformationView.m; sourceTree = "<group>"; };
-		2A55AF27170C1C760072667C /* keyWelcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyWelcome.png; sourceTree = "<group>"; };
-		2A55AF29170C25C40072667C /* Information-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Information-Icon.png"; sourceTree = "<group>"; };
 		2A7245B217993952005B9377 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		2A7245B317993952005B9377 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		2A7245B8179951F3005B9377 /* StandardTableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardTableButton.h; sourceTree = "<group>"; };
@@ -176,25 +174,32 @@
 		2A896B09173A527E00EFFFB4 /* SectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionHeaderView.m; sourceTree = "<group>"; };
 		2A896B0B173A670200EFFFB4 /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
 		2A896B0C173A670200EFFFB4 /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
+		2A90F177188CC2A300BCE183 /* CBetterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBetterCollectionViewCell.h; sourceTree = "<group>"; };
+		2A90F178188CC2A300BCE183 /* CBetterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBetterCollectionViewCell.m; sourceTree = "<group>"; };
+		2A90F179188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBetterCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
+		2A90F17A188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBetterCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
+		2A90F17B188CC2A300BCE183 /* CCoverflowCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCoverflowCollectionViewLayout.h; sourceTree = "<group>"; };
+		2A90F17C188CC2A300BCE183 /* CCoverflowCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCoverflowCollectionViewLayout.m; sourceTree = "<group>"; };
+		2A90F17D188CC2A300BCE183 /* CInterpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CInterpolator.h; sourceTree = "<group>"; };
+		2A90F17E188CC2A300BCE183 /* CInterpolator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CInterpolator.mm; sourceTree = "<group>"; };
+		2A90F17F188CC2A300BCE183 /* CReflectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CReflectionView.h; sourceTree = "<group>"; };
+		2A90F180188CC2A300BCE183 /* CReflectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CReflectionView.m; sourceTree = "<group>"; };
+		2A90F181188CC2A300BCE183 /* Interpolator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Interpolator.cpp; sourceTree = "<group>"; };
+		2A90F182188CC2A300BCE183 /* Interpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interpolator.h; sourceTree = "<group>"; };
+		2A90F18C188CC3C600BCE183 /* KBKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBKeyboardHandler.h; sourceTree = "<group>"; };
+		2A90F18D188CC3C600BCE183 /* KBKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBKeyboardHandler.m; sourceTree = "<group>"; };
+		2A90F18E188CC3C600BCE183 /* KBKeyboardHandlerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBKeyboardHandlerDelegate.h; sourceTree = "<group>"; };
+		2A90F191188CC4A400BCE183 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellBG.png; sourceTree = "<group>"; };
+		2A90F192188CC4A400BCE183 /* defaultBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultBG.png; sourceTree = "<group>"; };
+		2A90F193188CC4A400BCE183 /* Information-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Information-Icon.png"; sourceTree = "<group>"; };
+		2A90F194188CC4A400BCE183 /* keyWelcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyWelcome.png; sourceTree = "<group>"; };
+		2A90F195188CC4A400BCE183 /* maintenance.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maintenance.jpg; sourceTree = "<group>"; };
+		2A90F196188CC4A400BCE183 /* notificationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notificationIcon.png; sourceTree = "<group>"; };
+		2A90F197188CC4A400BCE183 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
 		2A9363311702D76A00444068 /* InitialLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLoginVC.h; sourceTree = "<group>"; };
 		2A9363321702D76A00444068 /* InitialLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLoginVC.m; sourceTree = "<group>"; };
-		2A9363521702E45900444068 /* cellBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellBG.png; path = Helpers/cellBG.png; sourceTree = "<group>"; };
 		2A9C5C2717DF1A76001D494F /* RESTConstructor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTConstructor.h; path = Helpers/RESTConstructor.h; sourceTree = "<group>"; };
 		2A9C5C2817DF1A76001D494F /* RESTConstructor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTConstructor.m; path = Helpers/RESTConstructor.m; sourceTree = "<group>"; };
-		2AA06B9217311B7200989F8D /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsIcon.png; path = Helpers/settingsIcon.png; sourceTree = "<group>"; };
-		2AA6860B1730DF6500B33A58 /* defaultBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = defaultBG.png; path = Helpers/defaultBG.png; sourceTree = "<group>"; };
-		2AB7979317CC85C2000BBB05 /* CBetterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBetterCollectionViewCell.h; path = Coverflow/CBetterCollectionViewCell.h; sourceTree = "<group>"; };
-		2AB7979417CC85C2000BBB05 /* CBetterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBetterCollectionViewCell.m; path = Coverflow/CBetterCollectionViewCell.m; sourceTree = "<group>"; };
-		2AB7979517CC85C2000BBB05 /* CBetterCollectionViewLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBetterCollectionViewLayoutAttributes.h; path = Coverflow/CBetterCollectionViewLayoutAttributes.h; sourceTree = "<group>"; };
-		2AB7979617CC85C3000BBB05 /* CBetterCollectionViewLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBetterCollectionViewLayoutAttributes.m; path = Coverflow/CBetterCollectionViewLayoutAttributes.m; sourceTree = "<group>"; };
-		2AB7979717CC85C3000BBB05 /* CCoverflowCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCoverflowCollectionViewLayout.h; path = Coverflow/CCoverflowCollectionViewLayout.h; sourceTree = "<group>"; };
-		2AB7979817CC85C3000BBB05 /* CCoverflowCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCoverflowCollectionViewLayout.m; path = Coverflow/CCoverflowCollectionViewLayout.m; sourceTree = "<group>"; };
-		2AB7979917CC85C3000BBB05 /* CInterpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CInterpolator.h; path = Coverflow/CInterpolator.h; sourceTree = "<group>"; };
-		2AB7979A17CC85C3000BBB05 /* CInterpolator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CInterpolator.mm; path = Coverflow/CInterpolator.mm; sourceTree = "<group>"; };
-		2AB7979B17CC85C3000BBB05 /* CReflectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CReflectionView.h; path = Coverflow/CReflectionView.h; sourceTree = "<group>"; };
-		2AB7979C17CC85C3000BBB05 /* CReflectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CReflectionView.m; path = Coverflow/CReflectionView.m; sourceTree = "<group>"; };
-		2AB7979D17CC85C3000BBB05 /* Interpolator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Interpolator.cpp; path = Coverflow/Interpolator.cpp; sourceTree = "<group>"; };
-		2AB7979E17CC85C3000BBB05 /* Interpolator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Interpolator.h; path = Coverflow/Interpolator.h; sourceTree = "<group>"; };
 		2AB797A817CC9411000BBB05 /* GuestServicesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestServicesCollectionViewController.h; sourceTree = "<group>"; };
 		2AB797A917CC9411000BBB05 /* GuestServicesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuestServicesCollectionViewController.m; sourceTree = "<group>"; };
 		2AB797AB17CC9510000BBB05 /* GuestServicesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuestServicesCollectionViewCell.h; sourceTree = "<group>"; };
@@ -202,11 +207,6 @@
 		2AB797AE17CC96EB000BBB05 /* CCoverflowTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCoverflowTitleView.h; sourceTree = "<group>"; };
 		2AB797AF17CC96EC000BBB05 /* CCoverflowTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCoverflowTitleView.m; sourceTree = "<group>"; };
 		2AB797B017CC96EC000BBB05 /* CCoverflowTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CCoverflowTitleView.xib; sourceTree = "<group>"; };
-		2AB797B517CC97AE000BBB05 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
-		2AB9CA8817312206004E3C44 /* notificationIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = notificationIcon.png; path = Helpers/notificationIcon.png; sourceTree = "<group>"; };
-		2AC6B8D21717EBE60076C474 /* KBKeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KBKeyboardHandler.h; path = Helpers/KBKeyboardHandler.h; sourceTree = "<group>"; };
-		2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KBKeyboardHandler.m; path = Helpers/KBKeyboardHandler.m; sourceTree = "<group>"; };
-		2AC6B8D51717EC140076C474 /* KBKeyboardHandlerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KBKeyboardHandlerDelegate.h; path = Helpers/KBKeyboardHandlerDelegate.h; sourceTree = "<group>"; };
 		8820D5F916DEBA7E00CF4D02 /* InitialViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewVC.h; path = ClientApplication/Classes/Controllers/InitialViewVC.h; sourceTree = SOURCE_ROOT; };
 		8820D5FA16DEBA7E00CF4D02 /* InitialViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewVC.m; path = ClientApplication/Classes/Controllers/InitialViewVC.m; sourceTree = SOURCE_ROOT; };
 		8820D5FC16DEEB2500CF4D02 /* DatabaseAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatabaseAuthentication.h; path = ClientApplication/Classes/Models/DatabaseAuthentication.h; sourceTree = SOURCE_ROOT; };
@@ -325,6 +325,7 @@
 		2A22BD9616AC01FC00EC87BC /* ClientApplication */ = {
 			isa = PBXGroup;
 			children = (
+				2A90F190188CC4A400BCE183 /* Images */,
 				2A22BDFE16AC06A900EC87BC /* Classes */,
 				2A22BD9716AC01FC00EC87BC /* Supporting Files */,
 			);
@@ -367,18 +368,7 @@
 		2A22BDFE16AC06A900EC87BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2AB7979317CC85C2000BBB05 /* CBetterCollectionViewCell.h */,
-				2AB7979417CC85C2000BBB05 /* CBetterCollectionViewCell.m */,
-				2AB7979517CC85C2000BBB05 /* CBetterCollectionViewLayoutAttributes.h */,
-				2AB7979617CC85C3000BBB05 /* CBetterCollectionViewLayoutAttributes.m */,
-				2AB7979717CC85C3000BBB05 /* CCoverflowCollectionViewLayout.h */,
-				2AB7979817CC85C3000BBB05 /* CCoverflowCollectionViewLayout.m */,
-				2AB7979917CC85C3000BBB05 /* CInterpolator.h */,
-				2AB7979A17CC85C3000BBB05 /* CInterpolator.mm */,
-				2AB7979B17CC85C3000BBB05 /* CReflectionView.h */,
-				2AB7979C17CC85C3000BBB05 /* CReflectionView.m */,
-				2AB7979D17CC85C3000BBB05 /* Interpolator.cpp */,
-				2AB7979E17CC85C3000BBB05 /* Interpolator.h */,
+				2A90F175188CC2A300BCE183 /* ThirdPartySrc */,
 				88C9B6F21700A97C0016C205 /* CustomSegues */,
 				2A22BE2116AC084700EC87BC /* Storyboards */,
 				2A22BE1F16AC07C900EC87BC /* Models */,
@@ -402,7 +392,6 @@
 		2A22BE1E16AC07BF00EC87BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2AB797B517CC97AE000BBB05 /* Images */,
 				2AB797AE17CC96EB000BBB05 /* CCoverflowTitleView.h */,
 				2AB797AF17CC96EC000BBB05 /* CCoverflowTitleView.m */,
 				2AB797B017CC96EC000BBB05 /* CCoverflowTitleView.xib */,
@@ -478,15 +467,6 @@
 		2A22BE2016AC07D600EC87BC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2AB9CA8817312206004E3C44 /* notificationIcon.png */,
-				2AA06B9217311B7200989F8D /* settingsIcon.png */,
-				2AA6860B1730DF6500B33A58 /* defaultBG.png */,
-				2AC6B8D51717EC140076C474 /* KBKeyboardHandlerDelegate.h */,
-				2AC6B8D31717EBE60076C474 /* KBKeyboardHandler.m */,
-				2AC6B8D21717EBE60076C474 /* KBKeyboardHandler.h */,
-				2A55AF29170C25C40072667C /* Information-Icon.png */,
-				2A55AF27170C1C760072667C /* keyWelcome.png */,
-				2A9363521702E45900444068 /* cellBG.png */,
 				2A9C5C2717DF1A76001D494F /* RESTConstructor.h */,
 				2A9C5C2817DF1A76001D494F /* RESTConstructor.m */,
 			);
@@ -502,6 +482,58 @@
 			name = Storyboards;
 			path = /Users/chrispurtell/github/HAE/source/ui/ios/ClientApplication/ClientApplication/Classes/Storyboards;
 			sourceTree = "<absolute>";
+		};
+		2A90F175188CC2A300BCE183 /* ThirdPartySrc */ = {
+			isa = PBXGroup;
+			children = (
+				2A90F18B188CC3C600BCE183 /* KeyboardHandlerImpl */,
+				2A90F176188CC2A300BCE183 /* Coverflow */,
+			);
+			path = ThirdPartySrc;
+			sourceTree = "<group>";
+		};
+		2A90F176188CC2A300BCE183 /* Coverflow */ = {
+			isa = PBXGroup;
+			children = (
+				2A90F177188CC2A300BCE183 /* CBetterCollectionViewCell.h */,
+				2A90F178188CC2A300BCE183 /* CBetterCollectionViewCell.m */,
+				2A90F179188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.h */,
+				2A90F17A188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.m */,
+				2A90F17B188CC2A300BCE183 /* CCoverflowCollectionViewLayout.h */,
+				2A90F17C188CC2A300BCE183 /* CCoverflowCollectionViewLayout.m */,
+				2A90F17D188CC2A300BCE183 /* CInterpolator.h */,
+				2A90F17E188CC2A300BCE183 /* CInterpolator.mm */,
+				2A90F17F188CC2A300BCE183 /* CReflectionView.h */,
+				2A90F180188CC2A300BCE183 /* CReflectionView.m */,
+				2A90F181188CC2A300BCE183 /* Interpolator.cpp */,
+				2A90F182188CC2A300BCE183 /* Interpolator.h */,
+			);
+			path = Coverflow;
+			sourceTree = "<group>";
+		};
+		2A90F18B188CC3C600BCE183 /* KeyboardHandlerImpl */ = {
+			isa = PBXGroup;
+			children = (
+				2A90F18C188CC3C600BCE183 /* KBKeyboardHandler.h */,
+				2A90F18D188CC3C600BCE183 /* KBKeyboardHandler.m */,
+				2A90F18E188CC3C600BCE183 /* KBKeyboardHandlerDelegate.h */,
+			);
+			path = KeyboardHandlerImpl;
+			sourceTree = "<group>";
+		};
+		2A90F190188CC4A400BCE183 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2A90F191188CC4A400BCE183 /* cellBG.png */,
+				2A90F192188CC4A400BCE183 /* defaultBG.png */,
+				2A90F193188CC4A400BCE183 /* Information-Icon.png */,
+				2A90F194188CC4A400BCE183 /* keyWelcome.png */,
+				2A90F195188CC4A400BCE183 /* maintenance.jpg */,
+				2A90F196188CC4A400BCE183 /* notificationIcon.png */,
+				2A90F197188CC4A400BCE183 /* settingsIcon.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
 		};
 		88C9B6F21700A97C0016C205 /* CustomSegues */ = {
 			isa = PBXGroup;
@@ -627,14 +659,14 @@
 				2A22BDA716AC01FC00EC87BC /* Default-568h@2x.png in Resources */,
 				88FE814B16C990CB00B59C22 /* MainStoryboard_iPad.storyboard in Resources */,
 				88FE814C16C990CB00B59C22 /* MainStoryboard_iPhone.storyboard in Resources */,
-				2A9363531702E45900444068 /* cellBG.png in Resources */,
-				2A55AF28170C1C760072667C /* keyWelcome.png in Resources */,
-				2A55AF2A170C25C40072667C /* Information-Icon.png in Resources */,
-				2AA6860C1730DF6500B33A58 /* defaultBG.png in Resources */,
-				2AA06B9317311B7200989F8D /* settingsIcon.png in Resources */,
-				2AB9CA8917312206004E3C44 /* notificationIcon.png in Resources */,
 				2AB797B217CC96EC000BBB05 /* CCoverflowTitleView.xib in Resources */,
-				2AB797B617CC97AE000BBB05 /* Images in Resources */,
+				2A90F198188CC4A400BCE183 /* cellBG.png in Resources */,
+				2A90F199188CC4A400BCE183 /* defaultBG.png in Resources */,
+				2A90F19A188CC4A400BCE183 /* Information-Icon.png in Resources */,
+				2A90F19B188CC4A400BCE183 /* keyWelcome.png in Resources */,
+				2A90F19C188CC4A400BCE183 /* maintenance.jpg in Resources */,
+				2A90F19D188CC4A400BCE183 /* notificationIcon.png in Resources */,
+				2A90F19E188CC4A400BCE183 /* settingsIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +718,6 @@
 				88C9B6FB1700ACA70016C205 /* MainTabBarController.m in Sources */,
 				88C9B6FE1700ACC50016C205 /* UnauthenticatedNVC.m in Sources */,
 				2A9363331702D76A00444068 /* InitialLoginVC.m in Sources */,
-				2AC6B8D41717EBE60076C474 /* KBKeyboardHandler.m in Sources */,
 				2A896AF5173A238700EFFFB4 /* InformationViewController.m in Sources */,
 				2A896AFB173A252700EFFFB4 /* NotificationsNavigationViewController.m in Sources */,
 				2A896B04173A427D00EFFFB4 /* AnnouncementTableViewController.m in Sources */,
@@ -699,16 +730,17 @@
 				2A7245B417993952005B9377 /* AccountViewController.m in Sources */,
 				2A7245BA179951F3005B9377 /* StandardTableButton.m in Sources */,
 				2A2B99A017AB937900DDE33B /* AccountInformationView.m in Sources */,
-				2AB7979F17CC85C3000BBB05 /* CBetterCollectionViewCell.m in Sources */,
-				2AB797A017CC85C3000BBB05 /* CBetterCollectionViewLayoutAttributes.m in Sources */,
-				2AB797A117CC85C3000BBB05 /* CCoverflowCollectionViewLayout.m in Sources */,
-				2AB797A217CC85C3000BBB05 /* CInterpolator.mm in Sources */,
-				2AB797A317CC85C3000BBB05 /* CReflectionView.m in Sources */,
-				2AB797A417CC85C3000BBB05 /* Interpolator.cpp in Sources */,
 				2AB797AA17CC9411000BBB05 /* GuestServicesCollectionViewController.m in Sources */,
 				2AB797AD17CC9510000BBB05 /* GuestServicesCollectionViewCell.m in Sources */,
 				2AB797B117CC96EC000BBB05 /* CCoverflowTitleView.m in Sources */,
 				2A9C5C2917DF1A76001D494F /* RESTConstructor.m in Sources */,
+				2A90F183188CC2A300BCE183 /* CBetterCollectionViewCell.m in Sources */,
+				2A90F184188CC2A300BCE183 /* CBetterCollectionViewLayoutAttributes.m in Sources */,
+				2A90F185188CC2A300BCE183 /* CCoverflowCollectionViewLayout.m in Sources */,
+				2A90F186188CC2A300BCE183 /* CInterpolator.mm in Sources */,
+				2A90F187188CC2A300BCE183 /* CReflectionView.m in Sources */,
+				2A90F188188CC2A300BCE183 /* Interpolator.cpp in Sources */,
+				2A90F18F188CC3C600BCE183 /* KBKeyboardHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,9 @@
 
 BASEDIR=$(dirname "$0")
 . $BASEDIR/config_env.sh
-cd $SMDATABASE_HOME
-$DERBY_INSTALL_PATH/startNetworkServer
+#cd $SMDATABASE_HOME/../../binary/
+java -jar $DERBY_INSTALL_PATH/derbyrun.jar server start
+
 
 
  

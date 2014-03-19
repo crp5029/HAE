@@ -61,10 +61,12 @@
 	[self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CCoverflowTitleView class]) bundle:NULL] forSupplementaryViewOfKind:@"title" withReuseIdentifier:@"title"];
     
 	NSMutableArray *theAssets = [NSMutableArray array];
-	NSURL *theURL = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:@"Images"];
+	NSURL *theURL = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:@"Images" isDirectory:YES];
+    NSLog(@"%@", theURL);
 	NSEnumerator *theEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:theURL includingPropertiesForKeys:NULL options:NSDirectoryEnumerationSkipsPackageDescendants | NSDirectoryEnumerationSkipsHiddenFiles errorHandler:NULL];
 	for (theURL in theEnumerator)
     {
+        NSLog(@"%@", theURL);
 		if ([[theURL pathExtension] isEqualToString:@"jpg"])
         {
 			[theAssets addObject:theURL];

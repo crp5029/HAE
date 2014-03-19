@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2AC2F4C818D99B440078985F"
+               BlueprintIdentifier = "2AC2F50318D99DD30078985F"
                BuildableName = "libStaticResources.a"
                BlueprintName = "StaticResources"
-               ReferencedContainer = "container:StaticResources.xcodeproj">
+               ReferencedContainer = "container:ClientApplication.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2AC2F4D818D99B440078985F"
-               BuildableName = "StaticResourcesTests.xctest"
-               BlueprintName = "StaticResourcesTests"
-               ReferencedContainer = "container:StaticResources.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

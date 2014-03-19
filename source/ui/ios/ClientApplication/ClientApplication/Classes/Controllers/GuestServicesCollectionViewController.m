@@ -62,11 +62,9 @@
     
 	NSMutableArray *theAssets = [NSMutableArray array];
 	NSURL *theURL = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:@"Images" isDirectory:YES];
-    NSLog(@"%@", theURL);
 	NSEnumerator *theEnumerator = [[NSFileManager defaultManager] enumeratorAtURL:theURL includingPropertiesForKeys:NULL options:NSDirectoryEnumerationSkipsPackageDescendants | NSDirectoryEnumerationSkipsHiddenFiles errorHandler:NULL];
 	for (theURL in theEnumerator)
     {
-        NSLog(@"%@", theURL);
 		if ([[theURL pathExtension] isEqualToString:@"jpg"])
         {
 			[theAssets addObject:theURL];
